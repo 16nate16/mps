@@ -96,12 +96,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-#hero-container {background:url("../img/darker.jpg") no-repeat; height:874px;}
+html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
+
+#hero-container {background:url("../img/darker.jpg") no-repeat; height:874px; color:#fff}
+#hero-content {padding: 15% 0 0 5%; width:50%}
+#hero-tagline-container .main-tag {font-size:33px; font-weight : 300;}
+.hero-action {margin-top:20px}
+.logo {margin:0;}
+
 .circle { border-radius: 50%; width: 200px; height: 200px; border:1px solid grey;}
 
-.intro-section {width:80%; margin: 0 auto;}
+.intro-section {padding-bottom: 35px}
+.intro-section, .call-to-action-content {width:80%; margin: 0 auto;}
+.intro-section-main-heading {text-align: center; font-size:40px;}
 .intro-container .intro-circle {margin: 0 auto}
-.intro-container .intro-heading {text-align: center}
+.intro-container .intro-heading, .intro-container .intro-text {text-align: center}
+
+.call-to-action-container {background: gainsboro; padding-bottom: 50px}
+.call-to-action-content .call-to-action-text {font-size:30px; font-weight:300}
+.call-to-action {margin-top:30px;}
 
 
 
