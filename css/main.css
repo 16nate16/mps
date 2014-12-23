@@ -116,6 +116,13 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300}
 .call-to-action {margin-top:30px;}
 
+/*Custom Selection*/
+#custom-selection-page .custom-selection-heading, #custom-selection-page .logo {text-align:center}
+.select-customization-container .custom-selection-content-container
+{border:1px solid grey; border-radius:4px; padding:5px 8px; text-align: center}
+
+.select-customization-container .icon {font-size:50px}
+
 
 
 
