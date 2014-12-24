@@ -78,6 +78,15 @@
             $("#reviewOrder").on("click", function( event ) {
                 event.preventDefault();
                 var $form = $("#supplementForm")
+                var host = window.location.origin
+                var endpoint = "/order-my-perfect-supplement"
+                var params = $form.serialize()
+                if (params) {
+                    window.location.href = host + endpoint + "/?" + params
+                }
+                else {
+                    alert("no form params!!!")
+                }
                 console.log($form.serialize());
             });
         </script>

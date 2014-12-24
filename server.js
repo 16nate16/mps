@@ -35,6 +35,16 @@ app.route('/design-your-supplement').get(function (req, res) {
     res.render('design-your-supplement')
 })
 
+app.route('/order-my-perfect-supplement').get(function (reg, res) {
+    console.log("$$$$$$$$$$$$$$$");
+    console.log(reg.params);
+    console.log(reg.query);
+    res.render('order-my-perfect-supplement')
+
+})
+
+
+
 app.listen(app.get('port'), function(){
     console.log("MPS server listening on port " + app.get('port'));
 });
