@@ -98,7 +98,12 @@ textarea {
    ========================================================================== */
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
 
+/*general*/
+.lg-btns .btn {padding:20px 80px}
 .no-gutter {margin:0}
+.page-heading {font-weight: 300; text-align:center; font-size:40px}
+.section-heading {font-weight:300; font-size:30px; margin-bottom: 15px}
+.logo {text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; width:250px; height:250px; background-size:contain}
 
 
 #hero-container {background:url("../img/darker.jpg") no-repeat; width: 100%; height:874px; color:#fff; background-size:cover;}
@@ -126,6 +131,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 
 .select-customization-container .icon {font-size:50px}
 
+
+/*design*/
+.design-supplement-container {padding:0 15%;}
 
 
 

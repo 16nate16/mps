@@ -20,19 +20,21 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <div class="container">
-            <h1 class="logo">My Perfect Supplement</h1>
-            <h2 class="design-supplement-heading page-heading"> Select your level of Customization</h2>
+            <h1 class="logo"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
+
             <div class="row design-supplement-container">
                 <form id="supplementForm">
                     <div class="form-group">
-                        <label for="supplementName">Supplement Name</label>
-                        <input type="text" class="form-control" id="supplementName" placeholder="Enter A Supplement Name">
+                        <h2 class="page-heading">Name Your Supplement</h2>
+                        <label for="supplementName"><span class="sub-heading">Have some fun here...</span></label>
+                        <input type="text" name="supplementName" class="form-control" id="supplementName" placeholder="Enter A Supplement Name">
                     </div>
                     <div class="form-group">
+                        <h2 class="page-heading">Design Your Supplement</h2>
                         <h3 class="section-heading">Caffeine</h3>
                         <p class="section-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
                             ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                        <div class="btn-group" data-toggle="buttons">
+                        <div class="btn-group lg-btns" data-toggle="buttons">
                             <label class="btn btn-primary active">
                                 <input type="radio" name="caffeine" value="fifty-mg" id="option1"  checked="checked"> 50 mg
                             </label>
@@ -51,10 +53,10 @@
                         <h3 class="section-heading">Additional Information</h3>
                         <p class="section-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
                             ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea name="comments" class="form-control" rows="3"></textarea>
                     </div>
                 </form>
-<button id="reviewOrder" class="btn" type="submit">Review Your Order</button>
+<button id="reviewOrder" class="btn btn-primary" type="submit">Review Your Order</button>
 
 
             </div><!--end custom select row-->
