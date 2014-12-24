@@ -3,7 +3,7 @@
  */
 
 var express         = require('express'),
-    hbs             = require('express-hbs'),
+    hbs             = require('hbs'),
     cookieParser    = require('cookie-parser'),
     bodyParser      = require('body-parser'),
     favicon         = require('serve-favicon'),
@@ -28,16 +28,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(router);
 
 app.route('/').get(function (req, res) {
-    console.log("render index");
-    res.render('index', {title:"yoyo"})
+    res.render('index')
 })
 
-app.route('/test').get(function (req, res) {
-    console.log("render index");
-    res.render('test', {title:"tet"})
+app.route('/design-your-supplement').get(function (req, res) {
+    res.render('design-your-supplement')
 })
-
-
 
 app.listen(app.get('port'), function(){
     console.log("MPS server listening on port " + app.get('port'));
