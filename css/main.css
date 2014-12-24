@@ -98,7 +98,10 @@ textarea {
    ========================================================================== */
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
 
-#hero-container {background:url("../img/darker.jpg") no-repeat; height:874px; color:#fff}
+.no-gutter {margin:0}
+
+
+#hero-container {background:url("../img/darker.jpg") no-repeat; width: 100%; height:874px; color:#fff; background-size:cover;}
 #hero-content {padding: 15% 0 0 5%; width:50%}
 #hero-tagline-container .main-tag {font-size:33px; font-weight : 300;}
 .hero-action {margin-top:20px}
@@ -246,6 +249,25 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/*x-small*/
+@media (max-width:767px) {
+    #hero-container {height:400px}
+}
+
+/*small*/
+@media (min-width: 768px) {
+    #hero-container {height:600px}
+}
+/*medium*/
+@media (min-width: 992px) {
+    #hero-container {height:846px}
+}
+
+@media (min-width: 1200px) {
+    #hero-container {height:946px}
+
+
+}
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
