@@ -103,7 +103,15 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .no-gutter {margin:0}
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin-bottom: 15px}
-.logo {text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; width:250px; height:250px; background-size:contain}
+.logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:150px; height:150px; background-size:contain; margin: 40px auto 20px}
+.logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:250px; height:250px;}
+
+
+/*form controls*/
+.jumbo-input {padding:30px 10px}
+.form-section {clear:both; margin-bottom: 200px; margin-top:50px}
+.next-btn {padding:10px 30px; margin-top: 20px}
+.next-btn .arrow {position:relative; left:-10px}
 
 
 #hero-container {background:url("../img/darker.jpg") no-repeat; width: 100%; height:874px; color:#fff; background-size:cover;}
