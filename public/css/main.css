@@ -103,7 +103,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .no-gutter {margin:0}
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin-bottom: 15px}
-.logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:150px; height:150px; background-size:contain; margin: 40px auto 20px}
+.logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:75px; height:75px; background-size:contain; margin: 40px auto 20px}
 .logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:200px; height:200px;}
 
 
@@ -113,6 +113,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .next-btn {padding:10px 30px; margin-top: 40px}
 .next-btn .arrow {position:relative; left:-10px}
 .btn-alt {background-color:#36ac9c !important; border-color:#23a796!important; font-weight:300}
+.form-section-heading-chk {/*margin-left: 20%*/}
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
@@ -138,7 +139,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 /*Custom Selection*/
 #custom-selection-page .custom-selection-heading, #custom-selection-page .logo {text-align:center}
 .select-customization-container .custom-selection-content-container
-{border:1px solid grey; border-radius:4px; padding:5px 8px; text-align: center}
+{border:1px solid grey; border-radius:4px; padding:20px 30px; text-align: center}
+.custom-selection a {color:#333; text-decoration: none;}
+
 
 .select-customization-container .icon {font-size:50px}
 
@@ -146,9 +149,21 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 /*design*/
 .design-supplement-container {padding:0 15%;}
 
+/*footer*/
+.footer {height:200px; margin-top:50px; padding:20px 10px; background:#f4f4f4;}
+.footer-links {width:300px; margin:0 auto;}
+.footer-links li{float:left; list-style: none; padding: 3px 20px;font-size:11px; color:#333333}
+.footer-links a {color:#333333}
 
 
+/*checkout*/
 
+#checkout .container {width:50%}
+#checkout .form-control {margin-bottom:20px}
+#checkout .form-section {margin-bottom:20px; padding:20px; border:1px solid gainsboro; overflow:hidden  }
+.ex-date-control {display: block; width:100%;}
+
+/*overrides*/
 
 
 

@@ -17,131 +17,138 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
-<form action="" method="POST" id="payment-form" class="form-horizontal">
-    <div class="row">
-        <div class="col-md-12">
+<body id="checkout">
+<div class="container">
+    <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
 
-            <fieldset>
+    <form action="" method="POST" id="payment-form">
+        <div class="row form-container">
+            <div class="col-md-12">
+<div class="form-group form-section">
+    <h1 class="form-section-heading-chk">Order Summary</h1>
+</div>
+    <div class="form-group form-section">
+    <h1 class="form-section-heading-chk">Billing Details</h1>
 
-                <!-- Form Name -->
-                <legend>Billing Details</legend>
-
-                <!-- Street -->
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="street">Street</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="street" placeholder="Street" class="address form-control">
-                    </div>
-                </div>
-
-                <!-- City -->
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="textinput">City</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="city" placeholder="City" class="city form-control">
-                    </div>
-                </div>
-
-                <!-- State -->
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="textinput">State</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">
-                    </div>
-                </div>
-
-                <!-- Postcal Code -->
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="textinput">Postal Code</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
-                    </div>
-                </div>
-
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="textinput">Email</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="email" maxlength="65" placeholder="Email" class="email form-control">
-                    </div>
-                </div>
-                </fieldset><!--end personal info-->
-
-            <fieldset>
-                    <legend>Card Details</legend>
-
-                    <!-- Card Holder Name -->
+                    <!-- Street -->
                     <div class="form-group">
-                        <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>
+                        <!--<label class="col-sm-4 control-label" for="street-nm">Street</label>-->
                         <div class="col-sm-6">
-                            <input type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
+                            <input type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
                         </div>
                     </div>
 
-                    <!-- Card Number -->
+                    <!-- City -->
                     <div class="form-group">
-                        <label class="col-sm-4 control-label" for="textinput">Card Number</label>
+                <!--        <label class="col-sm-4 control-label" for="textinput">City</label>-->
                         <div class="col-sm-6">
-                            <input type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
+                            <input type="text" name="city" placeholder="City" class="city form-control">
                         </div>
                     </div>
 
-                    <!-- Expiry-->
+                    <!-- State -->
                     <div class="form-group">
-                        <label class="col-sm-4 control-label" for="textinput">Card Expiry Date</label>
+                  <!--      <label class="col-sm-4 control-label" for="textinput">State</label>-->
                         <div class="col-sm-6">
-                            <div class="form-inline">
-                                <select name="select2" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
-                                    <option value="01" selected="selected">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <span> / </span>
-                                <select name="select2" data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
-                                </select>
-<!--                                <script type="text/javascript">
-                                    var select = $(".card-expiry-year"),
-                                            year = new Date().getFullYear();
+                            <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">
+                        </div>
+                    </div>
 
-                                    for (var i = 0; i < 12; i++) {
-                                        select.append($("<option value='"+(i + year)+"' "+(i === 0 ? "selected" : "")+">"+(i + year)+"</option>"))
-                                    }
-                                </script>-->
+                    <!-- Postcal Code -->
+                    <div class="form-group">
+              <!--          <label class="col-sm-4 control-label" for="textinput">Postal Code</label>-->
+                        <div class="col-sm-6">
+                            <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
+                        </div>
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+            <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
+                        <div class="col-sm-6">
+                            <input type="text" name="email" maxlength="65" placeholder="Email" class="email form-control">
+                        </div>
+                    </div>
+<!--end personal info-->
+                </div>
+
+                <div class="form-group form-section">
+                    <h1>Payment Details</h1>
+
+                        <!-- Card Holder Name -->
+                        <div class="form-group">
+                         <!--   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>-->
+                            <div class="col-sm-6">
+                                <input type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
                             </div>
                         </div>
-                    </div>
 
-                    <!-- CVV -->
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label" for="textinput">CVV/CVV2</label>
-                        <div class="col-sm-3">
-                            <input type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
+                        <!-- Card Number -->
+                        <div class="form-group">
+                     <!--       <label class="col-sm-4 control-label" for="textinput">Card Number</label>-->
+                            <div class="col-sm-6">
+                                <input type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Submit -->
-                    <div class="control-group">
-                        <div class="controls">
+                        <!-- Expiry-->
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label ex-date-control">Card Expiry Date</label>
+                            <div class="col-sm-6">
+                                <div class="form-inline">
+                                    <select name="select2" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
+                                        <option value="01" selected="selected">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <span> / </span>
+                                    <select name="select2" data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
+                                    </select>
 
-                                <button class="btn btn-success" type="submit">Pay Now</button>
-
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
+
+                        <!-- CVV -->
+                        <div class="form-group">
+            <!--                <label class="col-sm-4 control-label" for="textinput">CVV/CVV2</label>-->
+                            <div class="col-sm-3">
+                                <input type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="control-group">
+                            <div class="controls">
+
+                                    <button class="btn btn-success" type="submit">Pay Now</button>
+
+                            </div>
+                        </div>
+                   </div>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+</div><!--end container-->
+<div class="footer">
+    <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
+    <ul class="footer-links">
+        <li><a href="#" title="#">Create</a></li>
+
+        <li><a href="#" title="#">FAQ</a></li>
+        <li><a href="#" title="#">Contact</a></li>
+    </ul>
+</div>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -34,6 +34,9 @@ app.route('/').get(function (req, res) {
 app.route('/design-your-supplement').get(function (req, res) {
     res.render('design-your-supplement')
 })
+app.route('/select-customization').get(function (req, res) {
+    res.render('select-customization')
+})
 
 app.route('/order-my-perfect-supplement').get(function (reg, res) {
     console.log("$$$$$$$$$$$$$$$");
