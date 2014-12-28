@@ -10,6 +10,8 @@ var express         = require('express'),
     router          = express.Router(),
     serveStatic     = require('serve-static'),
     env             = process.env.NODE_ENV || 'development';
+    helpers         = require('./helpers')
+    _               = require("underscore")
     app             = express();
 
 
@@ -38,10 +40,33 @@ app.route('/select-customization').get(function (req, res) {
     res.render('select-customization')
 })
 
-app.route('/order-my-perfect-supplement').get(function (reg, res) {
+function addLabel (params) {
+    var formattedItems = [];
+    for (var prop in params) {
+        if (params.hasOwnProperty(prop)) {
+            var val = params[prop] ? params[prop] : "N/A"
+            formattedItems.push({
+                label : helpers.firstLetterUppercase(prop),
+                value : _.escape(val)
+            })
+        }
+    }
+    return formattedItems;
+
+}
+
+
+
+app.route('/order-my-perfect-supplement').get(function (req, res) {
     console.log("$$$$$$$$$$$$$$$");
-    console.log(reg.params);
-    console.log(reg.query);
+   // console.log(reg.params);
+    console.log(req.query);
+    var params = req.query
+    var formattedParams = addLabel(params);
+        console.log("####")
+        console.log(formattedParams)
+
+
     res.render('order-my-perfect-supplement')
 
 })
