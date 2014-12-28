@@ -26,12 +26,18 @@
             <div class="col-md-12">
 <div class="form-group form-section">
     <h1 class="form-section-heading-chk">Order Summary</h1>
-    <h2>Name: Rynos rocket fluid</h2>
+
+    <h2>Name: {{name}}</h2>
+
     <ul class="list-group">
-        <li class="list-group-item">
-            <span class="badge">50mg</span>
-            Caffiene
-        </li>
+        {{#each details}}
+            {{#if value}}
+                <li class="list-group-item">
+                    <span class="badge">{{value}}</span>
+                    {{label}}
+                </li>
+            {{/if}}
+        {{/each}}
     </ul>
 
 </div>

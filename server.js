@@ -40,34 +40,17 @@ app.route('/select-customization').get(function (req, res) {
     res.render('select-customization')
 })
 
-function addLabel (params) {
-    var formattedItems = [];
-    for (var prop in params) {
-        if (params.hasOwnProperty(prop)) {
-            var val = params[prop] ? params[prop] : "N/A"
-            formattedItems.push({
-                label : helpers.firstLetterUppercase(prop),
-                value : _.escape(val)
-            })
-        }
-    }
-    return formattedItems;
-
-}
-
 
 
 app.route('/order-my-perfect-supplement').get(function (req, res) {
     console.log("$$$$$$$$$$$$$$$");
    // console.log(reg.params);
-    console.log(req.query);
+    console.log(req.query)
     var params = req.query
-    var formattedParams = addLabel(params);
-        console.log("####")
-        console.log(formattedParams)
-
-
-    res.render('order-my-perfect-supplement')
+    var name = params.supplementName || "My Perfect Supplement"
+    delete params.supplementName
+    var formattedParams = helpers.addLabel(params);
+    res.render('order-my-perfect-supplement', {details: formattedParams, name : name})
 
 })
 
