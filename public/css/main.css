@@ -104,7 +104,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin-bottom: 15px}
 .logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:150px; height:150px; background-size:contain; margin: 40px auto 20px}
-.logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:250px; height:250px;}
+.logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:200px; height:200px;}
 
 
 /*form controls*/
@@ -112,6 +112,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .form-section {clear:both; margin-bottom: 200px; margin-top:50px}
 .next-btn {padding:10px 30px; margin-top: 40px}
 .next-btn .arrow {position:relative; left:-10px}
+.btn-alt {background-color:#36ac9c !important; border-color:#23a796!important; font-weight:300}
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
@@ -128,8 +129,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .intro-section-main-heading {text-align: center; font-size:40px;}
 .intro-container .intro-circle {margin: 0 auto}
 .intro-container .intro-heading, .intro-container .intro-text {text-align: center}
+.intro-container .icon {font-size:80px; display: inherit; text-align: center; margin-top:60px}
 
-.call-to-action-container {background: gainsboro; padding: 15px 25px}
+.call-to-action-container {background: #f4f4f4; padding: 15px 25px}
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300}
 .call-to-action {margin-top:30px;}
 
