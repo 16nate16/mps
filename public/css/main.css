@@ -161,9 +161,11 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 #checkout .container {width:50%}
 #checkout .form-control {margin-bottom:20px}
 #checkout .form-section {margin-bottom:20px; padding:20px; border:1px solid gainsboro; overflow:hidden  }
+#checkout .controls {clear:both; padding: 0 8px}
 .ex-date-control {display: block; width:100%;}
-
-/*overrides*/
+.ex-date-container {width:50%; float:left}
+.ex-date-heading {width:100%;}
+.ex-date-selection {padding-left: 15px}
 
 
 

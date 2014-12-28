@@ -26,6 +26,14 @@
             <div class="col-md-12">
 <div class="form-group form-section">
     <h1 class="form-section-heading-chk">Order Summary</h1>
+    <h2>Name: Rynos rocket fluid</h2>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="badge">50mg</span>
+            Caffiene
+        </li>
+    </ul>
+
 </div>
     <div class="form-group form-section">
     <h1 class="form-section-heading-chk">Billing Details</h1>
@@ -93,10 +101,10 @@
                         </div>
 
                         <!-- Expiry-->
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label ex-date-control">Card Expiry Date</label>
-                            <div class="col-sm-6">
-                                <div class="form-inline">
+                        <div class="form-group ex-date-container">
+                            <label class="col-sm-4 control-label ex-date-heading">Card Expiry Date</label>
+
+                                <div class="form-inline ex-date-selection">
                                     <select name="select2" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
                                         <option value="01" selected="selected">01</option>
                                         <option value="02">02</option>
@@ -114,14 +122,13 @@
                                     <span> / </span>
                                     <select name="select2" data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
                                     </select>
-
                                 </div>
-                            </div>
+
                         </div>
 
                         <!-- CVV -->
                         <div class="form-group">
-            <!--                <label class="col-sm-4 control-label" for="textinput">CVV/CVV2</label>-->
+                            <label class="col-sm-4 control-label sec-code-heading">CVV/CVV2</label>
                             <div class="col-sm-3">
                                 <input type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
                             </div>
@@ -129,9 +136,9 @@
 
                         <!-- Submit -->
                         <div class="control-group">
-                            <div class="controls">
+                            <div class="controls ">
 
-                                    <button class="btn btn-success" type="submit">Pay Now</button>
+                                    <button class="btn btn-success" type="submit">Checkout</button>
 
                             </div>
                         </div>
