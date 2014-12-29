@@ -108,7 +108,14 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
                 console.log("%%%%%%%%%%%%%%%%%%%")
                 //add charge info here
                 sendEmail()
-                return res.render('order-success', {message:"card Accepted"})
+
+                console.log(req.query)
+                var params = req.query
+                var name = params.supplementName || "My Perfect Supplement"
+                delete params.supplementName
+                var formattedParams = helpers.addLabel(params);
+                res.render('order-success', {details: formattedParams, name : name})
+
             }
 
         });
