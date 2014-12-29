@@ -56,10 +56,15 @@ function sendEmail () {
 
 // send the message and get a callback with an error or details of the message that was sent
     server.send({
-        text:    "i hope this works",
+        text:    "MPS Purchase",
         from:    "<ryno412@gmail.com>",
         to:      "<ryno412@gmail.com>",
-        subject: "BOOM MPS Purchase!"
+        subject: "BOOM! MPS hittin dog...",
+        attachment:
+            [
+                {data:"<html>i <i>hope</i> this works!</html>", alternative:true},
+            ]
+
     }, function(err, message) {
         if (err) {
             console.log("EMAIL ERROR")
@@ -93,15 +98,17 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
             description: req.body.email
         }, function(err, charge) {
             if (err /*&& err.type === 'StripeCardError'*/) {
-                // The card has been declined
+                // The card has been declined\
+                console.log("error",err)
                return res.render('order-error', {message: JSON.stringify(err)})
             }
             else {
-                console.log("error",err)
+
                 console.log("charge",charge)
                 console.log("%%%%%%%%%%%%%%%%%%%")
+                //add charge info here
                 sendEmail()
-                res.render('order-success', {message:"card Accepted"})
+                return res.render('order-success', {message:"card Accepted"})
             }
 
         });

@@ -167,6 +167,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .ex-date-heading {width:100%;}
 .ex-date-selection {padding-left: 15px}
 
+#order-error {background : #f2dede;}
+#order-error .err-msg {font-size:50px;  border:none; }
+
 
 
 
