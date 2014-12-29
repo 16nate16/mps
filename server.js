@@ -40,7 +40,79 @@ app.route('/select-customization').get(function (req, res) {
     res.render('select-customization')
 })
 
+function validateFields(fields) {
+    return fields
+}
 
+function sendEmail () {
+    var email   = require("emailjs");
+    var server  = email.server.connect({
+        user:    "ryno412@gmail.com",
+        password:"Thinkman1!",
+        host:    "smtp.gmail.com",
+        port : 465,
+        ssl:     true
+    });
+
+// send the message and get a callback with an error or details of the message that was sent
+    server.send({
+        text:    "i hope this works",
+        from:    "<ryno412@gmail.com>",
+        to:      "<ryno412@gmail.com>",
+        subject: "BOOM MPS Purchase!"
+    }, function(err, message) {
+        if (err) {
+            console.log("EMAIL ERROR")
+            console.log(err);
+        }
+        else {
+            console.log("EMAIL Success!!")
+            console.log(message);
+        }
+
+    });
+}
+
+
+app.route('/order-my-perfect-supplement').post(function (req, res) {
+    console.log("yolo")
+    console.log(req.body)
+    if (req.body && !validateFields(req.body).errors) {
+        // Set your secret key: remember to change this to your live secret key in production
+        // See your keys here https://dashboard.stripe.com/account
+        var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
+
+        // (Assuming you're using express - expressjs.com)
+        // Get the credit card details submitted by the form
+        var stripeToken = req.body.stripeToken;
+
+        var charge = stripe.charges.create({
+            amount: 2000, // amount in cents, again
+            currency: "usd",
+            card: stripeToken,
+            description: req.body.email
+        }, function(err, charge) {
+            if (err /*&& err.type === 'StripeCardError'*/) {
+                // The card has been declined
+               return res.render('order-error', {message: JSON.stringify(err)})
+            }
+            else {
+                console.log("error",err)
+                console.log("charge",charge)
+                console.log("%%%%%%%%%%%%%%%%%%%")
+                sendEmail()
+                res.render('order-success', {message:"card Accepted"})
+            }
+
+        });
+    }
+    else {
+        res.sendStatus(401)
+    }
+
+
+
+})
 
 app.route('/order-my-perfect-supplement').get(function (req, res) {
     console.log("$$$$$$$$$$$$$$$");

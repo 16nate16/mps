@@ -22,6 +22,8 @@
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
 
     <form action="" method="POST" id="payment-form">
+        <span class="payment-errors"></span>
+
         <div class="row form-container">
             <div class="col-md-12">
 <div class="form-group form-section">
@@ -42,6 +44,18 @@
 
 </div>
     <div class="form-group form-section">
+        <div class="hidden-inputs">
+            <input type="hidden" name="supplementName" value={{name}}>
+            {{#each details}}
+            <input type="hidden" name={{label}} value={{value}}>
+            {{/each}}
+        </div>
+
+
+
+
+
+
     <h1 class="form-section-heading-chk">Billing Details</h1>
 
                     <!-- Street -->
@@ -89,12 +103,13 @@
 
                 <div class="form-group form-section">
                     <h1>Payment Details</h1>
+                    <span class="payment-errors"></span>
 
                         <!-- Card Holder Name -->
                         <div class="form-group">
                          <!--   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>-->
                             <div class="col-sm-6">
-                                <input type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
+                                <input  type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
                             </div>
                         </div>
 
@@ -102,7 +117,7 @@
                         <div class="form-group">
                      <!--       <label class="col-sm-4 control-label" for="textinput">Card Number</label>-->
                             <div class="col-sm-6">
-                                <input type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
+                                <input data-stripe="number" type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
                             </div>
                         </div>
 
@@ -111,7 +126,7 @@
                             <label class="col-sm-4 control-label ex-date-heading">Card Expiry Date</label>
 
                                 <div class="form-inline ex-date-selection">
-                                    <select name="select2" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
+                                    <select data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
                                         <option value="01" selected="selected">01</option>
                                         <option value="02">02</option>
                                         <option value="03">03</option>
@@ -126,7 +141,7 @@
                                         <option value="12">12</option>
                                     </select>
                                     <span> / </span>
-                                    <select name="select2" data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
+                                    <select data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
                                     </select>
                                 </div>
 
@@ -136,14 +151,13 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label sec-code-heading">CVV/CVV2</label>
                             <div class="col-sm-3">
-                                <input type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
+                                <input data-stripe="cvc" type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
                             </div>
                         </div>
 
                         <!-- Submit -->
                         <div class="control-group">
                             <div class="controls ">
-
                                     <button class="btn btn-success" type="submit">Checkout</button>
 
                             </div>
@@ -165,10 +179,48 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    // This identifies your website in the createToken call below
+    Stripe.setPublishableKey('pk_test_Ou5ABhpgcZ8iQEY74cX6BpTZ');
+    $('#payment-form').submit(function(event) {
+
+        var $form = $(this);
+
+        // Disable the submit button to prevent repeated clicks
+        $form.find('button').prop('disabled', true);
+
+        Stripe.card.createToken($form, function (status, response) {
+            console.log("################")
+            console.log("################", status)
+            console.log("################", response)
+            if (response.error) {
+                // Show the errors on the form
+                $form.find('.payment-errors').text(response.error.message);
+                $form.find('button').prop('disabled', false);
+            } else {
+                // response contains id and card, which contains additional card details
+                var token = response.id;
+                // Insert the token into the form so it gets submitted to the server
+                $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+                // and submit
+                $form.get(0).submit();
+            }
+        });
+
+        // Prevent the form from submitting with the default action
+        return false;
+    });
+    // ...
+</script>
+
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>
+
+
+
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
