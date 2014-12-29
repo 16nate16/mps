@@ -1,0 +1,12 @@
+<style>
+    h1 {fonts-size:8px}
+</style>
+<h1>We just got paid!</h1>
+<dl>
+    {{#each details}}
+        {{#if value}}
+        <dt style="float:left; width:100px">{{label}}</dt>
+        <dd style="float:left; min-width:300px">{{value}}</dd>
+        {{/if}}
+    {{/each}}
+</dl>

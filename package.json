@@ -11,6 +11,7 @@
     "express-hbs": "^0.7.11",
     "express-layout": "^0.1.0",
     "express-session": "^1.7.6",
+    "handlebars": "^2.0.0",
     "hbs": "2.0.1",
     "morgan": "^1.2.3",
     "serve-favicon": "^2.0.1",

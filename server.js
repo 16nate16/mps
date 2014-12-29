@@ -9,9 +9,12 @@ var express         = require('express'),
     favicon         = require('serve-favicon'),
     router          = express.Router(),
     serveStatic     = require('serve-static'),
-    env             = process.env.NODE_ENV || 'development';
-    helpers         = require('./helpers')
-    _               = require("underscore")
+    env             = process.env.NODE_ENV || 'development',
+    helpers         = require('./helpers'),
+    _               = require("underscore"),
+    handlebars      = require('handlebars'),
+    fs              = require('fs'),
+    path            = require('path'),
     app             = express();
 
 
@@ -44,7 +47,18 @@ function validateFields(fields) {
     return fields
 }
 
-function sendEmail () {
+function createEmailTemplate (params) {
+    var file = path.resolve(__dirname, './public/templates/email.html')
+    var data = fs.readFileSync(file, {encoding: "utf-8"})
+    var template = handlebars.compile(data)
+    var html = template({details: params})
+    return new Buffer(html).toString()
+
+}
+
+
+function sendEmail (params) {
+    var template = createEmailTemplate(params)
     var email   = require("emailjs");
     var server  = email.server.connect({
         user:    "ryno412@gmail.com",
@@ -58,17 +72,17 @@ function sendEmail () {
     server.send({
         text:    "MPS Purchase",
         from:    "<ryno412@gmail.com>",
-        to:      "<ryno412@gmail.com>",
+        to:      "<ryno412@gmail.com>, <natewhitaker16@gmail.com>",
         subject: "BOOM! MPS hittin dog...",
         attachment:
             [
-                {data:"<html>i <i>hope</i> this works!</html>", alternative:true},
+                {data: template, alternative:true}
             ]
 
     }, function(err, message) {
         if (err) {
             console.log("EMAIL ERROR")
-            console.log(err);
+            console.log(err)
         }
         else {
             console.log("EMAIL Success!!")
@@ -83,11 +97,8 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
     console.log("yolo")
     console.log(req.body)
     if (req.body && !validateFields(req.body).errors) {
-        // Set your secret key: remember to change this to your live secret key in production
-        // See your keys here https://dashboard.stripe.com/account
         var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
 
-        // (Assuming you're using express - expressjs.com)
         // Get the credit card details submitted by the form
         var stripeToken = req.body.stripeToken;
 
@@ -97,17 +108,20 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
             card: stripeToken,
             description: req.body.email
         }, function(err, charge) {
-            if (err /*&& err.type === 'StripeCardError'*/) {
+            if (err && err.type === 'StripeCardError') {
                 // The card has been declined\
+
                 console.log("error",err)
                return res.render('order-error', {message: JSON.stringify(err)})
             }
             else {
-
-                console.log("charge",charge)
-                console.log("%%%%%%%%%%%%%%%%%%%")
+                var emailParams = req.body
+                if (charge && charge.id) {
+                    emailParams.chargeId = charge.id
+                }
+                var formattedParamas = helpers.addLabel(emailParams)
                 //add charge info here
-                sendEmail()
+                sendEmail(formattedParamas)
 
                 console.log(req.query)
                 var params = req.query
