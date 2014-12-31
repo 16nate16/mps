@@ -99,21 +99,25 @@ textarea {
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
 
 /*general*/
-.lg-btns .btn {padding:20px 80px}
+.lg-btns .btn {padding:20px 70px}
 .no-gutter {margin:0}
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
-.section-heading {font-weight:300; font-size:30px; margin-bottom: 15px}
+.section-heading {font-weight:300; font-size:30px; margin: 70px 0 15px 0}
 .logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:75px; height:75px; background-size:contain; margin: 40px auto 20px}
 .logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:200px; height:200px;}
 
 
 /*form controls*/
 .jumbo-input {padding:30px 10px; font-size:2em;}
-.form-section {clear:both; margin-bottom: 200px; margin-top:50px}
+.form-section {clear:both; margin-bottom: 10px; margin-top:25px}
 .next-btn {padding:10px 30px; margin-top: 40px}
 .next-btn .arrow {position:relative; left:-10px}
 .btn-alt {background-color:#36ac9c !important; border-color:#23a796!important; font-weight:300}
 .form-section-heading-chk {/*margin-left: 20%*/}
+.section-content {font-size:16px; margin-bottom:40px}
+
+
+
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
