@@ -152,6 +152,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .custom-selection-content-container .custom-selection-heading {font-size:24px; margin-bottom: 10px}
 .custom-selection-content-container .custom-selection-subheading {font-size:20px; margin:0}
 
+.left-col {float:left; width:45%;}
+.right-col {float:right; width:45%;}
+
 
 #customized-page .lg-btns .btn {padding:10px 40px;}
 #customized-page .section-heading {font-size:20px; margin: 40px 0 15px 0}

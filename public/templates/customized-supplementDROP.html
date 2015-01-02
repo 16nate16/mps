@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="libs/dropdown/css/style1.css" />
+    <script src="libs/dropdown/js/modernizr.custom.63321.js"></script>
 
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -30,6 +31,62 @@
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <div class="row customized-supplement-container">
                 <form id="supplementForm">
+
+
+                    <section>
+                        <div>
+                            <p>In this example we use a gutter of 5 and stack the items with a slight offset</p>
+                        </div>
+                        <div class="left-col">
+
+                            <select id="age-select" name="cd-dropdown">
+                                <option value="-1" selected>How old are you?</option>
+                                <option value="1" class="icon-monkey">18-24</option>
+                                <option value="2" class="icon-monkey">25-34</option>
+                                <option value="3" class="icon-bear">25-34</option>
+                                <option value="4" class="icon-squirrel">35-44</option>
+                                <option value="5" class="icon-elephant">45-54</option>
+                                <option value="6" class="icon-elephant">55+</option>
+                            </select>
+
+                            <select id="weight-select" name="cd-dropdown">
+                                <option value="-1" selected>How much do you weigh? (lbs)d</option>
+                                <option value="1" class="icon-monkey">18-24</option>
+                                <option value="2" class="icon-monkey">25-34</option>
+                                <option value="3" class="icon-bear">25-34</option>
+                                <option value="4" class="icon-squirrel">35-44</option>
+                                <option value="5" class="icon-elephant">45-54</option>
+                                <option value="6" class="icon-elephant">55+</option>
+                            </select>
+                        </div>
+
+                        <div class="right-col">
+
+                            <select id="height-select" name="cd-dropdown">
+                                <option value="-1" selected>How tall are you?</option>
+                                <option value="1" class="icon-monkey">- 120</option>
+                                <option value="2" class="icon-monkey">120</option>
+                                <option value="3" class="icon-bear">25-34</option>
+                                <option value="4" class="icon-squirrel">35-44</option>
+                                <option value="5" class="icon-elephant">45-54</option>
+                                <option value="6" class="icon-elephant">55+</option>
+                            </select>
+
+                            <select id="gender-select" name="cd-dropdown">
+                                <option value="-1" selected>What is your gender?</option>
+                                <option value="1" class="icon-monkey">18-24</option>
+                                <option value="2" class="icon-monkey">25-34</option>
+                                <option value="3" class="icon-bear">25-34</option>
+                                <option value="4" class="icon-squirrel">35-44</option>
+                                <option value="5" class="icon-elephant">45-54</option>
+                                <option value="6" class="icon-elephant"><span>Age:</span>55+</option>
+                            </select>
+                        </div>
+
+
+
+
+
                     <div class="form-section-container">
                         <h2 id="customize" class="page-heading">Personal Information</h2>
                         <div class="form-group form-section">
@@ -54,7 +111,7 @@
                         </div><!--end form group-->
 
                         <div class="form-group form-section">
-                            <h3 class="section-heading">How much do you weigh? (lbs)</h3>
+                            <h3 class="section-heading">How much do you weigh? (lbs) ddd</h3>
                             <div class="btn-group lg-btns" data-toggle="buttons">
                                 <label class="btn btn-default active">
                                     <input type="radio" name="Weight" value="120"   checked="checked">- 120
@@ -276,7 +333,30 @@
         </script>
 
 
+<script type="text/javascript" src="libs/dropdown/js/jquery.dropdown.js"></script>
+<script type="text/javascript">
 
+    $( function() {
+
+        $( '#age-select' ).dropdown( {
+            gutter : 5
+        } );
+
+        $( '#weight-select' ).dropdown( {
+            gutter : 5
+        } );
+
+        $( '#height-select' ).dropdown( {
+            gutter : 5
+        } );
+
+        $( '#gender-select' ).dropdown( {
+            gutter : 5
+        } );
+
+    });
+
+</script>
 
 
 
