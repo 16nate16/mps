@@ -99,7 +99,7 @@ textarea {
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
 
 /*general*/
-.lg-btns .btn {padding:20px 70px}
+.lg-btns .btn {padding:15px 65px}
 .no-gutter {margin:0}
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin: 70px 0 15px 0}
@@ -114,7 +114,9 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .next-btn .arrow {position:relative; left:-10px}
 .btn-alt {background-color:#36ac9c !important; border-color:#23a796!important; font-weight:300}
 .form-section-heading-chk {/*margin-left: 20%*/}
-.section-content {font-size:16px; margin-bottom:40px}
+.section-content {font-size:14px; margin-bottom:40px}
+
+.review-btn {padding:20px 30px}
 
 
 
@@ -145,10 +147,14 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .select-customization-container .custom-selection-content-container
 {border:1px solid grey; border-radius:4px; padding:20px 30px; text-align: center}
 .custom-selection a {color:#333; text-decoration: none;}
-
+#customized-page .lg-btns .btn {padding:10px 40px;}
+#customized-page .section-heading {font-size:20px; margin: 40px 0 15px 0}
+.form-section-container {margin-bottom: 350px}
+.pre-workout-section {text-align:center}
+.current-pre-workout-container {margin-bottom: 50px;}
 
 .select-customization-container .icon {font-size:50px}
-
+.btn-default.active {color: #fff; background-color: #5bc0de;  border-color: #46b8da}
 
 /*design*/
 .design-supplement-container {padding:0 15%;}
