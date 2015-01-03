@@ -25,15 +25,18 @@
 
             <div class="row design-supplement-container">
                 <form id="supplementForm">
-                    <div class="form-section-container">
+                    <div class="active form-section-container">
                         <div class="form-group form-section">
                             <h2 class="page-heading">Name Your Supplement</h2>
                             <label for="supplementName"><span class="sub-heading">Have some fun here...</span></label>
                             <input type="text" name="supplementName" class="form-control input-lg" id="supplementName">
-                            <a href="#customize" class="btn btn-info next-btn pull-right"><i class="arrow fa fa-arrow-down"></i>Next</a>
+                            <div class="controls">
+                                <a href="#" class="btn btn-success next-btn pull-right">Next <i class="arrow fa fa-arrow-right"></i></a>
+                                <a href="#" class="btn btn-success prev-btn pull-left"><i class="arrow fa fa-arrow-left"></i>Prev</a>
+                            </div>
                         </div><!--end form group-->
-                    </div>
-                    <div class="form-section-container">
+                    </div><!--end section-->
+                    <div class="next form-section-container supplement-list-section">
                         <h2 id="customize" class="page-heading">Design Your Supplement</h2>
 
                         <div class="form-group form-section">
@@ -209,11 +212,12 @@
                                 </label>
                             </div>
                         </div><!--end form group-->
-                        <a href="#comments" class="btn btn-info next-btn pull-right"><i class="arrow fa fa-arrow-down"></i>Next</a>
-                    </div>
-
-
-                <div class="form-section-container">
+                        <div class="controls">
+                            <a href="#" class="btn btn-success next-btn pull-right">Next <i class="arrow fa fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-success prev-btn pull-left"><i class="arrow fa fa-arrow-left"></i>Prev</a>
+                        </div>
+                    </div><!--end section-->
+                    <div class="next form-section-container">
                     <div class="form-group form-section">
                     <h2 id="comments" class="page-heading">Any thing else?</h2>
                     <h3  class="section-heading">Additional Information</h3>
@@ -221,10 +225,12 @@
                         ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                     <textarea name="comments" class="form-control" rows="3"></textarea>
                 </div><!--end form group-->
-                    <button id="reviewOrder" class="btn btn-info review-btn pull-right" type="submit">Review Your Order</button>
-                </div>
+                        <div class="controls">
+                            <a href="#" class="btn btn-success prev-btn pull-left"><i class="arrow fa fa-arrow-left"></i>Prev</a>
+                            <button id="reviewOrder" class="btn btn-info review-btn pull-right" type="submit">Review Your Order</button>
+                        </div>
 
-
+                </div><!--end section-->
                 </form>
 
             </div><!--end custom select row-->
