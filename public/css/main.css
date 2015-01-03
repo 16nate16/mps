@@ -170,8 +170,11 @@ body {overflow-x:hidden;}
 .btn-default.active {color: #fff; background-color: #5bc0de;  border-color: #46b8da}
 /*.btn-default.active {color: #fff; background-color: #36ac9c !important;  border-color: #23a796!important;}*/
 
+
+.current-pre-workout-container, .comments-container, .name-supplement-container {width:70%; /*left:20%*/}
+
 /*design*/
-.design-supplement-container {padding:0 15%;}
+.design-supplement-container {/*padding:0 15%;*/}
 
 /*footer*/
 .footer {height:200px; margin-top:50px; padding:20px 10px; background:#f4f4f4;}
@@ -198,7 +201,11 @@ body {overflow-x:hidden;}
     position:absolute;
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    width:90%;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    padding: 0 50px
+
 }
 
 .form-section-container.active {
@@ -209,6 +216,7 @@ body {overflow-x:hidden;}
 .form-section-container.next {
     -webkit-transform: translateX(3000px)!important;
     transform: translateX(3000px)
+    display: none;
 }
 .form-section-container.prev {
     -webkit-transform : translateX(-3000px)!important;
@@ -219,7 +227,7 @@ body {overflow-x:hidden;}
 .form-section-container:nth-child(3) {background:red}
 .form-section-container:nth-child(4) {background:black}*/
 
-.customized-supplement-container, .design-supplement-container { height:800px; padding:0 20px}
+.customized-supplement-container, .design-supplement-container { height:800px;/* padding:0 20px*/}
 .supplement-list-section {height:1500px}
 
 
