@@ -25,6 +25,53 @@ $("#reviewOrder").on("click", function(e) {
 });
 
 
+
+function navigate (dir) {
+    var $nodes = $('.form-section-container')
+
+    var $cur = $('.form-section-container.active')
+    var index = $nodes.index($cur)
+    var $next = $($nodes[index + 1 ])
+    var $prev = $($nodes[index - 1 ])
+    console.log($cur)
+    console.log($next)
+    if (dir == 'next' && index != $nodes.length -1) {
+        //go next
+        console.log("gonig next!")
+        $cur.removeClass('active').addClass('prev')
+        $next.removeClass('next').addClass('active')
+
+    }
+    if (dir == 'prev' && index != 0) {
+        $cur.removeClass('active').addClass('next')
+        $prev.removeClass('prev').addClass('active')
+    }
+    console.log($nodes)
+    console.log($nodes.index($cur))
+
+}
+
+$(".next-btn").click(function(e) {
+    navigate('next')
+
+})
+$(".prev-btn").click(function(e) {
+    navigate('prev')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*	-----------------------
  SMOOTH SCROLL FUNCTIONS
  ----------------------- */

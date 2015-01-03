@@ -26,17 +26,18 @@
 <![endif]-->
 <div class="container">
             <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
-    <h2 class="page-heading">We are here to help</h2>
+    <h2 class="page-heading">We are here to help :(</h2>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <div class="row customized-supplement-container">
                 <form id="supplementForm">
 
 
-                    <section>
+
                         <div>
                             <p>In this example we use a gutter of 5 and stack the items with a slight offset</p>
                         </div>
+<!--
                         <div class="left-col">
 
                             <select id="age-select" name="cd-dropdown">
@@ -83,11 +84,12 @@
                             </select>
                         </div>
 
+-->
 
 
 
 
-                    <div class="form-section-container">
+                    <div class="form-section-container active">
                         <h2 id="customize" class="page-heading">Personal Information</h2>
                         <div class="form-group form-section">
                             <h3 class="section-heading">How old are you?</h3>
@@ -177,14 +179,14 @@
                                     <input type="radio" name="Gender" value="Female"> Female
                                 </label>
                             </div>
-                            <a href="#goals" class="btn btn-info next-btn pull-right"><i class="arrow fa fa-arrow-down"></i>Next</a>
+
                         </div><!--end form group-->
 
                     </div>
 
 
 
-                    <div class="form-section-container">
+                    <div class="form-section-container next">
                         <h2 id="goals" class="page-heading">Goal Related Info</h2>
 
                         <div class="form-group form-section">
@@ -272,7 +274,7 @@
 
 
 
-                    <div class="form-section-container current-pre-workout-container">
+                    <div class="form-section-container next current-pre-workout-container">
                         <h2 id="current-pre-workout" class="page-heading">Current pre-workout</h2>
                         <div class="form-group form-section pre-workout-section">
                             <h3 class="section-heading">Do you currently take pre-workout supplements?</h3>
@@ -297,7 +299,10 @@
                 <button id="reviewOrder" class="btn btn-info review-btn pull-right" type="submit">Review Your Order</button>
             </div><!--end custom select row-->
 
-
+<div id="controls">
+    <a href="#" class="btn btn-info next-btn pull-right"><i class="arrow fa fa-arrow-down"></i>Next</a>
+    <a href="#" class="btn btn-info prev-btn pull-right"><i class="arrow fa fa-arrow-down"></i>Prev</a>
+</div>
         </div><!--end container-->
 <div class="footer">
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
@@ -335,6 +340,46 @@
 
 <script type="text/javascript" src="libs/dropdown/js/jquery.dropdown.js"></script>
 <script type="text/javascript">
+
+
+    function navigate (dir) {
+        var $nodes = $('.form-section-container')
+
+        var $cur = $('.form-section-container.active')
+        var index = $nodes.index($cur)
+        var $next = $($nodes[index + 1 ])
+        var $prev = $($nodes[index - 1 ])
+        console.log($cur)
+        console.log($next)
+        if (dir == 'next' && index != $nodes.length -1) {
+            //go next
+            console.log("gonig next!")
+            $cur.removeClass('active').addClass('prev')
+            $next.removeClass('next').addClass('active')
+
+        }
+        if (dir == 'prev' && index != 0) {
+            $cur.removeClass('active').addClass('next')
+            $prev.removeClass('prev').addClass('active')
+        }
+        console.log($nodes)
+        console.log($nodes.index($cur))
+
+    }
+
+    $(".next-btn").click(function(e) {
+        navigate('next')
+
+    })
+    $(".prev-btn").click(function(e) {
+        navigate('prev')
+    })
+
+
+
+
+
+
 
     $( function() {
 

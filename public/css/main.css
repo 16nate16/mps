@@ -97,6 +97,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
+body {overflow-x:hidden;}
 
 /*general*/
 .lg-btns .btn {padding:15px 65px}
@@ -110,15 +111,18 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 /*form controls*/
 .jumbo-input {padding:30px 10px; font-size:2em;}
 .form-section {clear:both; margin-bottom: 10px; margin-top:25px}
-.next-btn {padding:10px 30px; margin-top: 40px}
-.next-btn .arrow {position:relative; left:-10px}
+.next-btn, .prev-btn {padding:10px 30px; margin-top: 40px}
+.next-btn .arrow, .prev-btn .arrow {/*position:relative; left:-10px*/}
 .btn-alt {background-color:#36ac9c !important; border-color:#23a796!important; font-weight:300}
 .form-section-heading-chk {/*margin-left: 20%*/}
 .section-content {font-size:14px; margin-bottom:40px}
 
 .review-btn {padding:15px 30px}
+.controls {height:10%; overflow: hidden; margin-top:40px}
 
-
+.controls .next-btn, .controls .prev-btn {background:#fff; color:#555; padding:10px 30px; margin-top: 0px; font-size:18px}
+.controls .next-btn i.fa-arrow-right {position:relative; left:5px;}
+.controls .prev-btn i.fa-arrow-left {position:relative; left:-5px;}
 
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
@@ -164,6 +168,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 
 .select-customization-container .icon {font-size:50px}
 .btn-default.active {color: #fff; background-color: #5bc0de;  border-color: #46b8da}
+/*.btn-default.active {color: #fff; background-color: #36ac9c !important;  border-color: #23a796!important;}*/
 
 /*design*/
 .design-supplement-container {padding:0 15%;}
@@ -189,12 +194,22 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 #order-error {background : #f2dede;}
 #order-error .err-msg {font-size:50px;  border:none; }
 
+.form-section-container {
+    position:absolute;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    width:90%;
+}
 
+.form-section-container.active {transform: translateX(0)}
+.form-section-container.next {transform: translateX(3000px)}
+.form-section-container.prev {transform: translateX(-3000px)}
+/*.form-section-container:nth-child(1) {background:blue}
+.form-section-container:nth-child(2) {background:green}
+.form-section-container:nth-child(3) {background:red}
+.form-section-container:nth-child(4) {background:black}*/
 
-
-
-
-
+.customized-supplement-container {height:800px; padding:0 20px}
 
 
 
