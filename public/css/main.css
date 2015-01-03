@@ -199,8 +199,8 @@ body {overflow-x:hidden;}
 
 .form-section-container {
     position:absolute;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     left:0;
     right:0;
     margin: 0 auto;
@@ -211,12 +211,16 @@ body {overflow-x:hidden;}
 .form-section-container.active {
     -webkit-transform:translateX(0)!important;
     transform: translateX(0)
+    opacity : 1;
+
+
 
 }
 .form-section-container.next {
     -webkit-transform: translateX(3000px)!important;
-    transform: translateX(3000px)
-    display: none;
+    transform: translateX(3000px);
+    opacity:0;
+
 }
 .form-section-container.prev {
     -webkit-transform : translateX(-3000px)!important;
@@ -227,8 +231,7 @@ body {overflow-x:hidden;}
 .form-section-container:nth-child(3) {background:red}
 .form-section-container:nth-child(4) {background:black}*/
 
-.customized-supplement-container, .design-supplement-container { height:800px;/* padding:0 20px*/}
-.supplement-list-section {height:1500px}
+.form-section-wrapper { height:700px;/* padding:0 20px*/}
 
 
 
