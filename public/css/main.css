@@ -126,7 +126,7 @@ body {overflow-x:hidden;}
 
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
-
+/*home*/
 #hero-container {background:url("../img/darker.jpg") no-repeat; width: 100%; height:874px; color:#fff; background-size:cover;}
 #hero-content {padding: 15% 0 0 5%; width:50%}
 #hero-tagline-container .main-tag {font-size:33px; font-weight : 300;}
@@ -145,7 +145,7 @@ body {overflow-x:hidden;}
 .call-to-action-container {background: #f4f4f4; padding: 15px 25px}
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300}
 .call-to-action {margin-top:30px;}
-
+.hero-action, .call-to-action {font-weight: 300; font-size: 22px; padding: 13px 36px  }
 /*Custom Selection*/
 #custom-selection-page .custom-selection-heading, #custom-selection-page .logo {text-align:center}
 .select-customization-container .custom-selection-content-container
@@ -196,6 +196,7 @@ body {overflow-x:hidden;}
 
 #order-error {background : #f2dede;}
 #order-error .err-msg {font-size:50px;  border:none; }
+.payment-errors {width:100%; display: none;}
 
 .form-section-container {
     position:absolute;

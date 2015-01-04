@@ -22,7 +22,7 @@
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
 
     <form action="" method="POST" id="payment-form">
-        <span class="payment-errors"></span>
+        <div class="payment-errors alert alert-danger"></div>
 
         <div class="row form-container">
             <div class="col-md-12">
@@ -58,52 +58,73 @@
 
     <h1 class="form-section-heading-chk">Billing Details</h1>
 
-                    <!-- Street -->
-                    <div class="form-group">
-                        <!--<label class="col-sm-4 control-label" for="street-nm">Street</label>-->
-                        <div class="col-sm-6">
-                            <input type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
-                        </div>
-                    </div>
-
-                    <!-- City -->
-                    <div class="form-group">
-                <!--        <label class="col-sm-4 control-label" for="textinput">City</label>-->
-                        <div class="col-sm-6">
-                            <input type="text" name="city" placeholder="City" class="city form-control">
-                        </div>
-                    </div>
-
-                    <!-- State -->
-                    <div class="form-group">
-                  <!--      <label class="col-sm-4 control-label" for="textinput">State</label>-->
-                        <div class="col-sm-6">
-                            <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">
-                        </div>
-                    </div>
-
-                    <!-- Postcal Code -->
-                    <div class="form-group">
-              <!--          <label class="col-sm-4 control-label" for="textinput">Postal Code</label>-->
-                        <div class="col-sm-6">
-                            <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
-                        </div>
-                    </div>
-
-
-                    <!-- Email -->
-                    <div class="form-group">
+        <!-- Email -->
+        <div class="form-group">
             <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
-                        <div class="col-sm-6">
-                            <input type="text" name="email" maxlength="65" placeholder="Email" class="email form-control">
-                        </div>
-                    </div>
+            <div class="col-sm-6">
+                <input type="text" name="name" placeholder="Name" class="form-control">
+            </div>
+        </div>        <!-- Email -->
+        <div class="form-group">
+            <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
+            <div class="col-sm-6">
+                <input type="text" name="email" maxlength="65" placeholder="Email" class="email form-control">
+            </div>
+        </div>
+        <!-- Street -->
+        <div class="form-group">
+            <!--<label class="col-sm-4 control-label" for="street-nm">Street</label>-->
+            <div class="col-sm-6">
+                <input type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
+            </div>
+        </div>
+
+        <!-- City -->
+        <div class="form-group">
+    <!--        <label class="col-sm-4 control-label" for="textinput">City</label>-->
+            <div class="col-sm-6">
+                <input type="text" name="city" placeholder="City" class="city form-control">
+            </div>
+        </div>
+
+        <!-- State -->
+        <div class="form-group">
+      <!--      <label class="col-sm-4 control-label" for="textinput">State</label>-->
+            <div class="col-sm-6">
+                <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">
+            </div>
+        </div>
+
+        <!-- Postcal Code -->
+        <div class="form-group">
+  <!--          <label class="col-sm-4 control-label" for="textinput">Postal Code</label>-->
+            <div class="col-sm-6">
+                <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
+            </div>
+        </div>
+
+
+
 <!--end personal info-->
                 </div>
 
                 <div class="form-group form-section">
+                    <h1>Shipping</h1>
+                    <h3>Enter promo code for free shipping</h3>
+                    <!-- Card Holder Name -->
+                    <div class="form-group">
+                        <!--   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>-->
+                        <div class="col-sm-6">
+                            <input  type="text" name="promo-code" maxlength="70" placeholder="Promo code" class="card-holder-name form-control">
+                        </div>
+                        <button class="btn btn-sm btn-info">Verify</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group form-section">
                     <h1>Payment Details</h1>
-                    <span class="payment-errors"></span>
+                    <div class="payment-errors alert alert-danger"></div>
 
                         <!-- Card Holder Name -->
                         <div class="form-group">
@@ -184,21 +205,18 @@
     // This identifies your website in the createToken call below
     Stripe.setPublishableKey('pk_test_Ou5ABhpgcZ8iQEY74cX6BpTZ');
     $('#payment-form').submit(function(event) {
-
         var $form = $(this);
-
+        var $errMsg = $form.find('.payment-errors')
         // Disable the submit button to prevent repeated clicks
         $form.find('button').prop('disabled', true);
 
         Stripe.card.createToken($form, function (status, response) {
-            console.log("################")
-            console.log("################", status)
-            console.log("################", response)
             if (response.error) {
                 // Show the errors on the form
-                $form.find('.payment-errors').text(response.error.message);
+                $errMsg.css('display','block').text(response.error.message);
                 $form.find('button').prop('disabled', false);
             } else {
+                
                 // response contains id and card, which contains additional card details
                 var token = response.id;
                 // Insert the token into the form so it gets submitted to the server

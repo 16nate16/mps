@@ -97,6 +97,22 @@ function sendEmail (params) {
 }
 
 
+app.route('/test').get(function (reg, res) {
+    var mock = { supplementName: 'yolo',
+        Caffeine: '150mg',
+        'Beta-Alanine': '3000mg',
+        'L-Arginine': '3000mg',
+        'Creatine-Monohydrate': '1000mg',
+        'Branch-Chain-Amino-Acids': '1000mg',
+        'N-Acetyl-L-Tyrosin': '300mg',
+        'L-Glutamine': '6000mg',
+        comments: 'jolo' }
+
+    var formattedParams = helpers.addLabel(mock);
+    res.render('order-success', {details: formattedParams, name : mock.supplementName})
+
+})
+
 app.route('/order-my-perfect-supplement').post(function (req, res) {
     console.log("yolo")
     console.log(req.body)
