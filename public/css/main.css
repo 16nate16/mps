@@ -96,8 +96,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
-/*body {overflow-x:hidden;}*/
+html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; margin:0; padding:0}
+h1,h2,h3,h4, p {margin:5px 0 10px 0 }
+
+
 
 /*general*/
 .lg-btns .btn {padding:15px 65px}
@@ -105,7 +107,7 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin: 70px 0 15px 0}
 .logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:75px; height:75px; background-size:contain; margin: 40px auto 20px}
-.logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:200px; height:200px;}
+.logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white.png') no-repeat; background-size:contain; width:100px; height:100px;}
 .container {padding-bottom: 100px}
 
 /*form controls*/
@@ -126,10 +128,11 @@ html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, 
 
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
+
 /*home*/
-#hero-container {background:url("../img/darker.jpg") no-repeat; width: 100%; height:874px; color:#fff; background-size:cover;}
-#hero-content {padding: 15% 0 0 5%; width:50%}
-#hero-tagline-container .main-tag {font-size:33px; font-weight : 300;}
+#hero-container {background:url("../img/darkerSm.jpg") no-repeat; width: 100%; height:602px; color:#fff; background-size:cover;}
+#hero-content {/*padding: 15% 0 0 5%;*/ padding:60px 0 0 40px; width:50%}
+#hero-tagline-container .main-tag {font-size:36px; font-weight : 300; margin-top:15px}
 .hero-action {margin-top:20px}
 .logo {margin:0;}
 
@@ -347,20 +350,20 @@ html, body {position:relative; overflow-x:hidden}*/
    ========================================================================== */
 /*x-small*/
 @media (max-width:767px) {
-    #hero-container {height:400px}
+    /*#hero-container {height:400px}*/
 }
 
 /*small*/
 @media (min-width: 768px) {
-    #hero-container {height:600px}
+   /* #hero-container {height:600px}*/
 }
 /*medium*/
 @media (min-width: 992px) {
-    #hero-container {height:846px}
+    /*#hero-container {height:846px}*/
 }
 
 @media (min-width: 1200px) {
-    #hero-container {height:946px}
+    /*#hero-container {height:946px}*/
 
 
 }
