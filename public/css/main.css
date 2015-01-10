@@ -97,7 +97,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;}
-body {overflow-x:hidden;}
+/*body {overflow-x:hidden;}*/
 
 /*general*/
 .lg-btns .btn {padding:15px 65px}
@@ -220,7 +220,7 @@ body {overflow-x:hidden;}
 .form-section-container.next {
     -webkit-transform: translateX(3000px)!important;
     transform: translateX(3000px);
-    opacity:0;
+    opacity:1;
 
 }
 .form-section-container.prev {
@@ -233,9 +233,9 @@ body {overflow-x:hidden;}
 .form-section-container:nth-child(4) {background:black}*/
 
 .form-section-wrapper { height:700px;/* padding:0 20px*/}
-
-
-
+/*html {overflow-y:hidden;}
+html, body {position:relative; overflow-x:hidden}*/
+.container {overflow: hidden; -webkit-perspective:200px; perspective: 200px;}
 
 
 

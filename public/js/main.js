@@ -38,12 +38,14 @@ function navigate (dir) {
     if (dir == 'next' && index != $nodes.length -1) {
         $cur.removeClass('active').addClass('prev')
         $next.removeClass('next').addClass('active')
+        //this is hacky
         if ($next.hasClass('lg-list')) {
-            $mainContainer.css("height", "2200px")
+           $mainContainer.css("height", "2200px")
         }
         else {
             $mainContainer.css("height", "700px")
         }
+
 
     }
     if (dir == 'prev' && index != 0) {
@@ -56,8 +58,8 @@ function navigate (dir) {
             $mainContainer.css("height", "700px")
         }
     }
-    console.log($nodes)
-    console.log($nodes.index($cur))
+    $(window).scrollTop(0)
+    console.log("yo")
 
 }
 
