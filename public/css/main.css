@@ -96,8 +96,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; margin:0; padding:0}
-h1,h2,h3,h4, p {margin:5px 0 10px 0 }
+/*html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; margin:0; padding:0}*/
+html, body, h1, h2, h3, h4, p {font-family: 'Open Sans', sans-serif !important; margin:0; padding:0}
+h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 
 
@@ -130,9 +131,9 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
 /*home*/
-#hero-container {background:url("../img/darkerSm.jpg") no-repeat; width: 100%; height:602px; color:#fff; background-size:cover;}
-#hero-content {/*padding: 15% 0 0 5%;*/ padding:60px 0 0 40px; width:50%}
-#hero-tagline-container .main-tag {font-size:36px; font-weight : 300; margin-top:15px}
+#hero-container {background:url("../img/hero.jpg") no-repeat; width: 100%; height:550px; color:#fff; background-size:cover; margin-bottom: 25px}
+#hero-content {padding:60px 0 0 40px; width:50%}
+#hero-tagline-container .main-tag {font-size:36px; font-weight : 300; margin-top:25px}
 .hero-action {margin-top:20px}
 .logo {margin:0;}
 
@@ -140,15 +141,23 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
 
 .intro-section {padding-bottom: 35px; margin-bottom: 10px}
 .intro-section, .call-to-action-content {width:80%; margin: 0 auto;}
-.intro-section-main-heading {text-align: center; font-size:40px;}
+.intro-section-main-heading {text-align: center; font-size:36px; font-weight: 300}
 .intro-container .intro-circle {margin: 0 auto}
 .intro-container .intro-heading, .intro-container .intro-text {text-align: center}
+.intro-heading {font-size:20px}
 .intro-container .icon {font-size:80px; display: inherit; text-align: center; margin-top:60px}
 
 .call-to-action-container {background: #f4f4f4; padding: 15px 25px}
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300}
 .call-to-action {margin-top:30px;}
-.hero-action, .call-to-action {font-weight: 300; font-size: 22px; padding: 13px 36px  }
+.hero-action, .call-to-action {font-weight: 300; font-size: 20px; padding: 13px 40px  }
+
+
+/*Select customization level page*/
+#select-customization-level-page .container {margin-bottom: 125px }
+#select-customization-level-page .page-heading {margin: 30px 0 40px}
+
+
 /*Custom Selection*/
 #custom-selection-page .custom-selection-heading, #custom-selection-page .logo {text-align:center}
 .select-customization-container .custom-selection-content-container
@@ -163,9 +172,9 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
 .right-col {float:right; width:45%;}
 
 
-#customized-page .lg-btns .btn {padding:10px 40px;}
+#customized-page .lg-btns .btn {padding:10px 20px;}
 #customized-page .section-heading {font-size:20px; margin: 40px 0 15px 0}
-.form-section-container {margin-bottom: 350px}
+
 .pre-workout-section {text-align:center}
 .current-pre-workout-container {margin-bottom: 50px;}
 
@@ -180,7 +189,7 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
 .design-supplement-container {/*padding:0 15%;*/}
 
 /*footer*/
-.footer {height:200px; margin-top:50px; padding:20px 10px; background:#f4f4f4;}
+.footer {height:200px; margin-top:50px; padding:20px 10px; background:#f4f4f4; padding-bottom: 150px}
 .footer-links {width:300px; margin:0 auto;}
 .footer-links li{float:left; list-style: none; padding: 3px 20px;font-size:11px; color:#333333}
 .footer-links a {color:#333333}
@@ -208,7 +217,10 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
     left:0;
     right:0;
     margin: 0 auto;
-    padding: 0 50px
+    padding: 0 20px;
+    width:75%;
+    margin-bottom: 100px;
+
 
 }
 
@@ -236,8 +248,6 @@ h1,h2,h3,h4, p {margin:5px 0 10px 0 }
 .form-section-container:nth-child(4) {background:black}*/
 
 .form-section-wrapper { height:700px;/* padding:0 20px*/}
-/*html {overflow-y:hidden;}
-html, body {position:relative; overflow-x:hidden}*/
 .container {overflow: hidden; -webkit-perspective:200px; perspective: 200px;}
 
 
@@ -350,20 +360,22 @@ html, body {position:relative; overflow-x:hidden}*/
    ========================================================================== */
 /*x-small*/
 @media (max-width:767px) {
-    /*#hero-container {height:400px}*/
+    #hero-container {height:400px}
 }
 
 /*small*/
 @media (min-width: 768px) {
-   /* #hero-container {height:600px}*/
+    #hero-container {height:450px}
+    /*.form-section-container {padding: 0 100px}*/
 }
 /*medium*/
 @media (min-width: 992px) {
-    /*#hero-container {height:846px}*/
+    #hero-container {height:500px}
+    /*.form-section-container {padding: 0 100px}*/
 }
 
 @media (min-width: 1200px) {
-    /*#hero-container {height:946px}*/
+    #hero-container {height:550px}
 
 
 }

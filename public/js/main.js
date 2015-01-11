@@ -40,7 +40,7 @@ function navigate (dir) {
         $next.removeClass('next').addClass('active')
         //this is hacky
         if ($next.hasClass('lg-list')) {
-           $mainContainer.css("height", "2200px")
+           $mainContainer.css("height", "2400px")
         }
         else {
             $mainContainer.css("height", "700px")
@@ -52,7 +52,7 @@ function navigate (dir) {
         $cur.removeClass('active').addClass('next')
         $prev.removeClass('prev').addClass('active')
         if ($prev.hasClass('lg-list')) {
-            $mainContainer.css("height", "2200px")
+            $mainContainer.css("height", "2400px")
         }
         else {
             $mainContainer.css("height", "700px")
