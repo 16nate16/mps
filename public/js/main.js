@@ -34,32 +34,26 @@ function navigate (dir) {
     var index = $nodes.index($cur)
     var $next = $($nodes[index + 1 ])
     var $prev = $($nodes[index - 1 ])
+    var padding = 100
 
     if (dir == 'next' && index != $nodes.length -1) {
         $cur.removeClass('active').addClass('prev')
         $next.removeClass('next').addClass('active')
-        //this is hacky
-        if ($next.hasClass('lg-list')) {
-           $mainContainer.css("height", "2400px")
-        }
-        else {
-            $mainContainer.css("height", "700px")
-        }
 
+        var nextHeight = $next.height()
+        $mainContainer.css("height", nextHeight + padding + "px")
 
     }
+
     if (dir == 'prev' && index != 0) {
         $cur.removeClass('active').addClass('next')
         $prev.removeClass('prev').addClass('active')
-        if ($prev.hasClass('lg-list')) {
-            $mainContainer.css("height", "2400px")
-        }
-        else {
-            $mainContainer.css("height", "700px")
-        }
+        
+        var prevHeight = $prev.height()
+        $mainContainer.css("height", prevHeight + padding + "px")
     }
+
    $(window).scrollTop(0)
-    console.log("yo")
 
 }
 
