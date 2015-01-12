@@ -58,7 +58,7 @@ function navigate (dir) {
             $mainContainer.css("height", "700px")
         }
     }
-   // $(window).scrollTop(0)
+   $(window).scrollTop(0)
     console.log("yo")
 
 }
