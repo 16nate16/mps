@@ -151,7 +151,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .intro-heading {font-size:20px}
 .intro-container .icon {font-size:80px; display: inherit; text-align: center; margin-top:60px}
 
-.call-to-action-container {background: #f4f4f4; padding: 15px 25px 50px; margin-top: 50px;}
+.call-to-action-container {background: #f4f4f4; padding:25px 25px 30px; margin-top: 50px;}
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300; margin-top: 32px}
 .call-to-action {margin-top:30px;}
 .hero-action, .call-to-action {font-weight: 300; font-size: 20px; padding: 13px 40px  }
