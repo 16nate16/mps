@@ -48,7 +48,7 @@ function navigate (dir) {
     if (dir == 'prev' && index != 0) {
         $cur.removeClass('active').addClass('next')
         $prev.removeClass('prev').addClass('active')
-        
+
         var prevHeight = $prev.height()
         $mainContainer.css("height", prevHeight + padding + "px")
     }

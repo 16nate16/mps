@@ -98,19 +98,22 @@ textarea {
    ========================================================================== */
 /*html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; margin:0; padding:0}*/
 html, body, h1, h2, h3, h4, p {font-family: 'Open Sans', sans-serif !important; margin:0; padding:0}
+html,body {height:100%;}
+body {background:#f4f4f4;}
 h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 
 
 /*general*/
-.lg-btns .btn {padding:15px 65px}
+.lg-btns .btn {padding:15px 50px}
 .no-gutter {margin:0}
 .page-heading {font-weight: 300; text-align:center; font-size:40px}
 .section-heading {font-weight:300; font-size:30px; margin: 70px 0 15px 0}
 .logo-page a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_dark.png') no-repeat; width:75px; height:75px; background-size:contain; margin: 40px auto 20px}
 .logo-home a {display:block; text-indent: -9999px; background:  url('../img/mps_logo_white_75px.png') no-repeat; background-size:contain; width:75px; height:75px;}
 .container {padding-bottom: 100px}
-
+.fluid-container {background: #fff;}
+.wrapper {background: #fff; width:100%;}
 /*form controls*/
 .jumbo-input {padding:30px 10px; font-size:2em;}
 .form-section {clear:both; margin-bottom: 10px; margin-top:25px}
@@ -133,7 +136,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 /*home*/
 #hero-container {background:url("../img/hero.jpg") no-repeat; width: 100%; height:550px; color:#fff; background-size:cover; margin-bottom: 25px}
 #hero-content {padding:60px 0 0 10%; width:65%}
-#hero-tagline-container .main-tag {font-size:36px; font-weight : 300; margin-top:25px}
+#hero-tagline-container .main-tag {font-size:36px; font-weight : 300; margin-top:15px}
 #home-page .footer {background: #fff;}
 #home-page .footer-links {width:233px}
 
@@ -158,8 +161,8 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 
 /*Select customization level page*/
-#select-customization-level-page .container {margin-bottom: 125px }
-#select-customization-level-page .page-heading {margin: 30px 0 40px}
+#select-customization-level-page .container {margin-bottom: 0 }
+#select-customization-level-page .page-heading {margin: 30px 0 60px}
 
 
 /*Custom Selection*/
@@ -178,6 +181,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 #customized-page .lg-btns .btn {padding:10px 20px;}
 #customized-page .section-heading {font-size:20px; margin: 40px 0 15px 0}
+#customized-page .form-section-wrapper {height:650px}
 
 .pre-workout-section {text-align:center}
 .current-pre-workout-container {margin-bottom: 50px;}
@@ -187,13 +191,18 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 /*.btn-default.active {color: #fff; background-color: #36ac9c !important;  border-color: #23a796!important;}*/
 
 
+/*flavor selection*/
+.flavor-selection {width:80%!important;}
+.flavor-selection .flavor-btn {padding: 10px; width: 280px; height: 300px; margin-right: 25px; }
+.flavor-selection .flavor-btn:last-child {margin-right: 0}
+.flavor-selection h4 {font-size:18px;}
 .current-pre-workout-container, .comments-container, .name-supplement-container {width:70%; /*left:20%*/}
 
 /*design*/
 .design-supplement-container {/*padding:0 15%;*/}
 
 /*footer*/
-.footer {height:200px; margin-top:50px; padding:20px 10px; background:#f4f4f4; padding-bottom: 150px}
+.footer {height:200px; padding:20px 10px; background:#f4f4f4; padding-bottom: 150px}
 .footer-links {width:300px; margin:0 auto;}
 .footer-links li{float:left; list-style: none; padding: 3px 20px;font-size:11px; color:#333333}
 .footer-links a {color:#333333}
@@ -251,7 +260,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .form-section-container:nth-child(3) {background:red}
 .form-section-container:nth-child(4) {background:black}*/
 
-.form-section-wrapper { height:700px;/* padding:0 20px*/}
+.form-section-wrapper { height:400px;/* padding:0 20px*/}
 .container {overflow: hidden; -webkit-perspective:200px; perspective: 200px;}
 
 
