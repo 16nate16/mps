@@ -27,8 +27,14 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <div class="wrapper">
+    <nav id="main-nav">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
     <div class="container">
+
         <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
+
         <!--    <h2 class="page-heading">We are here to help</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>-->
@@ -66,6 +72,8 @@
                         <div class="controls">
                             <a href="javascript:void(0)" class="btn btn-success next-btn pull-right">Next <i
                                     class="arrow fa fa-arrow-right"></i></a>
+                          <!--  <a href="javascript:void(0)" class="btn btn-success prev-btn pull-left"><i
+                                    class="arrow fa fa-arrow-left"></i>Back</a>-->
 
                         </div>
                     </div>
@@ -177,6 +185,8 @@
                     <div class="controls">
                         <a href="javascript:void(0)" class="btn btn-success next-btn pull-right">Next<i
                                 class="fa fa-arrow-right"></i></a>
+                        <a href="javascript:void(0)" class="btn btn-success prev-btn pull-left"><i
+                                class="arrow fa fa-arrow-left"></i>Back</a>
 
                     </div>
                 </div>
@@ -280,7 +290,7 @@
                         <a href="javascript:void(0)" class="btn btn-success next-btn pull-right">Next <i
                                 class="arrow fa fa-arrow-right"></i></a>
                         <a href="javascript:void(0)" class="btn btn-success prev-btn pull-left"><i
-                                class="arrow fa fa-arrow-left"></i>Prev</a>
+                                class="arrow fa fa-arrow-left"></i>Back</a>
                     </div>
                 </div>
                 <!--end section-->
@@ -326,8 +336,8 @@
                             </label>
                             <label class="btn btn-default flavor-btn">
                                 <img src="img/cherry-limade.png">
-                                <input type="radio" name="Flavor" value="Raspberry Lemonade" autocomplete="off">
-                                <h4>Black Cherry Lemonade</h4>
+                                <input type="radio" name="Flavor" value="Black Cherry Limeade" autocomplete="off">
+                                <h4>Black Cherry Limeade</h4>
                             </label>
                             <!--           <label class="btn btn-default col-md-3">
                                            <div class="circle">X</div>
@@ -393,22 +403,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
-<script>
-    $("#reviewOrder").on("click", function (event) {
-        event.preventDefault();
-        var $form = $("#supplementForm")
-        var host = window.location.origin
-        var endpoint = "/order-my-perfect-supplement"
-        var params = $form.serialize()
-        if (params) {
-            window.location.href = host + endpoint + "/?" + params
-        }
-        else {
-            alert("no form params!!!")
-        }
-        console.log($form.serialize());
-    });
-</script>
+
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

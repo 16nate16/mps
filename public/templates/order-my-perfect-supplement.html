@@ -20,6 +20,10 @@
 </head>
 <body id="checkout">
 <div class="wrapper">
+    <nav id="main-nav">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
     <div class="container">
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
 
@@ -30,8 +34,10 @@
             <div class="col-md-12">
 <div class="form-group form-section">
     <h1 class="form-section-heading-chk">Order Summary</h1>
+    <div class="clearfix">
+        <h2 class="order-summary-name">Name: {{name}}</h2> <h2 class="order-price">$24.99</h2>
+    </div>
 
-    <h2>Name: {{name}}</h2>
 
     <ul class="list-group">
         {{#each details}}

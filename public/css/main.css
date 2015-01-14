@@ -133,6 +133,11 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
+/*nav*/
+#main-nav {position:absolute; right:30px; top:30px; z-index:1}
+#main-nav a {color:#555; margin-left:20px;}
+
+
 /*home*/
 #hero-container {background:url("../img/hero.jpg") no-repeat; width: 100%; height:550px; color:#fff; background-size:cover; margin-bottom: 25px}
 #hero-content {padding:60px 0 0 10%; width:65%}
@@ -211,6 +216,13 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .footer-links a {color:#333333}
 
 
+/*about*/
+.about-content {width:80%; margin:0 auto; font-size:14px; line-height: 1.8;}
+
+/*contact*/
+.contact-section {width:70%; margin:0 auto;}
+.contact-section .form-control {margin-bottom: 20px;}
+
 /*checkout*/
 
 #checkout .container {width:50%}
@@ -221,6 +233,11 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .ex-date-container {width:50%; float:left}
 .ex-date-heading {width:100%;}
 .ex-date-selection {padding-left: 15px}
+
+.order-summary-name {display:inline-block;float:left;}
+.order-price {display:inline-block; float:right;}
+
+
 
 #order-error {background : #f2dede;}
 #order-error .err-msg {font-size:50px;  border:none; }
@@ -251,12 +268,13 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .form-section-container.next {
     -webkit-transform: translateX(3000px)!important;
     transform: translateX(3000px);
-    opacity:1;
+    opacity:0;
 
 }
 .form-section-container.prev {
     -webkit-transform : translateX(-3000px)!important;
-    transform: translateX(-3000px)
+    transform: translateX(-3000px);
+    opacity:0;
 }
 /*.form-section-container:nth-child(1) {background:blue}
 .form-section-container:nth-child(2) {background:green}

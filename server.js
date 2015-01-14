@@ -46,6 +46,13 @@ app.route('/select-customization').get(function (req, res) {
 app.route('/customized-supplement').get(function (req, res) {
     res.render('customized-supplement')
 })
+app.route('/about').get(function (req, res) {
+    res.render('about')
+})
+
+app.route('/contact').get(function (req, res) {
+    res.render('contact')
+})
 
 function validateFields(fields) {
     return fields
