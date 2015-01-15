@@ -407,7 +407,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
     #hero-tagline-container .main-tag {font-size:30px}
     #hero-content {padding: 5% 0 0 5%}
     .call-to-action-container {text-align: center; padding: 0 0 40px 0}
-    .call-to-action {padding:13px 25px; text-align: center}
+    .call-to-action {padding:13px 25px; float:none!important;}
 }
 
 
