@@ -393,13 +393,21 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
    Modify as content requires.
    ========================================================================== */
 /*x-small*/
-@media (max-width:767px) {
-    #hero-container {height:400px}
+
+@media (max-width: 480px) {
+    #hero-container {background:#050505; height:400px; text-align: center}
+    #hero-content {padding: 40px 0 0; width:100%;}
+    .logo-home a {margin-bottom: 10px; display: inline-block}
+    .call-to-action-container {text-align: center; padding: 0 0 40px 0}
+    .call-to-action {padding:13px 25px; text-align: center}
+    .intro-section, .call-to-action-content {width:80%}
+
 }
 
 /*small*/
 @media (min-width: 768px) {
-    #hero-container {height:450px}
+    #hero-container {height:320px}
+
     /*.form-section-container {padding: 0 100px}*/
 }
 /*medium*/
