@@ -173,7 +173,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 /*Custom Selection*/
 #custom-selection-page .custom-selection-heading, #custom-selection-page .logo {text-align:center}
 .select-customization-container .custom-selection-content-container
-{border: 1px solid rgb(211, 208, 208); border-radius:4px; padding:40px; text-align: center; color:#444}
+{border: 1px solid rgb(211, 208, 208); border-radius:4px; padding:40px; margin-bottom: 20px; text-align: center; color:#444}
 .custom-selection a {color:#333; text-decoration: none;}
 
 #custom-selection-page .page-heading {margin-bottom: 60px}
@@ -391,12 +391,21 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 /*Phones*/
 @media (max-width: 480px) {
+    /*home page*/
     #hero-container {background:#050505; height:400px; text-align: center}
     #hero-content {padding: 40px 0 0; width:100%;}
     .logo-home a {margin-bottom: 10px; display: inline-block}
     .call-to-action-container {text-align: center; padding: 0 0 40px 0}
     .call-to-action {padding:13px 25px; text-align: center}
     .intro-section, .call-to-action-content {width:80%}
+
+    /*build your own*/
+    .form-section-container {width:90%; text-align: center}
+    .lg-btns .btn {width:100%}
+    .flavor-selection .flavor-btn {margin-bottom: 20px}
+    .comments-container .prev-btn {margin-bottom: 20px}
+    .comments-container .prev-btn , .comments-container .review-btn  {float:none!important;}
+    #checkout .container {width:100%}
 
 }
 
@@ -408,14 +417,23 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
     #hero-content {padding: 5% 0 0 5%}
     .call-to-action-container {text-align: center; padding: 0 0 40px 0}
     .call-to-action {padding:13px 25px; float:none!important;}
+    .intro-section, .call-to-action-content {width:80%}
+
+    .form-section-container {width:90%; text-align: center}
+    .lg-btns .btn {width:100%}
+    .flavor-selection .flavor-btn {margin-bottom: 20px}
+    .comments-container .prev-btn {margin-bottom: 20px}
+
+    #checkout .container {width:100%}
 }
 
 
-    /*.form-section-container {padding: 0 100px}*/
-/*medium*/
-@media (min-width: 992px) {
-    #hero-container {height:500px}
-    /*.form-section-container {padding: 0 100px}*/
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #hero-tagline-container .main-tag {font-size:30px}
+    #hero-content {padding: 5% 0 0 5%}
+    #hero-container {background: url("../img/hero-sm.jpg") no-repeat; height:330px}
+
 }
 
 @media (min-width: 1200px) {
