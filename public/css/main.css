@@ -136,6 +136,8 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 /*nav*/
 #main-nav {position:absolute; right:30px; top:30px; z-index:1}
 #main-nav a {color:#555; margin-left:20px;}
+.mobile-nav {display:none; position:absolute; top:5px; right: 10px; z-index: 100}
+.mobile-nav .btn {border:none;}
 
 
 /*home*/
@@ -391,6 +393,10 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 /*Phones*/
 @media (max-width: 480px) {
+    /*nav*/
+    .mobile-nav {margin:5px 10px; display: block;}
+    #main-nav {display:none;}
+
     /*home page*/
     #hero-container {background:#050505; height:400px; text-align: center}
     #hero-content {padding: 40px 0 0; width:100%;}
@@ -438,8 +444,6 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 @media (min-width: 1200px) {
     #hero-container {height:550px}
-
-
 }
 
 @media only screen and (min-width: 35em) {
