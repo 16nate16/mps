@@ -387,13 +387,9 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-/*x-small*/
 
+
+/*Phones*/
 @media (max-width: 480px) {
     #hero-container {background:#050505; height:400px; text-align: center}
     #hero-content {padding: 40px 0 0; width:100%;}
@@ -404,12 +400,18 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 }
 
-/*small*/
-@media (min-width: 768px) {
-    #hero-container {height:320px}
+
+/* Landscape phone to portrait tablet */
+@media (min-width:481px) and (max-width: 767px) {
+    #hero-container {background: url("../img/hero-sm.jpg") no-repeat; height:330px}
+    #hero-tagline-container .main-tag {font-size:30px}
+    #hero-content {padding: 5% 0 0 5%}
+    .call-to-action-container {text-align: center; padding: 0 0 40px 0}
+    .call-to-action {padding:13px 25px; text-align: center}
+}
+
 
     /*.form-section-container {padding: 0 100px}*/
-}
 /*medium*/
 @media (min-width: 992px) {
     #hero-container {height:500px}
