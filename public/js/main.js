@@ -7,6 +7,14 @@ for (var i = 0; i < 12; i++) {
 
 
 
+$('#supplementForm').on("keyup keypress", function(e) {
+    var code = e.keyCode || e.which;
+    if (code  == 13) {
+        e.preventDefault();
+        return false;
+    }
+});
+
 //custom order
 $("#reviewOrder").on("click", function(e) {
     e.preventDefault();

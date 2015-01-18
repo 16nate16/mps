@@ -72,7 +72,7 @@ function sendEmail (params) {
     var template = createEmailTemplate(params)
     var email   = require("emailjs");
     var server  = email.server.connect({
-        user:    "ryno412@gmail.com",
+        user:    "ryan@myperfectsupplement.com",
         password:"Thinkman1!",
         host:    "smtp.gmail.com",
         port : 465,
@@ -82,8 +82,8 @@ function sendEmail (params) {
 // send the message and get a callback with an error or details of the message that was sent
     server.send({
         text:    "MPS Purchase",
-        from:    "<ryno412@gmail.com>",
-        to:      "<ryno412@gmail.com>, <natewhitaker16@gmail.com>",
+        from:    "orders@myperfectsupplement.com",
+        to:      "orders@myperfectsupplement.com",
         subject: "BOOM! MPS hittin dog...",
         attachment:
             [
