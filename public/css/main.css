@@ -213,7 +213,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 /*footer*/
 .footer {height:200px; padding:20px 10px; background:#f4f4f4; padding-bottom: 150px}
-.footer-links {width:300px; margin:0 auto;}
+.footer-links {width:226px; margin:0 auto;}
 .footer-links li{float:left; list-style: none; padding: 3px 20px;font-size:11px; color:#333333}
 .footer-links a {color:#333333}
 

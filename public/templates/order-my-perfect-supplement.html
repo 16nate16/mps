@@ -44,7 +44,7 @@
 <div class="form-group form-section">
     <h1 class="form-section-heading-chk">Order Summary</h1>
     <div class="clearfix">
-        <h2 class="order-summary-name">Name: {{name}}</h2> <h2 class="order-price">$24.99</h2>
+        <h2 class="order-summary-name">Name: {{name}}</h2> <h2 class="order-price"><strong>$24.99</strong> / 2 Week Supply</h2>
     </div>
 
 
@@ -60,6 +60,21 @@
     </ul>
 
 </div>
+
+                <div class="form-group form-section">
+                    <h1>Shipping</h1>
+                    <h3>Shipping is on us this time! enjoy :)</h3>
+                    <!--                    <h3>Enter promo code for free shipping</h3>
+                                        &lt;!&ndash; Card Holder Name &ndash;&gt;
+                                        <div class="form-group">
+                                            &lt;!&ndash;   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>&ndash;&gt;
+                                            <div class="col-sm-6">
+                                                <input  type="text" name="promo-code" maxlength="70" placeholder="Promo code" class="card-holder-name form-control">
+                                            </div>
+                                            <button class="btn btn-sm btn-info">Verify</button>
+                                        </div>-->
+                </div>
+
     <div class="form-group form-section">
         <div class="hidden-inputs">
             <input type="hidden" name="supplementName" value={{name}}>
@@ -73,7 +88,7 @@
 
 
 
-    <h1 class="form-section-heading-chk">Billing Details</h1>
+    <h1 class="form-section-heading-chk"> Shipping Details</h1>
 
         <!-- Email -->
         <div class="form-group">
@@ -125,19 +140,7 @@
 <!--end personal info-->
                 </div>
 
-                <div class="form-group form-section">
-                    <h1>Shipping</h1>
-                    <h3>Shipping is on us this time! enjoy :)</h3>
-<!--                    <h3>Enter promo code for free shipping</h3>
-                    &lt;!&ndash; Card Holder Name &ndash;&gt;
-                    <div class="form-group">
-                        &lt;!&ndash;   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>&ndash;&gt;
-                        <div class="col-sm-6">
-                            <input  type="text" name="promo-code" maxlength="70" placeholder="Promo code" class="card-holder-name form-control">
-                        </div>
-                        <button class="btn btn-sm btn-info">Verify</button>
-                    </div>-->
-                </div>
+
 
 
                 <div class="form-group form-section">
@@ -210,10 +213,8 @@
 <div class="footer">
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
     <ul class="footer-links">
-        <li><a href="#" title="#">Create</a></li>
-
-        <li><a href="#" title="#">FAQ</a></li>
-        <li><a href="#" title="#">Contact</a></li>
+        <li><a href="/select-customization" title="select customization">Create</a></li>
+        <li><a href="/contact" title="contact">Contact</a></li>
     </ul>
 </div>
 
@@ -222,7 +223,8 @@
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     // This identifies your website in the createToken call below
-    Stripe.setPublishableKey('pk_test_Ou5ABhpgcZ8iQEY74cX6BpTZ');
+    //Stripe.setPublishableKey('pk_test_Ou5ABhpgcZ8iQEY74cX6BpTZ');
+    Stripe.setPublishableKey('pk_live_gWWZUFSmnVSTFxeVbTzRrcnn');
     $('#payment-form').submit(function(event) {
         var $form = $(this);
         var $errMsg = $form.find('.payment-errors')

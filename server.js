@@ -51,6 +51,14 @@ app.route('/about').get(function (req, res) {
 })
 
 app.route('/contact').get(function (req, res) {
+    var emailParams = req.query
+    console.log(emailParams)
+    var formattedParams = helpers.addLabel(emailParams)
+    console.log("$$$$$$$$$$$$$$$$$")
+    console.log(formattedParams)
+    console.log("$$$$$$$$$$$$$$$$$")
+    //add charge info here
+    sendEmail(formattedParams, true)
     res.render('contact')
 })
 
@@ -58,8 +66,12 @@ function validateFields(fields) {
     return fields
 }
 
-function createEmailTemplate (params) {
+function createEmailTemplate (params, contactEmail) {
     var file = path.resolve(__dirname, './public/templates/email.html')
+    if (contactEmail) {
+        file = path.resolve(__dirname, './public/templates/emailContact.html')
+    }
+
     var data = fs.readFileSync(file, {encoding: "utf-8"})
     var template = handlebars.compile(data)
     var html = template({details: params})
@@ -68,8 +80,8 @@ function createEmailTemplate (params) {
 }
 
 
-function sendEmail (params) {
-    var template = createEmailTemplate(params)
+function sendEmail (params, contactEmail) {
+    var template = createEmailTemplate(params, contactEmail)
     var email   = require("emailjs");
     var server  = email.server.connect({
         user:    "ryan@myperfectsupplement.com",
@@ -80,27 +92,54 @@ function sendEmail (params) {
     });
 
 // send the message and get a callback with an error or details of the message that was sent
-    server.send({
-        text:    "MPS Purchase",
-        from:    "orders@myperfectsupplement.com",
-        to:      "orders@myperfectsupplement.com",
-        subject: "BOOM! MPS hittin dog...",
-        attachment:
-            [
-                {data: template, alternative:true}
-            ]
+    //todo param this rather than use an if
+    if (contactEmail){
+        server.send({
+            text:    "MPS Contact",
+            from:    "ryan@myperfectsupplement.com",
+            to:      "ryno412@gmail.com, natewhitaker16@gmail.com ",
+            subject: "MPS Message",
+            attachment:
+                [
+                    {data: template, alternative:true}
+                ]
 
-    }, function(err, message) {
-        if (err) {
-            console.log("EMAIL ERROR")
-            console.log(err)
-        }
-        else {
-            console.log("EMAIL Success!!")
-            console.log(message);
-        }
+        }, function(err, message) {
+            if (err) {
+                console.log("EMAIL ERROR")
+                console.log(err)
+            }
+            else {
+                console.log("EMAIL Success!!")
+                console.log(message);
+            }
 
-    });
+        });
+
+    }
+    else {
+        server.send({
+            text:    "MPS Purchase",
+            from:    "orders@myperfectsupplement.com",
+            to:      "orders@myperfectsupplement.com, ryno412@gmail.com",
+            subject: "BOOM! MPS hittin dog...",
+            attachment:
+                [
+                    {data: template, alternative:true}
+                ]
+
+        }, function(err, message) {
+            if (err) {
+                console.log("EMAIL ERROR")
+                console.log(err)
+            }
+            else {
+                console.log("EMAIL Success!!")
+                console.log(message);
+            }
+
+        });
+    }
 }
 
 
@@ -121,10 +160,10 @@ app.route('/test').get(function (reg, res) {
 })
 
 app.route('/order-my-perfect-supplement').post(function (req, res) {
-    console.log("yolo")
     console.log(req.body)
     if (req.body && !validateFields(req.body).errors) {
-        var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
+       // var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
+        var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
 
         // Get the credit card details submitted by the form
         var stripeToken = req.body.stripeToken;

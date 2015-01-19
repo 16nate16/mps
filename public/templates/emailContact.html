@@ -1,0 +1,12 @@
+<style>
+    h1 {fonts-size:8px}
+</style>
+<h1>MPS Message</h1>
+<dl>
+    {{#each details}}
+    {{#if value}}
+    <dt style="float:left; width:100px">{{label}}</dt>
+    <dd style="float:left; min-width:300px">{{value}}</dd></br>
+    {{/if}}
+    {{/each}}
+</dl>
