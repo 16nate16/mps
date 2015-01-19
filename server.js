@@ -97,7 +97,7 @@ function sendEmail (params, contactEmail) {
         server.send({
             text:    "MPS Contact",
             from:    "ryan@myperfectsupplement.com",
-            to:      "ryno412@gmail.com, natewhitaker16@gmail.com ",
+            to:      "ryno412@gmail.com, natewhitaker16@gmail.com",
             subject: "MPS Message",
             attachment:
                 [
@@ -121,7 +121,7 @@ function sendEmail (params, contactEmail) {
         server.send({
             text:    "MPS Purchase",
             from:    "orders@myperfectsupplement.com",
-            to:      "orders@myperfectsupplement.com, ryno412@gmail.com",
+            to:      "natewhitaker16@gmail.com, ryno412@gmail.com",
             subject: "BOOM! MPS hittin dog...",
             attachment:
                 [
@@ -169,7 +169,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
         var stripeToken = req.body.stripeToken;
 
         var charge = stripe.charges.create({
-            amount: 100, // amount in cents, again
+            amount: 2499, // amount in cents, again
             currency: "usd",
             card: stripeToken,
             description: req.body.email
@@ -187,7 +187,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
                 }
                 var formattedParamas = helpers.addLabel(emailParams)
                 //add charge info here
-                sendEmail(formattedParamas)
+                sendEmail(formattedParamas, false)
 
                 console.log(req.query)
                 var params = req.query
