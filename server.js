@@ -169,7 +169,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
         var stripeToken = req.body.stripeToken;
 
         var charge = stripe.charges.create({
-            amount: 2000, // amount in cents, again
+            amount: 100, // amount in cents, again
             currency: "usd",
             card: stripeToken,
             description: req.body.email
