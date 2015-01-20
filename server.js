@@ -161,7 +161,8 @@ app.route('/test').get(function (reg, res) {
 
 app.route('/order-my-perfect-supplement').post(function (req, res) {
     console.log(req.body)
-    if (req.body && !validateFields(req.body).errors) {
+    console.log("ORDE Hit")
+/*    if (req.body && !validateFields(req.body).errors) {
        // var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
         var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
 
@@ -202,7 +203,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
     }
     else {
         res.sendStatus(401)
-    }
+    }*/
 
 
 
