@@ -39,8 +39,6 @@
     <h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>
 
     <form action="" method="POST" id="payment-form">
-        <div class="payment-errors alert alert-danger"></div>
-
         <div class="row form-container">
             <div class="col-md-12">
 <div class="form-group form-section">
@@ -206,7 +204,7 @@
                         <div class="form-group">
                          <!--   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>-->
                             <div class="col-sm-6">
-                                <input  type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
+                                <input  required type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
                             </div>
                         </div>
 
@@ -286,7 +284,7 @@
     $('#payment-form').submit(function(event) {
         console.log("yo!!!")
     });
-/*    $('#payment-form').submit(function(event) {
+    $('#payment-form').submit(function(event) {
         var $form = $(this);
         var $errMsg = $form.find('.payment-errors')
         // Disable the submit button to prevent repeated clicks
@@ -304,13 +302,14 @@
                 // Insert the token into the form so it gets submitted to the server
                 $form.append($('<input type="hidden" name="stripeToken" />').val(token));
                 // and submit
-                $form.get(0).submit();
+                console.log("FORM SUbmit")
+                //$form.get(0).submit();
             }
         });
 
         // Prevent the form from submitting with the default action
         return false;
-    });*/
+    });
     // ...
 </script>
 
