@@ -14,7 +14,8 @@ var express         = require('express'),
     _               = require("underscore"),
     handlebars      = require('handlebars'),
     fs              = require('fs'),
-    path            = require('path'),
+    path            = require('path')
+    expressValidator = require('express-validator'),
     app             = express();
 
 
@@ -29,6 +30,7 @@ app.use(serveStatic(__dirname + '/public'));
 
 
 app.use(bodyParser.json())
+app.use(expressValidator());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(router);
 
@@ -107,11 +109,11 @@ function sendEmail (params, contactEmail) {
         }, function(err, message) {
             if (err) {
                 console.log("EMAIL ERROR")
-                console.log(err)
+                //console.log(err)
             }
             else {
                 console.log("EMAIL Success!!")
-                console.log(message);
+                //console.log(message);
             }
 
         });
@@ -121,7 +123,7 @@ function sendEmail (params, contactEmail) {
         server.send({
             text:    "MPS Purchase",
             from:    "orders@myperfectsupplement.com",
-            to:      "natewhitaker16@gmail.com, ryno412@gmail.com",
+            to:      "ryno412@gmail.com, natewhitaker16@gmail.com",
             subject: "BOOM! MPS hittin dog...",
             attachment:
                 [
@@ -131,11 +133,11 @@ function sendEmail (params, contactEmail) {
         }, function(err, message) {
             if (err) {
                 console.log("EMAIL ERROR")
-                console.log(err)
+
             }
             else {
                 console.log("EMAIL Success!!")
-                console.log(message);
+
             }
 
         });
@@ -160,64 +162,80 @@ app.route('/test').get(function (reg, res) {
 })
 
 app.route('/order-my-perfect-supplement').post(function (req, res) {
-    console.log(req.body)
-    console.log("ORDE Hit")
-/*    if (req.body && !validateFields(req.body).errors) {
-       // var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
-        var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
+    var queryParams = req.query
+    var bodyParams = req.body
+    var name = queryParams.supplementName || "My Perfect Supplement"
+    var formattedQueryParams = helpers.addLabel(queryParams)
 
-        // Get the credit card details submitted by the form
-        var stripeToken = req.body.stripeToken;
+    if (bodyParams) {
 
-        var charge = stripe.charges.create({
-            amount: 2499, // amount in cents, again
-            currency: "usd",
-            card: stripeToken,
-            description: req.body.email
-        }, function(err, charge) {
-            if (err && err.type === 'StripeCardError') {
-                // The card has been declined\
+        /*field validation */
+        req.assert('name', 'a name is required').notEmpty();
+        req.assert('street', 'a street is required').notEmpty();
+        req.assert('state', 'a state is required').notEmpty();
+        req.assert('zip', 'a zip is required').notEmpty();
+        req.assert('email', 'a valid email required').isEmail();
 
-                console.log("error",err)
-               return res.render('order-error', {message: JSON.stringify(err)})
-            }
-            else {
-                var emailParams = req.body
-                if (charge && charge.id) {
-                    emailParams.chargeId = charge.id
-                }
-                var formattedParamas = helpers.addLabel(emailParams)
-                //add charge info here
-                sendEmail(formattedParamas, false)
+        var errors = req.validationErrors();
+        if (errors) {
+            res.render('order-my-perfect-supplement', {details: formattedQueryParams, name : name, errors: errors})
+        }
+        else {
+            //var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
+            var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
 
-                console.log(req.query)
-                var params = req.query
-                var name = params.supplementName || "My Perfect Supplement"
-                delete params.supplementName
-                var formattedParams = helpers.addLabel(params);
-                res.render('order-success', {details: formattedParams, name : name})
+            // Get the credit card details submitted by the form
+            var stripeToken = req.body.stripeToken;
+            var charge = stripe.charges.create({
+             amount: 2499, // amount in cents, again
+             currency: "usd",
+             card: stripeToken,
+             description: req.body.email
+             }, function(err, charge) {
+                 if (err && err.type === 'StripeCardError') {
+                 // The card has been declined\
+                    console.log("error",err)
+                    return res.render('order-error', {message: JSON.stringify(err)})
+                 }
+                 else {
+                    if (charge && charge.id) {
+                        bodyParams.chargeId = charge.id
+                    }
+                    //format data for email
+                     delete bodyParams.supplementName
+                     var formattedBodyParams = helpers.addLabel(bodyParams);
+                     //for some reason the name is getting chopped off after space. todo look into this.
+                     formattedBodyParams.unshift({
+                         label : "SupplementName",
+                         value : _.escape(name)
+                     })
 
-            }
+                     //Send the email
+                     sendEmail(formattedBodyParams, false, name)
 
-        });
-    }
+                     //use the query params to generate the success page
+                     delete queryParams.supplementName
+                     var formattedParams = helpers.addLabel(queryParams);
+                     //render success page
+                     res.render('order-success', {details: formattedParams, name : _.escape(name)})
+
+                 }
+             });/*end create charge*/
+        }
+
+    }/*end def check on body params*/
+
     else {
         res.sendStatus(401)
-    }*/
-
-
-
+    }
 })
 
 app.route('/order-my-perfect-supplement').get(function (req, res) {
-    console.log("$$$$$$$$$$$$$$$");
-   // console.log(reg.params);
-    console.log(req.query)
     var params = req.query
     var name = params.supplementName || "My Perfect Supplement"
     delete params.supplementName
     var formattedParams = helpers.addLabel(params);
-    res.render('order-my-perfect-supplement', {details: formattedParams, name : name})
+    res.render('order-my-perfect-supplement', {details: formattedParams, name : _.escape(name)})
 
 })
 

@@ -89,18 +89,23 @@
 
 
     <h1 class="form-section-heading-chk"> Shipping Details</h1>
+        {{#if errors}}
+            {{#each errors}}
+            <div class="alert alert-danger" role="alert">{{msg}}</div>
+            {{/each}}
+        {{/if}}
 
         <!-- Email -->
         <div class="form-group">
             <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
             <div class="col-sm-6">
-                <input type="text" name="name" required placeholder="Name" class="form-control">
+                <input required type="text" name="name" placeholder="Name" class="form-control">
             </div>
         </div>        <!-- Email -->
         <div class="form-group">
             <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
             <div class="col-sm-6">
-                <input required  type="email" name="email" maxlength="65" placeholder="Email" class="email form-control">
+                <input required data-parsley-trigger="change" type="email" name="email" maxlength="65" placeholder="Email" class="email form-control">
             </div>
         </div>
         <!-- Street -->
@@ -282,9 +287,6 @@
 
     $("#payment-form").parsley();
     $('#payment-form').submit(function(event) {
-        console.log("yo!!!")
-    });
-    $('#payment-form').submit(function(event) {
         var $form = $(this);
         var $errMsg = $form.find('.payment-errors')
         // Disable the submit button to prevent repeated clicks
@@ -302,8 +304,7 @@
                 // Insert the token into the form so it gets submitted to the server
                 $form.append($('<input type="hidden" name="stripeToken" />').val(token));
                 // and submit
-                console.log("FORM SUbmit")
-                //$form.get(0).submit();
+                $form.get(0).submit();
             }
         });
 

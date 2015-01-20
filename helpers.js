@@ -2,7 +2,6 @@
  * Created by ryanford on 12/27/14.
  */
 _ = require('underscore')
-
 module.exports = {
 
     firstLetterUppercase : function (str) {
