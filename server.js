@@ -52,21 +52,18 @@ app.route('/about').get(function (req, res) {
     res.render('about')
 })
 
-app.route('/contact').get(function (req, res) {
-    var emailParams = req.query
-    console.log(emailParams)
+app.route('/contact').post(function (req, res) {
+    var emailParams = req.body
     var formattedParams = helpers.addLabel(emailParams)
-    console.log("$$$$$$$$$$$$$$$$$")
-    console.log(formattedParams)
-    console.log("$$$$$$$$$$$$$$$$$")
-    //add charge info here
     sendEmail(formattedParams, true)
+    res.render('thankyou')
+})
+
+app.route('/contact').get(function (req, res) {
     res.render('contact')
 })
 
-function validateFields(fields) {
-    return fields
-}
+
 
 function createEmailTemplate (params, contactEmail) {
     var file = path.resolve(__dirname, './public/templates/email.html')
