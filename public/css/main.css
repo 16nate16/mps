@@ -288,9 +288,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .container {overflow: hidden; -webkit-perspective:200px; perspective: 200px;}
 
 /*parsley*/
-.parsley-errors-list  li { padding:10px 12px; margin-top: -10px; color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;}
+.parsley-errors-list  li { padding:15px; border-radius:4px; margin-top: -10px; color: #a94442; background-color: #f2dede; border-color: #ebccd1;}
 
 
 

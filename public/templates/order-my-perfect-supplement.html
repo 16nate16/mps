@@ -109,7 +109,7 @@
         <div class="form-group">
             <!--<label class="col-sm-4 control-label" for="street-nm">Street</label>-->
             <div class="col-sm-6">
-                <input type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
+                <input required type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
             </div>
         </div>
 
@@ -117,7 +117,7 @@
         <div class="form-group">
     <!--        <label class="col-sm-4 control-label" for="textinput">City</label>-->
             <div class="col-sm-6">
-                <input type="text" name="city" placeholder="City" class="city form-control">
+                <input required type="text" name="city" placeholder="City" class="city form-control">
             </div>
         </div>
 
@@ -186,7 +186,7 @@
         <div class="form-group">
   <!--          <label class="col-sm-4 control-label" for="textinput">Postal Code</label>-->
             <div class="col-sm-6">
-                <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
+                <input required type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
             </div>
         </div>
 
@@ -284,7 +284,7 @@
 
     $("#payment-form").parsley();
     $('#payment-form').submit(function(event) {
-        console.log("yo")
+        console.log("yo!!!")
     });
 /*    $('#payment-form').submit(function(event) {
         var $form = $(this);
