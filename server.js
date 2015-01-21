@@ -30,8 +30,8 @@ app.use(serveStatic(__dirname + '/public'));
 
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(expressValidator());
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(router);
 
 app.route('/').get(function (req, res) {
@@ -106,7 +106,7 @@ function sendEmail (params, contactEmail) {
         }, function(err, message) {
             if (err) {
                 console.log("EMAIL ERROR")
-                //console.log(err)
+                console.log(err)
             }
             else {
                 console.log("EMAIL Success!!")
@@ -130,6 +130,7 @@ function sendEmail (params, contactEmail) {
         }, function(err, message) {
             if (err) {
                 console.log("EMAIL ERROR")
+                console.log(err)
 
             }
             else {
@@ -151,7 +152,7 @@ app.route('/test').get(function (reg, res) {
         'Branch-Chain-Amino-Acids': '1000mg',
         'N-Acetyl-L-Tyrosin': '300mg',
         'L-Glutamine': '6000mg',
-        comments: 'jolo' }
+        comments: 'jolo this is a comment' }
 
     var formattedParams = helpers.addLabel(mock);
     res.render('order-success', {details: formattedParams, name : mock.supplementName})
@@ -159,12 +160,14 @@ app.route('/test').get(function (reg, res) {
 })
 
 app.route('/order-my-perfect-supplement').post(function (req, res) {
-    var queryParams = req.query
     var bodyParams = req.body
-    var name = queryParams.supplementName || "My Perfect Supplement"
-    var formattedQueryParams = helpers.addLabel(queryParams)
-
     if (bodyParams) {
+
+        var formattedBodyParams = helpers.addLabel(bodyParams);
+        var formattedPageParams = helpers.addLabel(_.omit(req.body, ['stripeToken','cardholdername']))
+        var name = bodyParams.supplementName || "My Perfect Supplement"
+
+
 
         /*field validation */
         req.assert('name', 'a name is required').notEmpty();
@@ -175,16 +178,18 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
 
         var errors = req.validationErrors();
         if (errors) {
-            res.render('order-my-perfect-supplement', {details: formattedQueryParams, name : name, errors: errors})
+
+            res.render('order-my-perfect-supplement', {details: formattedPageParams, name : name, errors: errors})
         }
         else {
+            //todo add this to node.env flag
             //var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
             var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
 
             // Get the credit card details submitted by the form
             var stripeToken = req.body.stripeToken;
             var charge = stripe.charges.create({
-             amount: 100, // amount in cents, again
+             amount: 2499, // amount in cents, again
              currency: "usd",
              card: stripeToken,
              description: req.body.email
@@ -195,26 +200,18 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
                     return res.render('order-error', {message: JSON.stringify(err)})
                  }
                  else {
+
                     if (charge && charge.id) {
-                        bodyParams.chargeId = charge.id
+                        formattedBodyParams.push({
+                            label : "Charge ID",
+                            value : charge.id
+                        })
                     }
-                    //format data for email
-                     delete bodyParams.supplementName
-                     var formattedBodyParams = helpers.addLabel(bodyParams);
-                     //for some reason the name is getting chopped off after space. todo look into this.
-                     formattedBodyParams.unshift({
-                         label : "SupplementName",
-                         value : _.escape(name)
-                     })
 
                      //Send the email
-                     sendEmail(formattedBodyParams, false, name)
+                     sendEmail(formattedBodyParams, false)
 
-                     //use the query params to generate the success page
-                     delete queryParams.supplementName
-                     var formattedParams = helpers.addLabel(queryParams);
-                     //render success page
-                     res.render('order-success', {details: formattedParams, name : _.escape(name)})
+                     res.render('order-success', {details: formattedPageParams, name : _.escape(name)})
 
                  }
              });/*end create charge*/

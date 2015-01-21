@@ -240,7 +240,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .order-price {display:inline-block; float:right;}
 
 /*success page*/
-#order-success-page .container {width:80%;}
+#order-success-page .container {width:70%;}
 
 #order-error {background : #f2dede;}
 #order-error .err-msg {font-size:50px;  border:none; }
