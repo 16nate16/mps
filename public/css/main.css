@@ -189,7 +189,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 #customized-page .lg-btns .btn {padding:10px 20px;}
 #customized-page .section-heading {font-size:20px; margin: 40px 0 20px 0}
 #customized-page .form-section-wrapper {height:650px}
-#nutra-girl {float:left; margin:0 25px 15px 0; border:1px solid gainsboro;}
+#nutra-girl {float:left; margin:0 25px 15px 0; border:1px solid gainsboro; height:200px;}
 .nutra-container .page-heading {margin-bottom: 40px}
 .nutra-content {font-size:20px; font-weight:300; line-height: 1.8;}
 
@@ -235,6 +235,14 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .ex-date-container {width:50%; float:left}
 .ex-date-heading {width:100%;}
 .ex-date-selection {padding-left: 15px}
+
+
+
+
+#checkout #nutra-girl {height:200px}
+#checkout .nutra-content {font-size:20px; text-align:center;}
+#checkout .page-heading {font-size:30px}
+#checkout .order-summary-name {clear:both;}
 
 .order-summary-name {display:inline-block;float:left;}
 .order-price {display:inline-block; float:right;}

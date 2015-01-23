@@ -161,6 +161,7 @@ app.route('/test').get(function (reg, res) {
 
 app.route('/order-my-perfect-supplement').post(function (req, res) {
     var bodyParams = req.body
+
     if (bodyParams) {
 
         var formattedBodyParams = helpers.addLabel(bodyParams);
@@ -226,10 +227,15 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
 
 app.route('/order-my-perfect-supplement').get(function (req, res) {
     var params = req.query
+    var showKim = true
+    if (params.design) {
+        showKim = false;
+        delete params.design;
+    }
     var name = params.supplementName || "My Perfect Supplement"
     delete params.supplementName
     var formattedParams = helpers.addLabel(params);
-    res.render('order-my-perfect-supplement', {details: formattedParams, name : _.escape(name)})
+    res.render('order-my-perfect-supplement', {details: formattedParams, name : _.escape(name), kim : showKim})
 
 })
 
