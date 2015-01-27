@@ -1,6 +1,4 @@
-/**
- * Created by rford on 12/24/14.
- */
+
 
 var express         = require('express'),
     hbs             = require('hbs'),
@@ -83,8 +81,8 @@ function sendEmail (params, contactEmail) {
     var template = createEmailTemplate(params, contactEmail)
     var email   = require("emailjs");
     var server  = email.server.connect({
-        user:    "ryan@myperfectsupplement.com",
-        password:"Thinkman1!",
+        user:    "natewhitaker16@gmail.com",
+        password:"XXXXXXXXXXXXX",
         host:    "smtp.gmail.com",
         port : 465,
         ssl:     true
@@ -95,8 +93,8 @@ function sendEmail (params, contactEmail) {
     if (contactEmail){
         server.send({
             text:    "MPS Contact",
-            from:    "ryan@myperfectsupplement.com",
-            to:      "ryno412@gmail.com, natewhitaker16@gmail.com",
+            from:    "natewhitaker16@gmail.com",
+            to:      "natewhitaker16@gmail.com",
             subject: "MPS Message",
             attachment:
                 [
@@ -120,7 +118,7 @@ function sendEmail (params, contactEmail) {
         server.send({
             text:    "MPS Purchase",
             from:    "orders@myperfectsupplement.com",
-            to:      "ryno412@gmail.com, natewhitaker16@gmail.com",
+            to:      "natewhitaker16@gmail.com",
             subject: "BOOM! MPS hittin dog...",
             attachment:
                 [
@@ -184,8 +182,8 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
         }
         else {
             //todo add this to node.env flag
-            //var stripe = require("stripe")("sk_test_lMcyGuyEPmL3MoAiIXZAEgbm");
-            var stripe = require("stripe")("sk_live_vDWEAmVFANdMnja5zv3ZfyAh");
+            //var stripe = require("stripe")("xxxxxxxxxxxxxxxxxx");
+            var stripe = require("stripe")("xxxxxxxxxxxxxxxxxxxx");
 
             // Get the credit card details submitted by the form
             var stripeToken = req.body.stripeToken;
