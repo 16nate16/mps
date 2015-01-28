@@ -81,8 +81,8 @@ function sendEmail (params, contactEmail) {
     var template = createEmailTemplate(params, contactEmail)
     var email   = require("emailjs");
     var server  = email.server.connect({
-        user:    "natewhitaker16@gmail.com",
-        password:"XXXXXXXXXXXXX",
+        user:    "nate@myperfectsupplement.com",
+        password:"D3zyn0016",
         host:    "smtp.gmail.com",
         port : 465,
         ssl:     true
@@ -93,8 +93,8 @@ function sendEmail (params, contactEmail) {
     if (contactEmail){
         server.send({
             text:    "MPS Contact",
-            from:    "natewhitaker16@gmail.com",
-            to:      "natewhitaker16@gmail.com",
+            from:    "nate@myperfectsupplement.com",
+            to:      "nate@myperfectsupplement.com",
             subject: "MPS Message",
             attachment:
                 [
@@ -183,7 +183,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
         else {
             //todo add this to node.env flag
             //var stripe = require("stripe")("xxxxxxxxxxxxxxxxxx");
-            var stripe = require("stripe")("xxxxxxxxxxxxxxxxxxxx");
+            var stripe = require("stripe")("sk_live_BNbs6oiKUMGb8jD94vAE73QN");
 
             // Get the credit card details submitted by the form
             var stripeToken = req.body.stripeToken;
