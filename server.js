@@ -118,8 +118,8 @@ function sendEmail (params, contactEmail) {
         server.send({
             text:    "MPS Purchase",
             from:    "orders@myperfectsupplement.com",
-            to:      "natewhitaker16@gmail.com",
-            subject: "BOOM! MPS hittin dog...",
+            to:      "nate@myperfectsupplement.com",
+            subject: "BOOM!",
             attachment:
                 [
                     {data: template, alternative:true}
@@ -188,7 +188,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
             // Get the credit card details submitted by the form
             var stripeToken = req.body.stripeToken;
             var charge = stripe.charges.create({
-             amount: 2499, // amount in cents, again
+             amount: 100, // amount in cents, again
              currency: "usd",
              card: stripeToken,
              description: req.body.email
