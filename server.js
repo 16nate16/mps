@@ -161,7 +161,7 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
     var bodyParams = req.body
 
     if (bodyParams) {
-
+		sendEmail(formattedBodyParams, false);
         var formattedBodyParams = helpers.addLabel(bodyParams);
         var formattedPageParams = helpers.addLabel(_.omit(req.body, ['stripeToken','cardholdername']))
         var name = bodyParams.supplementName || "My Perfect Supplement"
