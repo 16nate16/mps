@@ -62,226 +62,50 @@
    <!-- <h1 class="form-section-heading-chk">Order Summary</h1>-->
     <!-- <div class="clearfix"> -->
         <!--<h2 class="order-summary-name">15 servings of {{{name}}}</h2> <h2 class="order-price"><strong>$19.99</strong> </h2>-->
-    <!-- </div>
+   <!-- Email -->
+   <div class="form-group">
+       <label class="col-sm-8 control-label" for="textinput">Name</label>
+       <div class="col-sm-12">
+           <input required type="text" name="name" placeholder="Name" class="form-control">
+       </div>
+   </div>
+       <!-- Email -->
+   <div class="form-group">
+       <label class="col-sm-8 control-label" for="textinput">Email</label>
+       <div class="col-sm-12">
+           <input required data-parsley-trigger="change" type="email" name="email" maxlength="65" placeholder="Email" class="email form-control">
+       </div>
+   </div>
 
 
-    <ul class="list-group">
-        {{#each details}}
-            {{#if value}}
-                <li class="list-group-item">
-                    <span class="badge">{{value}}</span>
-                    {{label}}
-                </li>
-            {{/if}}
-        {{/each}}
-    </ul>
+                   <!-- Submit -->
+                   <div class="control-group">
+                       <div class="controls text-center">
+                               <button class="btn btn-info btn-lg wheeler"  type="submit">Submit</button>
 
-</div> --> 
-
-                <!-- <div class="form-group form-section">
-                    <h1>Shipping</h1>
-                    <h3>Shipping is on us this time!</h3>
-                    <!--                    <h3>Enter promo code for free shipping</h3>
-                                        &lt;!&ndash; Card Holder Name &ndash;&gt;
-                                        <div class="form-group">
-                                            &lt;!&ndash;   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>&ndash;&gt;
-                                            <div class="col-sm-6">
-                                                <input  type="text" name="promo-code" maxlength="70" placeholder="Promo code" class="card-holder-name form-control">
-                                            </div>
-                                            <button class="btn btn-sm btn-info">Verify</button>
-                                        </div>-->
-                <!-- </div>  -->
-
-    <!-- <div class="form-group form-section">
-        <div class="hidden-inputs">
-            <input type="hidden" name="supplementName" value="{{name}}">
-            {{#each details}}
-            <input type="hidden" name={{label}} value="{{value}}">
-            {{/each}}
-        </div>
-
-
-
-
-
-
-    <h1 class="form-section-heading-chk"> Shipping Details</h1>
-        {{#if errors}}
-            {{#each errors}}
-            <div class="alert alert-danger" role="alert">{{msg}}</div>
-            {{/each}}
-        {{/if}}
-
-        <!-- Email -->
-        <div class="form-group">
-            <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
-            <div class="col-sm-6">
-                <input required type="text" name="name" placeholder="Name" class="form-control">
-            </div>
-        </div>        <!-- Email -->
-        <div class="form-group">
-            <!--            <label class="col-sm-4 control-label" for="textinput">Email</label>-->
-            <div class="col-sm-6">
-                <input required data-parsley-trigger="change" type="email" name="email" maxlength="65" placeholder="Email" class="email form-control">
-            </div>
-        </div>
-        <!-- Street -->
-        <!-- <div class="form-group">
-            <!--<label class="col-sm-4 control-label" for="street-nm">Street</label>-->
-            <!-- <div class="col-sm-6">
-                <input required type="text" id="stree-nmt" name="street" placeholder="Street" class="address form-control">
-            </div>
-        </div> -->
-
-        <!-- City -->
-        <!-- <div class="form-group"> -->
-    <!--        <label class="col-sm-4 control-label" for="textinput">City</label>-->
-            <!-- <div class="col-sm-6">
-                <input required type="text" name="city" placeholder="City" class="city form-control">
-            </div>
-        </div> -->
-
-        <!-- State -->
-        <!-- <div class="form-group"> -->
-      <!--      <label class="col-sm-4 control-label" for="textinput">State</label>-->
-            <!-- <div class="col-sm-6"> -->
-         <!--       <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">-->
-                <!-- <select name="state" class="form-control">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                </select>
-            </div>
-        </div> -->
-
-        <!-- Postcal Code -->
-        <!-- <div class="form-group"> -->
-  <!--          <label class="col-sm-4 control-label" for="textinput">Postal Code</label>-->
-            <!-- <div class="col-sm-6">
-                <input required type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
-            </div>
-        </div>  -->
-
-
-
-<!--end personal info-->
-                <!-- </div> -->
-
-
-
-
-                <!-- <div class="form-group form-section">
-                    <h1>Payment Details</h1> -->
-					<!-- <h2 class="order-summary-name">15 servings of {{{name}}}</h2> <h2 class="order-price"><strong>$19.99</strong> </h2> -->
-                    <!-- <div class="payment-errors alert alert-danger"></div> -->
-
-                        <!-- Card Holder Name -->
-                        <!-- <div class="form-group"> -->
-                         <!--   <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>-->
-                            <!-- <div class="col-sm-6">
-                                <input  required type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
-                            </div>
-                        </div> -->
-
-                        <!-- Card Number -->
-                        <!-- <div class="form-group"> -->
-                     <!--       <label class="col-sm-4 control-label" for="textinput">Card Number</label>-->
-                            <!-- <div class="col-sm-6">
-                                <input data-stripe="number" type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
-                            </div>
-                        </div> -->
-
-                        <!-- Expiry-->
-                        <!-- <div class="form-group ex-date-container">
-                            <label class="col-sm-4 control-label ex-date-heading">Card Expiry Date</label>
-
-                                <div class="form-inline ex-date-selection">
-                                    <select name="exp-month" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
-                                        <option value="01" selected="selected">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                    <span> / </span>
-                                    <select name="ex-year" data-stripe="exp-year" class="card-expiry-year stripe-sensitive required form-control">
-                                    </select>
-                                </div>
-
-                        </div> -->
-
-<!--                       CVV -->
-                        <!-- <div class="form-group">
-                            <label class="col-sm-4 control-label sec-code-heading">CVV/CVV2</label>
-                            <div class="col-sm-3">
-                                <input data-stripe="cvc" type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
-                            </div>
-                        </div> -->
-
-                        <!-- Submit -->
-                        <div class="control-group">
-                            <div class="controls text-center">
-                                    <button class="btn btn-info btn-lg wheeler"  type="submit">Checkout</button>
-
-                            </div>
-                        </div>
+                       </div>
                    </div>
-            </div>
+   
+    </div>
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+    
+
+
+         </div>  
         </div>
     </form> 
 </div><!--end container-->
@@ -302,7 +126,7 @@
     //Stripe.setPublishableKey('xxxxxxxxxxxxxxxxxx');
     Stripe.setPublishableKey('pk_live_p3dj3LDhUXdX9ncMYI1gIMLZ');
 
-    $("#payment-form").parsley();
+    // $("#payment-form").parsley();
     $('#payment-form').submit(function(event) {
         var $form = $(this);
         var $errMsg = $form.find('.payment-errors')
