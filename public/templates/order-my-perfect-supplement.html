@@ -47,25 +47,14 @@
 <div class="form-group form-section">
     <h2 class="page-heading">Almost there...</h2>
     <p class="nutra-content">Please provide your name and email address and one of our supplement experts will be reaching out to you shortly.</p>
-	<!-- <h2 class="order-summary-name">15 servings of {{{name}}}</h2> <h2 class="order-price"><strong>$19.99</strong> </h2> -->
-<!--    <img id="nutra-girl" src="/img/kim.jpg">
 
-    <p class="nutra-content">Kim is going to create your perfect supplement and contact you if
-        she has any questions. Make sure to keep us posted on your progress!</p>
-
-    <p class="nutra-content">We will get started on creating your perfect supplement and contact you if we
-        have any questions. Make sure to keep us posted on your progress!</p>
-
-
-<!--    <p class="nutra-content">Make sure to keep us posted on your progress!</p>-->
-<!--
-        Once she gathers some information about you and your fitness goals she will be able to start creating your supplement.
--->
-    <!-- </p> -->
-   <!-- <h1 class="form-section-heading-chk">Order Summary</h1>-->
-    <!-- <div class="clearfix"> -->
-        <!--<h2 class="order-summary-name">15 servings of {{{name}}}</h2> <h2 class="order-price"><strong>$19.99</strong> </h2>-->
-   <!-- Email -->
+        <div class="hidden-inputs">
+            <input type="hidden" name="supplementName" value="{{name}}">
+            {{#each details}}
+            <input type="hidden" name={{label}} value="{{value}}">
+            {{/each}}
+        </div>
+  
    <div class="form-group">
        <label class="col-sm-8 control-label" for="textinput">Name</label>
        <div class="col-sm-12">

@@ -99,7 +99,8 @@ textarea {
 /*html, body, h1, h2, h3, h4, p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; margin:0; padding:0}*/
 html, body, h1, h2, h3, h4, p {font-family: 'Open Sans', sans-serif !important; margin:0; padding:0}
 html,body {height:100%;}
-body {background:#f4f4f4;}
+body {background:#f4f4f4; font-size: 16px;}
+.why {font-size: 16px; line-height: 2;}
 h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 
 
@@ -130,6 +131,7 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .controls .next-btn i.fa-arrow-right {position:relative; left:5px;}
 .controls .prev-btn i.fa-arrow-left {position:relative; left:-5px;}
 
+.centered {text-align: center; margin-top:50px;}
 
 #supplementForm div.form-section:last-child {margin-bottom: 20px}
 
@@ -153,13 +155,14 @@ h1,h2,h3,h4, p {margin:15px 0 20px 0 }
 .circle { border-radius: 50%; width: 75px; height: 75px;}
 .intro-circle {background: #d8d9dd; color:#fff; font-size:50px; text-align: center; padding-top:2px}
 
-.intro-section {padding-bottom: 35px; margin-bottom: 10px}
+.intro-section {padding-bottom: 35px; margin-bottom: 100px;}
 .intro-section, .call-to-action-content {width:80%; margin: 0 auto;}
 .intro-section-main-heading {text-align: center;  font-size: 34px;  font-weight: 300; margin-top: 50px; margin-bottom: 50px;}
 .intro-container .intro-circle {margin: 0 auto}
 .intro-container .intro-heading, .intro-container .intro-text {text-align: center;  margin-top: 20px;  padding: 0 10px}
 .intro-heading {font-size:24px}
 .intro-container .icon {font-size:80px; display: inherit; text-align: center; margin-top:60px}
+
 
 .call-to-action-container {background: #f4f4f4; padding:25px 25px 30px; margin-top: 50px;}
 .call-to-action-content .call-to-action-text {font-size:30px; font-weight:300; margin-top: 32px}

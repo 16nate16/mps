@@ -165,8 +165,9 @@ app.route('/order-my-perfect-supplement').post(function (req, res) {
         var formattedBodyParams = helpers.addLabel(bodyParams);
         var formattedPageParams = helpers.addLabel(_.omit(req.body, ['stripeToken','cardholdername']))
         var name = bodyParams.supplementName || "My Perfect Supplement"
-		console.log(formattedBodyParams)
+		console.log(formattedBodyParams);
 		sendEmail(formattedBodyParams, false);
+		res.render('inquiry-success', {details: formattedPageParams, name : _.escape(name)});
 
 
         /*field validation */
