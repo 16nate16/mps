@@ -13,5 +13,5 @@ angular
                 templateUrl: 'views/home.html'
             });
 
-        $urlRouterProvider.otherwise('home');
+        $urlRouterProvider.otherwise('/');
     }]);
