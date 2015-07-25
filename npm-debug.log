@@ -1,0 +1,1448 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose node symlink /usr/bin/node
+5 warn package.json healthforge-server@0.0.1 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/fadi/Work/WebstormProjects/mps',
+7 verbose install   [ 'bower',
+7 verbose install     'compression',
+7 verbose install     'errorhandler',
+7 verbose install     'loopback',
+7 verbose install     'loopback-boot',
+7 verbose install     'loopback-connector-mongodb',
+7 verbose install     'loopback-datasource-juggler',
+7 verbose install     'ejs',
+7 verbose install     'serve-favicon',
+7 verbose install     'braintree',
+7 verbose install     'loopback-explorer',
+7 verbose install     'jshint' ] ]
+8 info preinstall healthforge-server@0.0.1
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'bower@^1.3.12', null ]
+11 verbose cache add name=undefined spec="bower@^1.3.12" args=["bower@^1.3.12",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'bower@^1.3.12',
+12 verbose parsed url   path: 'bower@^1.3.12',
+12 verbose parsed url   href: 'bower@^1.3.12' }
+13 verbose cache add [ 'compression@^1.0.3', null ]
+14 verbose cache add name=undefined spec="compression@^1.0.3" args=["compression@^1.0.3",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'compression@^1.0.3',
+15 verbose parsed url   path: 'compression@^1.0.3',
+15 verbose parsed url   href: 'compression@^1.0.3' }
+16 verbose cache add name="bower" spec="^1.3.12" args=["bower","^1.3.12"]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: '^1.3.12',
+17 verbose parsed url   path: '^1.3.12',
+17 verbose parsed url   href: '^1.3.12' }
+18 verbose addNamed [ 'bower', '^1.3.12' ]
+19 verbose addNamed [ null, '>=1.3.12-0 <2.0.0-0' ]
+20 verbose cache add [ 'errorhandler@^1.1.1', null ]
+21 verbose cache add name=undefined spec="errorhandler@^1.1.1" args=["errorhandler@^1.1.1",null]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'errorhandler@^1.1.1',
+22 verbose parsed url   path: 'errorhandler@^1.1.1',
+22 verbose parsed url   href: 'errorhandler@^1.1.1' }
+23 verbose cache add name="compression" spec="^1.0.3" args=["compression","^1.0.3"]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: '^1.0.3',
+24 verbose parsed url   path: '^1.0.3',
+24 verbose parsed url   href: '^1.0.3' }
+25 verbose addNamed [ 'compression', '^1.0.3' ]
+26 verbose addNamed [ null, '>=1.0.3-0 <2.0.0-0' ]
+27 silly lockFile 99f654c7-bower-1-3-12 bower@^1.3.12
+28 verbose lock bower@^1.3.12 /home/fadi/.npm/99f654c7-bower-1-3-12.lock
+29 silly lockFile d20bd3e6-compression-1-0-3 compression@^1.0.3
+30 verbose lock compression@^1.0.3 /home/fadi/.npm/d20bd3e6-compression-1-0-3.lock
+31 verbose cache add [ 'loopback@^2.8.0', null ]
+32 verbose cache add name=undefined spec="loopback@^2.8.0" args=["loopback@^2.8.0",null]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: 'loopback@^2.8.0',
+33 verbose parsed url   path: 'loopback@^2.8.0',
+33 verbose parsed url   href: 'loopback@^2.8.0' }
+34 verbose cache add name="errorhandler" spec="^1.1.1" args=["errorhandler","^1.1.1"]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: '^1.1.1',
+35 verbose parsed url   path: '^1.1.1',
+35 verbose parsed url   href: '^1.1.1' }
+36 verbose addNamed [ 'errorhandler', '^1.1.1' ]
+37 verbose addNamed [ null, '>=1.1.1-0 <2.0.0-0' ]
+38 silly lockFile 40f3549f-errorhandler-1-1-1 errorhandler@^1.1.1
+39 verbose lock errorhandler@^1.1.1 /home/fadi/.npm/40f3549f-errorhandler-1-1-1.lock
+40 verbose cache add name="loopback" spec="^2.8.0" args=["loopback","^2.8.0"]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: '^2.8.0',
+41 verbose parsed url   path: '^2.8.0',
+41 verbose parsed url   href: '^2.8.0' }
+42 verbose addNamed [ 'loopback', '^2.8.0' ]
+43 verbose addNamed [ null, '>=2.8.0-0 <3.0.0-0' ]
+44 silly lockFile abb75fef-loopback-2-8-0 loopback@^2.8.0
+45 verbose lock loopback@^2.8.0 /home/fadi/.npm/abb75fef-loopback-2-8-0.lock
+46 verbose cache add [ 'loopback-boot@^2.4.0', null ]
+47 verbose cache add name=undefined spec="loopback-boot@^2.4.0" args=["loopback-boot@^2.4.0",null]
+48 verbose parsed url { protocol: null,
+48 verbose parsed url   slashes: null,
+48 verbose parsed url   auth: null,
+48 verbose parsed url   host: null,
+48 verbose parsed url   port: null,
+48 verbose parsed url   hostname: null,
+48 verbose parsed url   hash: null,
+48 verbose parsed url   search: null,
+48 verbose parsed url   query: null,
+48 verbose parsed url   pathname: 'loopback-boot@^2.4.0',
+48 verbose parsed url   path: 'loopback-boot@^2.4.0',
+48 verbose parsed url   href: 'loopback-boot@^2.4.0' }
+49 silly addNameRange { name: 'bower', range: '>=1.3.12-0 <2.0.0-0', hasData: false }
+50 silly addNameRange { name: 'compression',
+50 silly addNameRange   range: '>=1.0.3-0 <2.0.0-0',
+50 silly addNameRange   hasData: false }
+51 silly addNameRange { name: 'errorhandler',
+51 silly addNameRange   range: '>=1.1.1-0 <2.0.0-0',
+51 silly addNameRange   hasData: false }
+52 verbose cache add [ 'loopback-connector-mongodb@^1.1.7', null ]
+53 verbose cache add name=undefined spec="loopback-connector-mongodb@^1.1.7" args=["loopback-connector-mongodb@^1.1.7",null]
+54 verbose parsed url { protocol: null,
+54 verbose parsed url   slashes: null,
+54 verbose parsed url   auth: null,
+54 verbose parsed url   host: null,
+54 verbose parsed url   port: null,
+54 verbose parsed url   hostname: null,
+54 verbose parsed url   hash: null,
+54 verbose parsed url   search: null,
+54 verbose parsed url   query: null,
+54 verbose parsed url   pathname: 'loopback-connector-mongodb@^1.1.7',
+54 verbose parsed url   path: 'loopback-connector-mongodb@^1.1.7',
+54 verbose parsed url   href: 'loopback-connector-mongodb@^1.1.7' }
+55 verbose cache add [ 'loopback-datasource-juggler@^2.7.0', null ]
+56 verbose cache add name=undefined spec="loopback-datasource-juggler@^2.7.0" args=["loopback-datasource-juggler@^2.7.0",null]
+57 verbose parsed url { protocol: null,
+57 verbose parsed url   slashes: null,
+57 verbose parsed url   auth: null,
+57 verbose parsed url   host: null,
+57 verbose parsed url   port: null,
+57 verbose parsed url   hostname: null,
+57 verbose parsed url   hash: null,
+57 verbose parsed url   search: null,
+57 verbose parsed url   query: null,
+57 verbose parsed url   pathname: 'loopback-datasource-juggler@^2.7.0',
+57 verbose parsed url   path: 'loopback-datasource-juggler@^2.7.0',
+57 verbose parsed url   href: 'loopback-datasource-juggler@^2.7.0' }
+58 verbose cache add [ 'ejs@~1.0.0', null ]
+59 verbose cache add name=undefined spec="ejs@~1.0.0" args=["ejs@~1.0.0",null]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: 'ejs@~1.0.0',
+60 verbose parsed url   path: 'ejs@~1.0.0',
+60 verbose parsed url   href: 'ejs@~1.0.0' }
+61 verbose cache add [ 'serve-favicon@^2.0.1', null ]
+62 verbose cache add name=undefined spec="serve-favicon@^2.0.1" args=["serve-favicon@^2.0.1",null]
+63 verbose parsed url { protocol: null,
+63 verbose parsed url   slashes: null,
+63 verbose parsed url   auth: null,
+63 verbose parsed url   host: null,
+63 verbose parsed url   port: null,
+63 verbose parsed url   hostname: null,
+63 verbose parsed url   hash: null,
+63 verbose parsed url   search: null,
+63 verbose parsed url   query: null,
+63 verbose parsed url   pathname: 'serve-favicon@^2.0.1',
+63 verbose parsed url   path: 'serve-favicon@^2.0.1',
+63 verbose parsed url   href: 'serve-favicon@^2.0.1' }
+64 verbose cache add name="loopback-boot" spec="^2.4.0" args=["loopback-boot","^2.4.0"]
+65 verbose parsed url { protocol: null,
+65 verbose parsed url   slashes: null,
+65 verbose parsed url   auth: null,
+65 verbose parsed url   host: null,
+65 verbose parsed url   port: null,
+65 verbose parsed url   hostname: null,
+65 verbose parsed url   hash: null,
+65 verbose parsed url   search: null,
+65 verbose parsed url   query: null,
+65 verbose parsed url   pathname: '^2.4.0',
+65 verbose parsed url   path: '^2.4.0',
+65 verbose parsed url   href: '^2.4.0' }
+66 verbose addNamed [ 'loopback-boot', '^2.4.0' ]
+67 verbose addNamed [ null, '>=2.4.0-0 <3.0.0-0' ]
+68 silly lockFile dc3cc9f2-loopback-boot-2-4-0 loopback-boot@^2.4.0
+69 verbose lock loopback-boot@^2.4.0 /home/fadi/.npm/dc3cc9f2-loopback-boot-2-4-0.lock
+70 silly addNameRange { name: 'loopback', range: '>=2.8.0-0 <3.0.0-0', hasData: false }
+71 verbose cache add name="loopback-connector-mongodb" spec="^1.1.7" args=["loopback-connector-mongodb","^1.1.7"]
+72 verbose parsed url { protocol: null,
+72 verbose parsed url   slashes: null,
+72 verbose parsed url   auth: null,
+72 verbose parsed url   host: null,
+72 verbose parsed url   port: null,
+72 verbose parsed url   hostname: null,
+72 verbose parsed url   hash: null,
+72 verbose parsed url   search: null,
+72 verbose parsed url   query: null,
+72 verbose parsed url   pathname: '^1.1.7',
+72 verbose parsed url   path: '^1.1.7',
+72 verbose parsed url   href: '^1.1.7' }
+73 verbose addNamed [ 'loopback-connector-mongodb', '^1.1.7' ]
+74 verbose addNamed [ null, '>=1.1.7-0 <2.0.0-0' ]
+75 silly lockFile 873c07bc-loopback-connector-mongodb-1-1-7 loopback-connector-mongodb@^1.1.7
+76 verbose lock loopback-connector-mongodb@^1.1.7 /home/fadi/.npm/873c07bc-loopback-connector-mongodb-1-1-7.lock
+77 verbose cache add name="loopback-datasource-juggler" spec="^2.7.0" args=["loopback-datasource-juggler","^2.7.0"]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: '^2.7.0',
+78 verbose parsed url   path: '^2.7.0',
+78 verbose parsed url   href: '^2.7.0' }
+79 verbose addNamed [ 'loopback-datasource-juggler', '^2.7.0' ]
+80 verbose addNamed [ null, '>=2.7.0-0 <3.0.0-0' ]
+81 silly lockFile 7f9e0c30-oopback-datasource-juggler-2-7-0 loopback-datasource-juggler@^2.7.0
+82 verbose lock loopback-datasource-juggler@^2.7.0 /home/fadi/.npm/7f9e0c30-oopback-datasource-juggler-2-7-0.lock
+83 verbose cache add name="ejs" spec="~1.0.0" args=["ejs","~1.0.0"]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: '~1.0.0',
+84 verbose parsed url   path: '~1.0.0',
+84 verbose parsed url   href: '~1.0.0' }
+85 verbose addNamed [ 'ejs', '~1.0.0' ]
+86 verbose addNamed [ null, '>=1.0.0-0 <1.1.0-0' ]
+87 silly lockFile 9e596aab-ejs-1-0-0 ejs@~1.0.0
+88 verbose lock ejs@~1.0.0 /home/fadi/.npm/9e596aab-ejs-1-0-0.lock
+89 verbose cache add name="serve-favicon" spec="^2.0.1" args=["serve-favicon","^2.0.1"]
+90 verbose parsed url { protocol: null,
+90 verbose parsed url   slashes: null,
+90 verbose parsed url   auth: null,
+90 verbose parsed url   host: null,
+90 verbose parsed url   port: null,
+90 verbose parsed url   hostname: null,
+90 verbose parsed url   hash: null,
+90 verbose parsed url   search: null,
+90 verbose parsed url   query: null,
+90 verbose parsed url   pathname: '^2.0.1',
+90 verbose parsed url   path: '^2.0.1',
+90 verbose parsed url   href: '^2.0.1' }
+91 verbose addNamed [ 'serve-favicon', '^2.0.1' ]
+92 verbose addNamed [ null, '>=2.0.1-0 <3.0.0-0' ]
+93 silly lockFile 55737c34-serve-favicon-2-0-1 serve-favicon@^2.0.1
+94 verbose lock serve-favicon@^2.0.1 /home/fadi/.npm/55737c34-serve-favicon-2-0-1.lock
+95 verbose cache add [ 'braintree@^1.23.0', null ]
+96 verbose cache add name=undefined spec="braintree@^1.23.0" args=["braintree@^1.23.0",null]
+97 verbose parsed url { protocol: null,
+97 verbose parsed url   slashes: null,
+97 verbose parsed url   auth: null,
+97 verbose parsed url   host: null,
+97 verbose parsed url   port: null,
+97 verbose parsed url   hostname: null,
+97 verbose parsed url   hash: null,
+97 verbose parsed url   search: null,
+97 verbose parsed url   query: null,
+97 verbose parsed url   pathname: 'braintree@^1.23.0',
+97 verbose parsed url   path: 'braintree@^1.23.0',
+97 verbose parsed url   href: 'braintree@^1.23.0' }
+98 verbose cache add [ 'loopback-explorer@^1.1.0', null ]
+99 verbose cache add name=undefined spec="loopback-explorer@^1.1.0" args=["loopback-explorer@^1.1.0",null]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: 'loopback-explorer@^1.1.0',
+100 verbose parsed url   path: 'loopback-explorer@^1.1.0',
+100 verbose parsed url   href: 'loopback-explorer@^1.1.0' }
+101 verbose cache add [ 'jshint@^2.5.6', null ]
+102 verbose cache add name=undefined spec="jshint@^2.5.6" args=["jshint@^2.5.6",null]
+103 verbose parsed url { protocol: null,
+103 verbose parsed url   slashes: null,
+103 verbose parsed url   auth: null,
+103 verbose parsed url   host: null,
+103 verbose parsed url   port: null,
+103 verbose parsed url   hostname: null,
+103 verbose parsed url   hash: null,
+103 verbose parsed url   search: null,
+103 verbose parsed url   query: null,
+103 verbose parsed url   pathname: 'jshint@^2.5.6',
+103 verbose parsed url   path: 'jshint@^2.5.6',
+103 verbose parsed url   href: 'jshint@^2.5.6' }
+104 verbose cache add name="braintree" spec="^1.23.0" args=["braintree","^1.23.0"]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: '^1.23.0',
+105 verbose parsed url   path: '^1.23.0',
+105 verbose parsed url   href: '^1.23.0' }
+106 verbose addNamed [ 'braintree', '^1.23.0' ]
+107 verbose addNamed [ null, '>=1.23.0-0 <2.0.0-0' ]
+108 silly lockFile bb41811d-braintree-1-23-0 braintree@^1.23.0
+109 verbose lock braintree@^1.23.0 /home/fadi/.npm/bb41811d-braintree-1-23-0.lock
+110 verbose cache add name="loopback-explorer" spec="^1.1.0" args=["loopback-explorer","^1.1.0"]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: '^1.1.0',
+111 verbose parsed url   path: '^1.1.0',
+111 verbose parsed url   href: '^1.1.0' }
+112 verbose addNamed [ 'loopback-explorer', '^1.1.0' ]
+113 verbose addNamed [ null, '>=1.1.0-0 <2.0.0-0' ]
+114 silly lockFile d1002ed1-loopback-explorer-1-1-0 loopback-explorer@^1.1.0
+115 verbose lock loopback-explorer@^1.1.0 /home/fadi/.npm/d1002ed1-loopback-explorer-1-1-0.lock
+116 silly addNameRange { name: 'loopback-boot',
+116 silly addNameRange   range: '>=2.4.0-0 <3.0.0-0',
+116 silly addNameRange   hasData: false }
+117 verbose cache add name="jshint" spec="^2.5.6" args=["jshint","^2.5.6"]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: '^2.5.6',
+118 verbose parsed url   path: '^2.5.6',
+118 verbose parsed url   href: '^2.5.6' }
+119 verbose addNamed [ 'jshint', '^2.5.6' ]
+120 verbose addNamed [ null, '>=2.5.6-0 <3.0.0-0' ]
+121 silly lockFile 532a3693-jshint-2-5-6 jshint@^2.5.6
+122 verbose lock jshint@^2.5.6 /home/fadi/.npm/532a3693-jshint-2-5-6.lock
+123 silly addNameRange { name: 'loopback-connector-mongodb',
+123 silly addNameRange   range: '>=1.1.7-0 <2.0.0-0',
+123 silly addNameRange   hasData: false }
+124 silly addNameRange { name: 'loopback-datasource-juggler',
+124 silly addNameRange   range: '>=2.7.0-0 <3.0.0-0',
+124 silly addNameRange   hasData: false }
+125 silly addNameRange { name: 'ejs', range: '>=1.0.0-0 <1.1.0-0', hasData: false }
+126 silly addNameRange { name: 'serve-favicon',
+126 silly addNameRange   range: '>=2.0.1-0 <3.0.0-0',
+126 silly addNameRange   hasData: false }
+127 silly addNameRange { name: 'braintree',
+127 silly addNameRange   range: '>=1.23.0-0 <2.0.0-0',
+127 silly addNameRange   hasData: false }
+128 silly addNameRange { name: 'loopback-explorer',
+128 silly addNameRange   range: '>=1.1.0-0 <2.0.0-0',
+128 silly addNameRange   hasData: false }
+129 silly addNameRange { name: 'jshint', range: '>=2.5.6-0 <3.0.0-0', hasData: false }
+130 verbose request where is /bower
+131 verbose request registry https://registry.npmjs.org/
+132 verbose request id 009b2e471fda901d
+133 verbose url raw /bower
+134 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+135 verbose url resolved https://registry.npmjs.org/bower
+136 verbose request where is https://registry.npmjs.org/bower
+137 info trying registry request attempt 1 at 14:26:32
+138 verbose etag "F3UGAQQ1HAP0D9MORG4AU9SKZ"
+139 http GET https://registry.npmjs.org/bower
+140 verbose request where is /errorhandler
+141 verbose request registry https://registry.npmjs.org/
+142 verbose url raw /errorhandler
+143 verbose url resolving [ 'https://registry.npmjs.org/', './errorhandler' ]
+144 verbose url resolved https://registry.npmjs.org/errorhandler
+145 verbose request where is https://registry.npmjs.org/errorhandler
+146 info trying registry request attempt 1 at 14:26:32
+147 verbose etag "AS01VKL21E835C4X4XHCE80NI"
+148 http GET https://registry.npmjs.org/errorhandler
+149 verbose request where is /loopback-boot
+150 verbose request registry https://registry.npmjs.org/
+151 verbose url raw /loopback-boot
+152 verbose url resolving [ 'https://registry.npmjs.org/', './loopback-boot' ]
+153 verbose url resolved https://registry.npmjs.org/loopback-boot
+154 verbose request where is https://registry.npmjs.org/loopback-boot
+155 info trying registry request attempt 1 at 14:26:32
+156 verbose etag "8WYVYWDI0OKT8FQZM7UK9P6HH"
+157 http GET https://registry.npmjs.org/loopback-boot
+158 verbose request where is /loopback
+159 verbose request registry https://registry.npmjs.org/
+160 verbose url raw /loopback
+161 verbose url resolving [ 'https://registry.npmjs.org/', './loopback' ]
+162 verbose url resolved https://registry.npmjs.org/loopback
+163 verbose request where is https://registry.npmjs.org/loopback
+164 info trying registry request attempt 1 at 14:26:32
+165 verbose etag "1Z60UU03F8IHGWNHOS82L7CUY"
+166 http GET https://registry.npmjs.org/loopback
+167 verbose request where is /loopback-datasource-juggler
+168 verbose request registry https://registry.npmjs.org/
+169 verbose url raw /loopback-datasource-juggler
+170 verbose url resolving [ 'https://registry.npmjs.org/',
+170 verbose url resolving   './loopback-datasource-juggler' ]
+171 verbose url resolved https://registry.npmjs.org/loopback-datasource-juggler
+172 verbose request where is https://registry.npmjs.org/loopback-datasource-juggler
+173 info trying registry request attempt 1 at 14:26:32
+174 verbose etag "BSRTGLGB8HUUQIRPCFO79QFW0"
+175 http GET https://registry.npmjs.org/loopback-datasource-juggler
+176 verbose request where is /compression
+177 verbose request registry https://registry.npmjs.org/
+178 verbose url raw /compression
+179 verbose url resolving [ 'https://registry.npmjs.org/', './compression' ]
+180 verbose url resolved https://registry.npmjs.org/compression
+181 verbose request where is https://registry.npmjs.org/compression
+182 info trying registry request attempt 1 at 14:26:32
+183 verbose etag "14VRNABDP5YHMVZQN1BLVI8EX"
+184 http GET https://registry.npmjs.org/compression
+185 verbose request where is /loopback-connector-mongodb
+186 verbose request registry https://registry.npmjs.org/
+187 verbose url raw /loopback-connector-mongodb
+188 verbose url resolving [ 'https://registry.npmjs.org/',
+188 verbose url resolving   './loopback-connector-mongodb' ]
+189 verbose url resolved https://registry.npmjs.org/loopback-connector-mongodb
+190 verbose request where is https://registry.npmjs.org/loopback-connector-mongodb
+191 info trying registry request attempt 1 at 14:26:32
+192 verbose etag "BY7E5U7DO3P8J0ZXMEHSMGCOE"
+193 http GET https://registry.npmjs.org/loopback-connector-mongodb
+194 verbose request where is /serve-favicon
+195 verbose request registry https://registry.npmjs.org/
+196 verbose url raw /serve-favicon
+197 verbose url resolving [ 'https://registry.npmjs.org/', './serve-favicon' ]
+198 verbose url resolved https://registry.npmjs.org/serve-favicon
+199 verbose request where is https://registry.npmjs.org/serve-favicon
+200 info trying registry request attempt 1 at 14:26:32
+201 verbose etag "5Y4HGQMBADUMR86B2JU87PD4Y"
+202 http GET https://registry.npmjs.org/serve-favicon
+203 verbose request where is /loopback-explorer
+204 verbose request registry https://registry.npmjs.org/
+205 verbose url raw /loopback-explorer
+206 verbose url resolving [ 'https://registry.npmjs.org/', './loopback-explorer' ]
+207 verbose url resolved https://registry.npmjs.org/loopback-explorer
+208 verbose request where is https://registry.npmjs.org/loopback-explorer
+209 info trying registry request attempt 1 at 14:26:32
+210 verbose etag "14ZTW17ZWR31K80A09EK8KTDI"
+211 http GET https://registry.npmjs.org/loopback-explorer
+212 verbose request where is /braintree
+213 verbose request registry https://registry.npmjs.org/
+214 verbose url raw /braintree
+215 verbose url resolving [ 'https://registry.npmjs.org/', './braintree' ]
+216 verbose url resolved https://registry.npmjs.org/braintree
+217 verbose request where is https://registry.npmjs.org/braintree
+218 info trying registry request attempt 1 at 14:26:32
+219 verbose etag "B2YGXSMPPYYY6XIVCFV5WZ9U6"
+220 http GET https://registry.npmjs.org/braintree
+221 verbose request where is /ejs
+222 verbose request registry https://registry.npmjs.org/
+223 verbose url raw /ejs
+224 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+225 verbose url resolved https://registry.npmjs.org/ejs
+226 verbose request where is https://registry.npmjs.org/ejs
+227 info trying registry request attempt 1 at 14:26:32
+228 verbose etag "100H38L7UN5X8LNXVKIWOC0IM"
+229 http GET https://registry.npmjs.org/ejs
+230 verbose request where is /jshint
+231 verbose request registry https://registry.npmjs.org/
+232 verbose url raw /jshint
+233 verbose url resolving [ 'https://registry.npmjs.org/', './jshint' ]
+234 verbose url resolved https://registry.npmjs.org/jshint
+235 verbose request where is https://registry.npmjs.org/jshint
+236 info trying registry request attempt 1 at 14:26:32
+237 verbose etag "EJWJPZH0PFLH0MOK9KQ3S5JZI"
+238 http GET https://registry.npmjs.org/jshint
+239 http 200 https://registry.npmjs.org/errorhandler
+240 silly registry.get cb [ 200,
+240 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+240 silly registry.get     etag: '"3Y0NLPWJ7NB8D26HT53Z0WY4"',
+240 silly registry.get     'content-type': 'application/json',
+240 silly registry.get     'cache-control': 'max-age=60',
+240 silly registry.get     'content-length': '34362',
+240 silly registry.get     'accept-ranges': 'bytes',
+240 silly registry.get     date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+240 silly registry.get     via: '1.1 varnish',
+240 silly registry.get     age: '14',
+240 silly registry.get     connection: 'keep-alive',
+240 silly registry.get     'x-served-by': 'cache-sjc3129-SJC',
+240 silly registry.get     'x-cache': 'HIT',
+240 silly registry.get     'x-cache-hits': '1',
+240 silly registry.get     'x-timer': 'S1434057993.066433,VS0,VE0',
+240 silly registry.get     vary: 'Accept' } ]
+241 silly addNameRange number 2 { name: 'errorhandler',
+241 silly addNameRange   range: '>=1.1.1-0 <2.0.0-0',
+241 silly addNameRange   hasData: true }
+242 silly addNameRange versions [ 'errorhandler',
+242 silly addNameRange   [ '1.0.0',
+242 silly addNameRange     '1.0.1',
+242 silly addNameRange     '1.0.2',
+242 silly addNameRange     '1.1.0',
+242 silly addNameRange     '1.1.1',
+242 silly addNameRange     '1.2.0',
+242 silly addNameRange     '1.2.1',
+242 silly addNameRange     '1.2.2',
+242 silly addNameRange     '1.2.3',
+242 silly addNameRange     '1.3.0',
+242 silly addNameRange     '1.3.1',
+242 silly addNameRange     '1.2.4',
+242 silly addNameRange     '1.3.2',
+242 silly addNameRange     '1.3.3',
+242 silly addNameRange     '1.3.4',
+242 silly addNameRange     '1.3.5',
+242 silly addNameRange     '1.3.6',
+242 silly addNameRange     '1.4.0' ] ]
+243 verbose addNamed [ 'errorhandler', '1.4.0' ]
+244 verbose addNamed [ '1.4.0', '1.4.0' ]
+245 silly lockFile b259a238-errorhandler-1-4-0 errorhandler@1.4.0
+246 verbose lock errorhandler@1.4.0 /home/fadi/.npm/b259a238-errorhandler-1-4-0.lock
+247 silly lockFile 7c13a7ab-orhandler-errorhandler-1-4-0-tgz https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+248 verbose lock https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz /home/fadi/.npm/7c13a7ab-orhandler-errorhandler-1-4-0-tgz.lock
+249 verbose addRemoteTarball [ 'https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz',
+249 verbose addRemoteTarball   '59de1a6219d8bf1ce6a9859996c23de07f5a8a47' ]
+250 info retry fetch attempt 1 at 14:26:33
+251 verbose fetch to= /tmp/npm-9350--dZIBiPY/registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+252 http GET https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+253 http 200 https://registry.npmjs.org/bower
+254 silly registry.get cb [ 200,
+254 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+254 silly registry.get     etag: '"A1YCJ6PMQ6P9Z4133COPXWET8"',
+254 silly registry.get     'content-type': 'application/json',
+254 silly registry.get     'cache-control': 'max-age=60',
+254 silly registry.get     'content-length': '112297',
+254 silly registry.get     'accept-ranges': 'bytes',
+254 silly registry.get     date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+254 silly registry.get     via: '1.1 varnish',
+254 silly registry.get     age: '21',
+254 silly registry.get     connection: 'keep-alive',
+254 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+254 silly registry.get     'x-cache': 'HIT',
+254 silly registry.get     'x-cache-hits': '1',
+254 silly registry.get     'x-timer': 'S1434057993.056041,VS0,VE0',
+254 silly registry.get     vary: 'Accept' } ]
+255 silly addNameRange number 2 { name: 'bower', range: '>=1.3.12-0 <2.0.0-0', hasData: true }
+256 silly addNameRange versions [ 'bower',
+256 silly addNameRange   [ '0.1.0',
+256 silly addNameRange     '0.1.2',
+256 silly addNameRange     '0.1.3',
+256 silly addNameRange     '0.2.0',
+256 silly addNameRange     '0.3.0',
+256 silly addNameRange     '0.3.1',
+256 silly addNameRange     '0.3.2',
+256 silly addNameRange     '0.4.0',
+256 silly addNameRange     '0.5.0',
+256 silly addNameRange     '0.5.1',
+256 silly addNameRange     '0.6.0',
+256 silly addNameRange     '0.6.1',
+256 silly addNameRange     '0.6.2',
+256 silly addNameRange     '0.6.3',
+256 silly addNameRange     '0.6.4',
+256 silly addNameRange     '0.6.5',
+256 silly addNameRange     '0.6.6',
+256 silly addNameRange     '0.6.7',
+256 silly addNameRange     '0.6.8',
+256 silly addNameRange     '0.7.0',
+256 silly addNameRange     '0.7.1',
+256 silly addNameRange     '0.8.0',
+256 silly addNameRange     '0.8.1',
+256 silly addNameRange     '0.8.2',
+256 silly addNameRange     '0.8.3',
+256 silly addNameRange     '0.8.4',
+256 silly addNameRange     '0.8.5',
+256 silly addNameRange     '0.8.6',
+256 silly addNameRange     '0.9.0',
+256 silly addNameRange     '0.9.1',
+256 silly addNameRange     '0.9.2',
+256 silly addNameRange     '0.10.0',
+256 silly addNameRange     '1.0.0',
+256 silly addNameRange     '1.0.1',
+256 silly addNameRange     '1.0.2',
+256 silly addNameRange     '1.0.3',
+256 silly addNameRange     '1.1.0',
+256 silly addNameRange     '1.1.1',
+256 silly addNameRange     '1.1.2',
+256 silly addNameRange     '1.2.0',
+256 silly addNameRange     '1.2.1',
+256 silly addNameRange     '1.2.2',
+256 silly addNameRange     '1.2.3',
+256 silly addNameRange     '1.2.4',
+256 silly addNameRange     '1.2.5',
+256 silly addNameRange     '1.2.6',
+256 silly addNameRange     '1.2.7',
+256 silly addNameRange     '1.2.8',
+256 silly addNameRange     '1.3.0',
+256 silly addNameRange     '1.3.1',
+256 silly addNameRange     '1.3.2',
+256 silly addNameRange     '1.3.3',
+256 silly addNameRange     '1.3.4',
+256 silly addNameRange     '1.3.5',
+256 silly addNameRange     '1.3.6',
+256 silly addNameRange     '1.3.7',
+256 silly addNameRange     '1.3.8',
+256 silly addNameRange     '1.3.9',
+256 silly addNameRange     '1.3.10',
+256 silly addNameRange     '1.3.11',
+256 silly addNameRange     '1.3.12',
+256 silly addNameRange     '1.4.0',
+256 silly addNameRange     '1.4.1' ] ]
+257 verbose addNamed [ 'bower', '1.4.1' ]
+258 verbose addNamed [ '1.4.1', '1.4.1' ]
+259 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+260 verbose lock bower@1.4.1 /home/fadi/.npm/185f46c0-bower-1-4-1.lock
+261 http 304 https://registry.npmjs.org/loopback-connector-mongodb
+262 silly registry.get cb [ 304,
+262 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+262 silly registry.get     via: '1.1 varnish',
+262 silly registry.get     'cache-control': 'max-age=60',
+262 silly registry.get     etag: '"BY7E5U7DO3P8J0ZXMEHSMGCOE"',
+262 silly registry.get     age: '45',
+262 silly registry.get     connection: 'keep-alive',
+262 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+262 silly registry.get     'x-cache': 'HIT',
+262 silly registry.get     'x-cache-hits': '1',
+262 silly registry.get     'x-timer': 'S1434057993.269730,VS0,VE0',
+262 silly registry.get     vary: 'Accept' } ]
+263 verbose etag https://registry.npmjs.org/loopback-connector-mongodb from cache
+264 silly addNameRange number 2 { name: 'loopback-connector-mongodb',
+264 silly addNameRange   range: '>=1.1.7-0 <2.0.0-0',
+264 silly addNameRange   hasData: true }
+265 silly addNameRange versions [ 'loopback-connector-mongodb',
+265 silly addNameRange   [ '1.0.0',
+265 silly addNameRange     '1.1.0',
+265 silly addNameRange     '1.1.3',
+265 silly addNameRange     '1.1.4',
+265 silly addNameRange     '1.1.5',
+265 silly addNameRange     '1.1.6',
+265 silly addNameRange     '1.1.7',
+265 silly addNameRange     '1.1.8',
+265 silly addNameRange     '1.2.0',
+265 silly addNameRange     '1.2.1',
+265 silly addNameRange     '1.2.2',
+265 silly addNameRange     '1.2.3',
+265 silly addNameRange     '1.2.4',
+265 silly addNameRange     '1.2.5',
+265 silly addNameRange     '1.2.6',
+265 silly addNameRange     '1.3.0',
+265 silly addNameRange     '1.4.0',
+265 silly addNameRange     '1.4.1',
+265 silly addNameRange     '1.4.2',
+265 silly addNameRange     '1.4.3',
+265 silly addNameRange     '1.4.4',
+265 silly addNameRange     '1.4.5',
+265 silly addNameRange     '1.5.0',
+265 silly addNameRange     '1.6.0',
+265 silly addNameRange     '1.7.0',
+265 silly addNameRange     '1.8.0',
+265 silly addNameRange     '1.9.0',
+265 silly addNameRange     '1.9.1',
+265 silly addNameRange     '1.9.2',
+265 silly addNameRange     '1.10.0',
+265 silly addNameRange     '1.10.1',
+265 silly addNameRange     '1.11.0' ] ]
+266 verbose addNamed [ 'loopback-connector-mongodb', '1.11.0' ]
+267 verbose addNamed [ '1.11.0', '1.11.0' ]
+268 silly lockFile 2bd4d990-oopback-connector-mongodb-1-11-0 loopback-connector-mongodb@1.11.0
+269 verbose lock loopback-connector-mongodb@1.11.0 /home/fadi/.npm/2bd4d990-oopback-connector-mongodb-1-11-0.lock
+270 http 304 https://registry.npmjs.org/serve-favicon
+271 silly registry.get cb [ 304,
+271 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+271 silly registry.get     via: '1.1 varnish',
+271 silly registry.get     'cache-control': 'max-age=60',
+271 silly registry.get     etag: '"5Y4HGQMBADUMR86B2JU87PD4Y"',
+271 silly registry.get     age: '14',
+271 silly registry.get     connection: 'keep-alive',
+271 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+271 silly registry.get     'x-cache': 'HIT',
+271 silly registry.get     'x-cache-hits': '1',
+271 silly registry.get     'x-timer': 'S1434057993.279709,VS0,VE0',
+271 silly registry.get     vary: 'Accept' } ]
+272 verbose etag https://registry.npmjs.org/serve-favicon from cache
+273 silly addNameRange number 2 { name: 'serve-favicon',
+273 silly addNameRange   range: '>=2.0.1-0 <3.0.0-0',
+273 silly addNameRange   hasData: true }
+274 silly addNameRange versions [ 'serve-favicon',
+274 silly addNameRange   [ '2.0.0',
+274 silly addNameRange     '2.0.1',
+274 silly addNameRange     '2.1.0',
+274 silly addNameRange     '2.1.1',
+274 silly addNameRange     '2.1.2',
+274 silly addNameRange     '2.1.3',
+274 silly addNameRange     '2.1.4',
+274 silly addNameRange     '2.1.5',
+274 silly addNameRange     '2.1.6',
+274 silly addNameRange     '2.1.7',
+274 silly addNameRange     '2.2.0',
+274 silly addNameRange     '2.2.1' ] ]
+275 verbose addNamed [ 'serve-favicon', '2.2.1' ]
+276 verbose addNamed [ '2.2.1', '2.2.1' ]
+277 silly lockFile 6918e89a-serve-favicon-2-2-1 serve-favicon@2.2.1
+278 verbose lock serve-favicon@2.2.1 /home/fadi/.npm/6918e89a-serve-favicon-2-2-1.lock
+279 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+280 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+281 silly lockFile 99f654c7-bower-1-3-12 bower@^1.3.12
+282 silly lockFile 99f654c7-bower-1-3-12 bower@^1.3.12
+283 http 304 https://registry.npmjs.org/loopback-explorer
+284 silly registry.get cb [ 304,
+284 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+284 silly registry.get     via: '1.1 varnish',
+284 silly registry.get     'cache-control': 'max-age=60',
+284 silly registry.get     etag: '"14ZTW17ZWR31K80A09EK8KTDI"',
+284 silly registry.get     age: '45',
+284 silly registry.get     connection: 'keep-alive',
+284 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+284 silly registry.get     'x-cache': 'HIT',
+284 silly registry.get     'x-cache-hits': '1',
+284 silly registry.get     'x-timer': 'S1434057993.290467,VS0,VE0',
+284 silly registry.get     vary: 'Accept' } ]
+285 verbose etag https://registry.npmjs.org/loopback-explorer from cache
+286 silly lockFile 6918e89a-serve-favicon-2-2-1 serve-favicon@2.2.1
+287 silly lockFile 6918e89a-serve-favicon-2-2-1 serve-favicon@2.2.1
+288 silly lockFile 55737c34-serve-favicon-2-0-1 serve-favicon@^2.0.1
+289 silly lockFile 55737c34-serve-favicon-2-0-1 serve-favicon@^2.0.1
+290 silly addNameRange number 2 { name: 'loopback-explorer',
+290 silly addNameRange   range: '>=1.1.0-0 <2.0.0-0',
+290 silly addNameRange   hasData: true }
+291 silly addNameRange versions [ 'loopback-explorer',
+291 silly addNameRange   [ '1.0.0',
+291 silly addNameRange     '1.0.1',
+291 silly addNameRange     '1.0.2',
+291 silly addNameRange     '1.1.0',
+291 silly addNameRange     '1.1.1',
+291 silly addNameRange     '1.2.0',
+291 silly addNameRange     '1.2.1',
+291 silly addNameRange     '1.2.2',
+291 silly addNameRange     '1.2.3',
+291 silly addNameRange     '1.2.4',
+291 silly addNameRange     '1.2.5',
+291 silly addNameRange     '1.2.6',
+291 silly addNameRange     '1.2.7',
+291 silly addNameRange     '1.2.8',
+291 silly addNameRange     '1.2.9',
+291 silly addNameRange     '1.2.10',
+291 silly addNameRange     '1.2.11',
+291 silly addNameRange     '1.3.0',
+291 silly addNameRange     '1.4.1',
+291 silly addNameRange     '1.5.0',
+291 silly addNameRange     '1.5.1',
+291 silly addNameRange     '1.5.2',
+291 silly addNameRange     '1.6.0',
+291 silly addNameRange     '1.6.1',
+291 silly addNameRange     '1.6.2',
+291 silly addNameRange     '1.6.3',
+291 silly addNameRange     '1.6.4',
+291 silly addNameRange     '1.7.0',
+291 silly addNameRange     '1.7.1',
+291 silly addNameRange     '1.7.2' ] ]
+292 verbose addNamed [ 'loopback-explorer', '1.7.2' ]
+293 verbose addNamed [ '1.7.2', '1.7.2' ]
+294 silly lockFile 447c970f-loopback-explorer-1-7-2 loopback-explorer@1.7.2
+295 verbose lock loopback-explorer@1.7.2 /home/fadi/.npm/447c970f-loopback-explorer-1-7-2.lock
+296 http 304 https://registry.npmjs.org/braintree
+297 silly registry.get cb [ 304,
+297 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+297 silly registry.get     via: '1.1 varnish',
+297 silly registry.get     'cache-control': 'max-age=60',
+297 silly registry.get     etag: '"B2YGXSMPPYYY6XIVCFV5WZ9U6"',
+297 silly registry.get     age: '23',
+297 silly registry.get     connection: 'keep-alive',
+297 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+297 silly registry.get     'x-cache': 'HIT',
+297 silly registry.get     'x-cache-hits': '1',
+297 silly registry.get     'x-timer': 'S1434057993.301182,VS0,VE0',
+297 silly registry.get     vary: 'Accept' } ]
+298 verbose etag https://registry.npmjs.org/braintree from cache
+299 silly addNameRange number 2 { name: 'braintree',
+299 silly addNameRange   range: '>=1.23.0-0 <2.0.0-0',
+299 silly addNameRange   hasData: true }
+300 silly addNameRange versions [ 'braintree',
+300 silly addNameRange   [ '0.1.1',
+300 silly addNameRange     '0.2.0',
+300 silly addNameRange     '0.3.0',
+300 silly addNameRange     '0.4.0',
+300 silly addNameRange     '0.4.1',
+300 silly addNameRange     '0.5.0',
+300 silly addNameRange     '0.5.1',
+300 silly addNameRange     '1.0.0',
+300 silly addNameRange     '1.1.0',
+300 silly addNameRange     '1.1.1',
+300 silly addNameRange     '1.1.2',
+300 silly addNameRange     '1.2.0',
+300 silly addNameRange     '1.3.0',
+300 silly addNameRange     '1.4.0',
+300 silly addNameRange     '1.5.1',
+300 silly addNameRange     '1.6.0',
+300 silly addNameRange     '1.7.0',
+300 silly addNameRange     '1.8.0',
+300 silly addNameRange     '1.9.0',
+300 silly addNameRange     '1.9.1',
+300 silly addNameRange     '1.9.2',
+300 silly addNameRange     '1.10.0',
+300 silly addNameRange     '1.11.0',
+300 silly addNameRange     '1.11.1',
+300 silly addNameRange     '1.11.2',
+300 silly addNameRange     '1.12.0',
+300 silly addNameRange     '1.13.0',
+300 silly addNameRange     '1.13.1',
+300 silly addNameRange     '1.14.0',
+300 silly addNameRange     '1.14.1',
+300 silly addNameRange     '1.15.0',
+300 silly addNameRange     '1.16.0',
+300 silly addNameRange     '1.17.0',
+300 silly addNameRange     '1.18.0',
+300 silly addNameRange     '1.18.1',
+300 silly addNameRange     '1.19.0',
+300 silly addNameRange     '1.20.0',
+300 silly addNameRange     '1.21.0',
+300 silly addNameRange     '1.22.0',
+300 silly addNameRange     '1.23.0',
+300 silly addNameRange     '1.24.0',
+300 silly addNameRange     '1.25.0',
+300 silly addNameRange     '1.26.0' ] ]
+301 verbose addNamed [ 'braintree', '1.26.0' ]
+302 verbose addNamed [ '1.26.0', '1.26.0' ]
+303 silly lockFile ccef4371-braintree-1-26-0 braintree@1.26.0
+304 verbose lock braintree@1.26.0 /home/fadi/.npm/ccef4371-braintree-1-26-0.lock
+305 http 304 https://registry.npmjs.org/ejs
+306 silly registry.get cb [ 304,
+306 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+306 silly registry.get     via: '1.1 varnish',
+306 silly registry.get     'cache-control': 'max-age=60',
+306 silly registry.get     etag: '"100H38L7UN5X8LNXVKIWOC0IM"',
+306 silly registry.get     age: '33',
+306 silly registry.get     connection: 'keep-alive',
+306 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+306 silly registry.get     'x-cache': 'HIT',
+306 silly registry.get     'x-cache-hits': '1',
+306 silly registry.get     'x-timer': 'S1434057993.316292,VS0,VE0',
+306 silly registry.get     vary: 'Accept' } ]
+307 verbose etag https://registry.npmjs.org/ejs from cache
+308 http 304 https://registry.npmjs.org/loopback
+309 silly registry.get cb [ 304,
+309 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+309 silly registry.get     via: '1.1 varnish',
+309 silly registry.get     'cache-control': 'max-age=60',
+309 silly registry.get     etag: '"1Z60UU03F8IHGWNHOS82L7CUY"',
+309 silly registry.get     age: '8',
+309 silly registry.get     connection: 'keep-alive',
+309 silly registry.get     'x-served-by': 'cache-lax1435-LAX',
+309 silly registry.get     'x-cache': 'HIT',
+309 silly registry.get     'x-cache-hits': '1',
+309 silly registry.get     'x-timer': 'S1434057993.314941,VS0,VE1',
+309 silly registry.get     vary: 'Accept' } ]
+310 verbose etag https://registry.npmjs.org/loopback from cache
+311 silly lockFile 2bd4d990-oopback-connector-mongodb-1-11-0 loopback-connector-mongodb@1.11.0
+312 silly lockFile 2bd4d990-oopback-connector-mongodb-1-11-0 loopback-connector-mongodb@1.11.0
+313 silly lockFile 873c07bc-loopback-connector-mongodb-1-1-7 loopback-connector-mongodb@^1.1.7
+314 silly lockFile 873c07bc-loopback-connector-mongodb-1-1-7 loopback-connector-mongodb@^1.1.7
+315 silly addNameRange number 2 { name: 'ejs', range: '>=1.0.0-0 <1.1.0-0', hasData: true }
+316 silly addNameRange versions [ 'ejs',
+316 silly addNameRange   [ '0.0.1',
+316 silly addNameRange     '0.0.2',
+316 silly addNameRange     '0.0.3',
+316 silly addNameRange     '0.0.4',
+316 silly addNameRange     '0.1.0',
+316 silly addNameRange     '0.2.0',
+316 silly addNameRange     '0.2.1',
+316 silly addNameRange     '0.3.0',
+316 silly addNameRange     '0.3.1',
+316 silly addNameRange     '0.4.0',
+316 silly addNameRange     '0.4.1',
+316 silly addNameRange     '0.4.2',
+316 silly addNameRange     '0.4.3',
+316 silly addNameRange     '0.5.0',
+316 silly addNameRange     '0.6.0',
+316 silly addNameRange     '0.6.1',
+316 silly addNameRange     '0.7.0',
+316 silly addNameRange     '0.7.1',
+316 silly addNameRange     '0.7.2',
+316 silly addNameRange     '0.8.0',
+316 silly addNameRange     '0.8.1',
+316 silly addNameRange     '0.8.2',
+316 silly addNameRange     '0.8.3',
+316 silly addNameRange     '0.8.4',
+316 silly addNameRange     '0.8.5',
+316 silly addNameRange     '0.8.6',
+316 silly addNameRange     '0.8.8',
+316 silly addNameRange     '1.0.0',
+316 silly addNameRange     '2.0.2',
+316 silly addNameRange     '2.0.3',
+316 silly addNameRange     '2.0.4',
+316 silly addNameRange     '2.0.5',
+316 silly addNameRange     '2.0.6',
+316 silly addNameRange     '2.0.7',
+316 silly addNameRange     '2.0.8',
+316 silly addNameRange     '2.1.1',
+316 silly addNameRange     '2.1.2',
+316 silly addNameRange     '2.1.3',
+316 silly addNameRange     '2.1.4',
+316 silly addNameRange     '2.2.1',
+316 silly addNameRange     '2.2.2',
+316 silly addNameRange     '2.2.3',
+316 silly addNameRange     '2.2.4',
+316 silly addNameRange     '2.3.1' ] ]
+317 verbose addNamed [ 'ejs', '1.0.0' ]
+318 verbose addNamed [ '1.0.0', '1.0.0' ]
+319 silly lockFile 3b9d58f7-ejs-1-0-0 ejs@1.0.0
+320 verbose lock ejs@1.0.0 /home/fadi/.npm/3b9d58f7-ejs-1-0-0.lock
+321 silly addNameRange number 2 { name: 'loopback', range: '>=2.8.0-0 <3.0.0-0', hasData: true }
+322 silly addNameRange versions [ 'loopback',
+322 silly addNameRange   [ '1.0.0',
+322 silly addNameRange     '1.1.0',
+322 silly addNameRange     '1.2.0',
+322 silly addNameRange     '1.2.1',
+322 silly addNameRange     '1.3.0',
+322 silly addNameRange     '1.3.1',
+322 silly addNameRange     '1.3.2',
+322 silly addNameRange     '1.3.3',
+322 silly addNameRange     '1.3.4',
+322 silly addNameRange     '1.4.0',
+322 silly addNameRange     '1.4.1',
+322 silly addNameRange     '1.4.2',
+322 silly addNameRange     '1.4.3',
+322 silly addNameRange     '1.5.0',
+322 silly addNameRange     '1.5.1',
+322 silly addNameRange     '1.5.2',
+322 silly addNameRange     '1.5.3',
+322 silly addNameRange     '1.6.0',
+322 silly addNameRange     '1.6.1',
+322 silly addNameRange     '1.6.2',
+322 silly addNameRange     '1.7.0',
+322 silly addNameRange     '1.7.1',
+322 silly addNameRange     '1.7.2',
+322 silly addNameRange     '1.7.3',
+322 silly addNameRange     '1.7.4',
+322 silly addNameRange     '1.7.5',
+322 silly addNameRange     '1.7.6',
+322 silly addNameRange     '1.7.7',
+322 silly addNameRange     '1.8.0',
+322 silly addNameRange     '1.8.1',
+322 silly addNameRange     '1.8.2',
+322 silly addNameRange     '1.8.3',
+322 silly addNameRange     '1.8.4',
+322 silly addNameRange     '1.8.5',
+322 silly addNameRange     '2.0.0-beta1',
+322 silly addNameRange     '2.0.0-beta2',
+322 silly addNameRange     '2.0.0-beta3',
+322 silly addNameRange     '1.8.6',
+322 silly addNameRange     '1.8.8',
+322 silly addNameRange     '1.9.0',
+322 silly addNameRange     '2.0.0-beta4',
+322 silly addNameRange     '1.9.1',
+322 silly addNameRange     '2.0.0-beta5',
+322 silly addNameRange     '2.0.0-beta6',
+322 silly addNameRange     '2.0.0-beta7',
+322 silly addNameRange     '1.10.0',
+322 silly addNameRange     '2.0.0',
+322 silly addNameRange     '2.0.1',
+322 silly addNameRange     '2.0.2',
+322 silly addNameRange     '2.1.0',
+322 silly addNameRange     '2.1.1',
+322 silly addNameRange     '2.1.2',
+322 silly addNameRange     '2.1.3',
+322 silly addNameRange     '2.1.4',
+322 silly addNameRange     '2.2.0',
+322 silly addNameRange     '2.3.0',
+322 silly addNameRange     '2.3.1',
+322 silly addNameRange     '2.4.0',
+322 silly addNameRange     '2.4.1',
+322 silly addNameRange     '2.5.0',
+322 silly addNameRange     '2.6.0',
+322 silly addNameRange     '2.7.0',
+322 silly addNameRange     '2.8.0',
+322 silly addNameRange     '2.8.1',
+322 silly addNameRange     '2.8.2',
+322 silly addNameRange     '2.8.3',
+322 silly addNameRange     '2.8.4',
+322 silly addNameRange     '2.8.5',
+322 silly addNameRange     '2.8.6',
+322 silly addNameRange     '2.8.7',
+322 silly addNameRange     '2.8.8',
+322 silly addNameRange     '2.9.0',
+322 silly addNameRange     '2.10.0',
+322 silly addNameRange     '2.10.1',
+322 silly addNameRange     '2.10.2',
+322 silly addNameRange     '2.11.0',
+322 silly addNameRange     '2.12.0',
+322 silly addNameRange     '2.12.1',
+322 silly addNameRange     '2.13.0',
+322 silly addNameRange     '2.14.0',
+322 silly addNameRange     '2.15.0',
+322 silly addNameRange     '2.16.0',
+322 silly addNameRange     '2.16.1',
+322 silly addNameRange     '2.16.3',
+322 silly addNameRange     '2.17.0',
+322 silly addNameRange     '2.17.1',
+322 silly addNameRange     '2.17.2',
+322 silly addNameRange     '2.17.3',
+322 silly addNameRange     '2.18.0' ] ]
+323 verbose addNamed [ 'loopback', '2.18.0' ]
+324 verbose addNamed [ '2.18.0', '2.18.0' ]
+325 silly lockFile 01ee120f-loopback-2-18-0 loopback@2.18.0
+326 verbose lock loopback@2.18.0 /home/fadi/.npm/01ee120f-loopback-2-18-0.lock
+327 http 304 https://registry.npmjs.org/jshint
+328 silly registry.get cb [ 304,
+328 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+328 silly registry.get     via: '1.1 varnish',
+328 silly registry.get     'cache-control': 'max-age=60',
+328 silly registry.get     etag: '"EJWJPZH0PFLH0MOK9KQ3S5JZI"',
+328 silly registry.get     age: '56',
+328 silly registry.get     connection: 'keep-alive',
+328 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+328 silly registry.get     'x-cache': 'HIT',
+328 silly registry.get     'x-cache-hits': '3',
+328 silly registry.get     'x-timer': 'S1434057993.332383,VS0,VE0',
+328 silly registry.get     vary: 'Accept' } ]
+329 verbose etag https://registry.npmjs.org/jshint from cache
+330 http 200 https://registry.npmjs.org/compression
+331 silly registry.get cb [ 200,
+331 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+331 silly registry.get     etag: '"8CUJ95QX3IZJ1OP1D41PSHUN"',
+331 silly registry.get     'content-type': 'application/json',
+331 silly registry.get     'cache-control': 'max-age=60',
+331 silly registry.get     'content-length': '54337',
+331 silly registry.get     'accept-ranges': 'bytes',
+331 silly registry.get     date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+331 silly registry.get     via: '1.1 varnish',
+331 silly registry.get     age: '35',
+331 silly registry.get     connection: 'keep-alive',
+331 silly registry.get     'x-served-by': 'cache-sjc3129-SJC',
+331 silly registry.get     'x-cache': 'HIT',
+331 silly registry.get     'x-cache-hits': '1',
+331 silly registry.get     'x-timer': 'S1434057993.306462,VS0,VE0',
+331 silly registry.get     vary: 'Accept' } ]
+332 silly lockFile 447c970f-loopback-explorer-1-7-2 loopback-explorer@1.7.2
+333 silly lockFile 447c970f-loopback-explorer-1-7-2 loopback-explorer@1.7.2
+334 silly lockFile d1002ed1-loopback-explorer-1-1-0 loopback-explorer@^1.1.0
+335 silly lockFile d1002ed1-loopback-explorer-1-1-0 loopback-explorer@^1.1.0
+336 silly addNameRange number 2 { name: 'jshint', range: '>=2.5.6-0 <3.0.0-0', hasData: true }
+337 silly addNameRange versions [ 'jshint',
+337 silly addNameRange   [ '0.1.8',
+337 silly addNameRange     '0.1.9',
+337 silly addNameRange     '0.2.0',
+337 silly addNameRange     '0.2.1',
+337 silly addNameRange     '0.2.2',
+337 silly addNameRange     '0.2.3',
+337 silly addNameRange     '0.3.0',
+337 silly addNameRange     '0.3.1',
+337 silly addNameRange     '0.4.0',
+337 silly addNameRange     '0.5.0',
+337 silly addNameRange     '0.5.1',
+337 silly addNameRange     '0.5.2',
+337 silly addNameRange     '0.5.3',
+337 silly addNameRange     '0.5.4',
+337 silly addNameRange     '0.5.5',
+337 silly addNameRange     '0.5.6',
+337 silly addNameRange     '0.5.7',
+337 silly addNameRange     '0.5.8',
+337 silly addNameRange     '0.5.9',
+337 silly addNameRange     '0.6.0',
+337 silly addNameRange     '0.6.1',
+337 silly addNameRange     '0.6.2',
+337 silly addNameRange     '0.6.3',
+337 silly addNameRange     '0.7.0',
+337 silly addNameRange     '0.7.1',
+337 silly addNameRange     '0.7.2',
+337 silly addNameRange     '0.7.3',
+337 silly addNameRange     '0.8.0',
+337 silly addNameRange     '0.8.1',
+337 silly addNameRange     '0.8.2',
+337 silly addNameRange     '0.9.0',
+337 silly addNameRange     '0.9.1',
+337 silly addNameRange     '1.0.0',
+337 silly addNameRange     '1.1.0',
+337 silly addNameRange     '2.0.0',
+337 silly addNameRange     '2.0.1',
+337 silly addNameRange     '2.1.0',
+337 silly addNameRange     '2.1.1',
+337 silly addNameRange     '2.1.2',
+337 silly addNameRange     '2.1.3',
+337 silly addNameRange     '2.1.4',
+337 silly addNameRange     '2.1.5',
+337 silly addNameRange     '2.1.6',
+337 silly addNameRange     '2.1.7',
+337 silly addNameRange     '2.1.8',
+337 silly addNameRange     '2.1.9',
+337 silly addNameRange     '2.1.10',
+337 silly addNameRange     '2.1.11',
+337 silly addNameRange     '2.2.0',
+337 silly addNameRange     '2.3.0',
+337 silly addNameRange     '2.4.0',
+337 silly addNameRange     '2.4.1',
+337 silly addNameRange     '2.4.2',
+337 silly addNameRange     '2.4.3',
+337 silly addNameRange     '2.4.4',
+337 silly addNameRange     '2.5.0',
+337 silly addNameRange     '2.5.1',
+337 silly addNameRange     '2.5.2',
+337 silly addNameRange     '2.5.3',
+337 silly addNameRange     '2.5.4',
+337 silly addNameRange     '2.5.5',
+337 silly addNameRange     '2.5.6',
+337 silly addNameRange     '2.5.7',
+337 silly addNameRange     '2.5.8',
+337 silly addNameRange     '2.5.9',
+337 silly addNameRange     '2.5.10',
+337 silly addNameRange     '2.5.11',
+337 silly addNameRange     '2.6.0',
+337 silly addNameRange     '2.6.1',
+337 silly addNameRange     '2.6.2',
+337 silly addNameRange     '2.6.3',
+337 silly addNameRange     '2.7.0',
+337 silly addNameRange     '2.8.0' ] ]
+338 verbose addNamed [ 'jshint', '2.8.0' ]
+339 verbose addNamed [ '2.8.0', '2.8.0' ]
+340 silly lockFile 1203a897-jshint-2-8-0 jshint@2.8.0
+341 verbose lock jshint@2.8.0 /home/fadi/.npm/1203a897-jshint-2-8-0.lock
+342 silly addNameRange number 2 { name: 'compression',
+342 silly addNameRange   range: '>=1.0.3-0 <2.0.0-0',
+342 silly addNameRange   hasData: true }
+343 silly addNameRange versions [ 'compression',
+343 silly addNameRange   [ '1.0.0',
+343 silly addNameRange     '1.0.1',
+343 silly addNameRange     '1.0.2',
+343 silly addNameRange     '1.0.3',
+343 silly addNameRange     '1.0.4',
+343 silly addNameRange     '1.0.5',
+343 silly addNameRange     '1.0.6',
+343 silly addNameRange     '1.0.7',
+343 silly addNameRange     '1.0.8',
+343 silly addNameRange     '1.0.9',
+343 silly addNameRange     '1.0.10',
+343 silly addNameRange     '1.0.11',
+343 silly addNameRange     '1.1.0',
+343 silly addNameRange     '1.1.1',
+343 silly addNameRange     '1.1.2',
+343 silly addNameRange     '1.2.0',
+343 silly addNameRange     '1.2.1',
+343 silly addNameRange     '1.2.2',
+343 silly addNameRange     '1.3.0',
+343 silly addNameRange     '1.3.1',
+343 silly addNameRange     '1.4.0',
+343 silly addNameRange     '1.4.1',
+343 silly addNameRange     '1.4.2',
+343 silly addNameRange     '1.4.3',
+343 silly addNameRange     '1.4.4',
+343 silly addNameRange     '1.5.0' ] ]
+344 verbose addNamed [ 'compression', '1.5.0' ]
+345 verbose addNamed [ '1.5.0', '1.5.0' ]
+346 silly lockFile b038e9e3-compression-1-5-0 compression@1.5.0
+347 verbose lock compression@1.5.0 /home/fadi/.npm/b038e9e3-compression-1-5-0.lock
+348 silly lockFile ccef4371-braintree-1-26-0 braintree@1.26.0
+349 silly lockFile ccef4371-braintree-1-26-0 braintree@1.26.0
+350 silly lockFile ed3e91bd-ompression-compression-1-5-0-tgz https://registry.npmjs.org/compression/-/compression-1.5.0.tgz
+351 verbose lock https://registry.npmjs.org/compression/-/compression-1.5.0.tgz /home/fadi/.npm/ed3e91bd-ompression-compression-1-5-0-tgz.lock
+352 silly lockFile bb41811d-braintree-1-23-0 braintree@^1.23.0
+353 silly lockFile bb41811d-braintree-1-23-0 braintree@^1.23.0
+354 verbose addRemoteTarball [ 'https://registry.npmjs.org/compression/-/compression-1.5.0.tgz',
+354 verbose addRemoteTarball   'ccc1a54788da1b3ad7729c49f6a00b3ac9adf47f' ]
+355 info retry fetch attempt 1 at 14:26:33
+356 verbose fetch to= /tmp/npm-9350--dZIBiPY/registry.npmjs.org/compression/-/compression-1.5.0.tgz
+357 http GET https://registry.npmjs.org/compression/-/compression-1.5.0.tgz
+358 silly lockFile 01ee120f-loopback-2-18-0 loopback@2.18.0
+359 silly lockFile 01ee120f-loopback-2-18-0 loopback@2.18.0
+360 silly lockFile 1203a897-jshint-2-8-0 jshint@2.8.0
+361 silly lockFile 1203a897-jshint-2-8-0 jshint@2.8.0
+362 silly lockFile abb75fef-loopback-2-8-0 loopback@^2.8.0
+363 silly lockFile abb75fef-loopback-2-8-0 loopback@^2.8.0
+364 silly lockFile 532a3693-jshint-2-5-6 jshint@^2.5.6
+365 silly lockFile 532a3693-jshint-2-5-6 jshint@^2.5.6
+366 silly lockFile 3b9d58f7-ejs-1-0-0 ejs@1.0.0
+367 silly lockFile 3b9d58f7-ejs-1-0-0 ejs@1.0.0
+368 silly lockFile 9e596aab-ejs-1-0-0 ejs@~1.0.0
+369 silly lockFile 9e596aab-ejs-1-0-0 ejs@~1.0.0
+370 http 304 https://registry.npmjs.org/loopback-datasource-juggler
+371 silly registry.get cb [ 304,
+371 silly registry.get   { date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+371 silly registry.get     via: '1.1 varnish',
+371 silly registry.get     'cache-control': 'max-age=60',
+371 silly registry.get     etag: '"BSRTGLGB8HUUQIRPCFO79QFW0"',
+371 silly registry.get     age: '8',
+371 silly registry.get     connection: 'keep-alive',
+371 silly registry.get     'x-served-by': 'cache-lax1431-LAX',
+371 silly registry.get     'x-cache': 'HIT',
+371 silly registry.get     'x-cache-hits': '1',
+371 silly registry.get     'x-timer': 'S1434057993.324193,VS0,VE1',
+371 silly registry.get     vary: 'Accept' } ]
+372 verbose etag https://registry.npmjs.org/loopback-datasource-juggler from cache
+373 silly addNameRange number 2 { name: 'loopback-datasource-juggler',
+373 silly addNameRange   range: '>=2.7.0-0 <3.0.0-0',
+373 silly addNameRange   hasData: true }
+374 silly addNameRange versions [ 'loopback-datasource-juggler',
+374 silly addNameRange   [ '1.0.0',
+374 silly addNameRange     '1.1.0',
+374 silly addNameRange     '1.2.0',
+374 silly addNameRange     '1.2.2',
+374 silly addNameRange     '1.2.3',
+374 silly addNameRange     '1.2.4',
+374 silly addNameRange     '1.2.5',
+374 silly addNameRange     '1.2.6',
+374 silly addNameRange     '1.2.7',
+374 silly addNameRange     '1.2.8',
+374 silly addNameRange     '1.2.9',
+374 silly addNameRange     '1.2.10',
+374 silly addNameRange     '1.2.11',
+374 silly addNameRange     '1.2.12',
+374 silly addNameRange     '1.2.13',
+374 silly addNameRange     '1.3.1',
+374 silly addNameRange     '1.3.2',
+374 silly addNameRange     '1.3.3',
+374 silly addNameRange     '1.3.4',
+374 silly addNameRange     '1.3.5',
+374 silly addNameRange     '1.3.6',
+374 silly addNameRange     '1.3.7',
+374 silly addNameRange     '1.3.8',
+374 silly addNameRange     '1.3.9',
+374 silly addNameRange     '1.3.10',
+374 silly addNameRange     '1.3.11',
+374 silly addNameRange     '1.3.12',
+374 silly addNameRange     '1.3.13',
+374 silly addNameRange     '1.4.0',
+374 silly addNameRange     '1.5.0',
+374 silly addNameRange     '1.5.1',
+374 silly addNameRange     '1.5.2',
+374 silly addNameRange     '2.0.0-beta1',
+374 silly addNameRange     '1.5.4',
+374 silly addNameRange     '1.5.5',
+374 silly addNameRange     '1.6.1',
+374 silly addNameRange     '2.0.0-beta2',
+374 silly addNameRange     '1.6.2',
+374 silly addNameRange     '1.6.3',
+374 silly addNameRange     '1.7.0',
+374 silly addNameRange     '2.0.0-beta3',
+374 silly addNameRange     '2.0.0-beta4',
+374 silly addNameRange     '1.7.1',
+374 silly addNameRange     '2.0.0-beta5',
+374 silly addNameRange     '2.0.0',
+374 silly addNameRange     '2.1.1',
+374 silly addNameRange     '2.2.1',
+374 silly addNameRange     '2.2.2',
+374 silly addNameRange     '2.3.0',
+374 silly addNameRange     '2.3.1',
+374 silly addNameRange     '2.4.0',
+374 silly addNameRange     '2.4.1',
+374 silly addNameRange     '2.4.2',
+374 silly addNameRange     '2.5.0',
+374 silly addNameRange     '2.5.1',
+374 silly addNameRange     '2.5.2',
+374 silly addNameRange     '2.6.1',
+374 silly addNameRange     '2.7.0',
+374 silly addNameRange     '2.8.0',
+374 silly addNameRange     '2.9.0',
+374 silly addNameRange     '2.10.0',
+374 silly addNameRange     '2.10.1',
+374 silly addNameRange     '2.10.2',
+374 silly addNameRange     '2.10.3',
+374 silly addNameRange     '2.11.0',
+374 silly addNameRange     '2.12.0',
+374 silly addNameRange     '2.13.0',
+374 silly addNameRange     '2.14.0',
+374 silly addNameRange     '2.14.1',
+374 silly addNameRange     '2.15.0',
+374 silly addNameRange     '2.16.0',
+374 silly addNameRange     '2.17.0',
+374 silly addNameRange     '2.18.0',
+374 silly addNameRange     '2.18.1',
+374 silly addNameRange     '2.19.0',
+374 silly addNameRange     '2.19.1',
+374 silly addNameRange     '2.19.2',
+374 silly addNameRange     '2.20.0',
+374 silly addNameRange     '2.21.0',
+374 silly addNameRange     '2.22.0',
+374 silly addNameRange     '2.23.0',
+374 silly addNameRange     '2.24.0',
+374 silly addNameRange     '2.25.0',
+374 silly addNameRange     '2.25.1',
+374 silly addNameRange     '2.26.0',
+374 silly addNameRange     '2.26.1',
+374 silly addNameRange     '2.26.2',
+374 silly addNameRange     '2.26.3',
+374 silly addNameRange     '2.26.4',
+374 silly addNameRange     '2.27.0',
+374 silly addNameRange     '2.27.1',
+374 silly addNameRange     '2.28.0',
+374 silly addNameRange     '2.28.1',
+374 silly addNameRange     '2.29.0',
+374 silly addNameRange     '2.29.1',
+374 silly addNameRange     '2.29.2' ] ]
+375 verbose addNamed [ 'loopback-datasource-juggler', '2.29.2' ]
+376 verbose addNamed [ '2.29.2', '2.29.2' ]
+377 silly lockFile cf83edee-opback-datasource-juggler-2-29-2 loopback-datasource-juggler@2.29.2
+378 verbose lock loopback-datasource-juggler@2.29.2 /home/fadi/.npm/cf83edee-opback-datasource-juggler-2-29-2.lock
+379 silly lockFile cf83edee-opback-datasource-juggler-2-29-2 loopback-datasource-juggler@2.29.2
+380 silly lockFile cf83edee-opback-datasource-juggler-2-29-2 loopback-datasource-juggler@2.29.2
+381 silly lockFile 7f9e0c30-oopback-datasource-juggler-2-7-0 loopback-datasource-juggler@^2.7.0
+382 silly lockFile 7f9e0c30-oopback-datasource-juggler-2-7-0 loopback-datasource-juggler@^2.7.0
+383 http 200 https://registry.npmjs.org/loopback-boot
+384 silly registry.get cb [ 200,
+384 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+384 silly registry.get     etag: '"DNVGYBFVKLDNEQZJ8N16OH3SP"',
+384 silly registry.get     'content-type': 'application/json',
+384 silly registry.get     'cache-control': 'max-age=60',
+384 silly registry.get     'content-length': '43122',
+384 silly registry.get     'accept-ranges': 'bytes',
+384 silly registry.get     date: 'Thu, 11 Jun 2015 21:26:33 GMT',
+384 silly registry.get     via: '1.1 varnish',
+384 silly registry.get     age: '45',
+384 silly registry.get     connection: 'keep-alive',
+384 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+384 silly registry.get     'x-cache': 'HIT',
+384 silly registry.get     'x-cache-hits': '1',
+384 silly registry.get     'x-timer': 'S1434057993.311297,VS0,VE0',
+384 silly registry.get     vary: 'Accept' } ]
+385 silly addNameRange number 2 { name: 'loopback-boot',
+385 silly addNameRange   range: '>=2.4.0-0 <3.0.0-0',
+385 silly addNameRange   hasData: true }
+386 silly addNameRange versions [ 'loopback-boot',
+386 silly addNameRange   [ '1.0.0',
+386 silly addNameRange     '1.1.0',
+386 silly addNameRange     '2.0.0-beta1',
+386 silly addNameRange     '2.0.0-beta2',
+386 silly addNameRange     '1.1.1',
+386 silly addNameRange     '2.0.0-beta3',
+386 silly addNameRange     '2.0.0',
+386 silly addNameRange     '2.1.0',
+386 silly addNameRange     '2.2.0',
+386 silly addNameRange     '2.3.0',
+386 silly addNameRange     '2.3.1',
+386 silly addNameRange     '2.4.0',
+386 silly addNameRange     '2.5.0',
+386 silly addNameRange     '2.5.1',
+386 silly addNameRange     '2.5.2',
+386 silly addNameRange     '2.6.0',
+386 silly addNameRange     '2.6.1',
+386 silly addNameRange     '2.6.2',
+386 silly addNameRange     '1.1.2',
+386 silly addNameRange     '2.6.3',
+386 silly addNameRange     '2.6.4',
+386 silly addNameRange     '2.6.5',
+386 silly addNameRange     '2.7.0',
+386 silly addNameRange     '2.7.1',
+386 silly addNameRange     '2.8.0',
+386 silly addNameRange     '2.8.1' ] ]
+387 verbose addNamed [ 'loopback-boot', '2.8.1' ]
+388 verbose addNamed [ '2.8.1', '2.8.1' ]
+389 silly lockFile a2a153f2-loopback-boot-2-8-1 loopback-boot@2.8.1
+390 verbose lock loopback-boot@2.8.1 /home/fadi/.npm/a2a153f2-loopback-boot-2-8-1.lock
+391 silly lockFile cbd1bc69-ack-boot-loopback-boot-2-8-1-tgz https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+392 verbose lock https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz /home/fadi/.npm/cbd1bc69-ack-boot-loopback-boot-2-8-1-tgz.lock
+393 verbose addRemoteTarball [ 'https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz',
+393 verbose addRemoteTarball   '7eb7f3f4241196c6b2d1397bcd2aa343f2b56e88' ]
+394 info retry fetch attempt 1 at 14:26:33
+395 verbose fetch to= /tmp/npm-9350--dZIBiPY/registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+396 http GET https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+397 http 200 https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+398 silly lockFile 7c13a7ab-orhandler-errorhandler-1-4-0-tgz https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+399 silly lockFile 7c13a7ab-orhandler-errorhandler-1-4-0-tgz https://registry.npmjs.org/errorhandler/-/errorhandler-1.4.0.tgz
+400 silly lockFile b259a238-errorhandler-1-4-0 errorhandler@1.4.0
+401 silly lockFile b259a238-errorhandler-1-4-0 errorhandler@1.4.0
+402 silly lockFile 40f3549f-errorhandler-1-1-1 errorhandler@^1.1.1
+403 silly lockFile 40f3549f-errorhandler-1-1-1 errorhandler@^1.1.1
+404 http 200 https://registry.npmjs.org/compression/-/compression-1.5.0.tgz
+405 silly lockFile ed3e91bd-ompression-compression-1-5-0-tgz https://registry.npmjs.org/compression/-/compression-1.5.0.tgz
+406 silly lockFile ed3e91bd-ompression-compression-1-5-0-tgz https://registry.npmjs.org/compression/-/compression-1.5.0.tgz
+407 silly lockFile b038e9e3-compression-1-5-0 compression@1.5.0
+408 silly lockFile b038e9e3-compression-1-5-0 compression@1.5.0
+409 silly lockFile d20bd3e6-compression-1-0-3 compression@^1.0.3
+410 silly lockFile d20bd3e6-compression-1-0-3 compression@^1.0.3
+411 http 200 https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+412 silly lockFile cbd1bc69-ack-boot-loopback-boot-2-8-1-tgz https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+413 silly lockFile cbd1bc69-ack-boot-loopback-boot-2-8-1-tgz https://registry.npmjs.org/loopback-boot/-/loopback-boot-2.8.1.tgz
+414 silly lockFile a2a153f2-loopback-boot-2-8-1 loopback-boot@2.8.1
+415 silly lockFile a2a153f2-loopback-boot-2-8-1 loopback-boot@2.8.1
+416 silly lockFile dc3cc9f2-loopback-boot-2-4-0 loopback-boot@^2.4.0
+417 silly lockFile dc3cc9f2-loopback-boot-2-4-0 loopback-boot@^2.4.0
+418 error Error: EACCES, mkdir '/home/fadi/.npm/errorhandler/1.4.0'
+418 error  { [Error: EACCES, mkdir '/home/fadi/.npm/errorhandler/1.4.0']
+418 error   errno: 3,
+418 error   code: 'EACCES',
+418 error   path: '/home/fadi/.npm/errorhandler/1.4.0',
+418 error   parent: 'healthforge-server' }
+419 error Please try running this command again as root/Administrator.
+420 error System Linux 3.13.0-54-generic
+421 error command "/usr/bin/node" "/usr/bin/npm" "install"
+422 error cwd /home/fadi/Work/WebstormProjects/mps
+423 error node -v v0.10.38
+424 error npm -v 1.4.28
+425 error path /home/fadi/.npm/errorhandler/1.4.0
+426 error code EACCES
+427 error errno 3
+428 error stack Error: EACCES, mkdir '/home/fadi/.npm/errorhandler/1.4.0'
+429 verbose exit [ 3, true ]

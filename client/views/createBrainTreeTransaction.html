@@ -1,0 +1,17 @@
+<form name="addBrainTreeTransactionForm" novalidate ng-submit="addBrainTreeTransaction(addBrainTreeTransactionForm)">
+  <table>
+    <tr>
+      <th>Item Name</th>
+      <th>Quantity (mg)</th>
+      <th>Price ($)</th>
+    </tr>
+    <tr ng-repeat="orderLine in brainTreeTransaction.orderLines">
+      <td><input type="text" required ng-model="orderLine.itemName"></td>
+      <td><input type="text" required ng-model="orderLine.quantity"></td>
+      <td><input type="text" required ng-model="orderLine.amount"></td>
+    </tr>
+    <tr><td></td><td></td><td>$ {{brainTreeTransaction.getTotal()}}</td></tr>
+  </table>
+  <input type="button" value="Add Order Line" ng-click="brainTreeTransaction.orderLines.push({})" />
+  <input type="submit" value="Create BrainTree Transaction" />
+</form>

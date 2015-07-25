@@ -1,0 +1,22 @@
+<div class="meal-plan-viewer">
+    <fieldset ng-repeat="meal in recommendation.meals" class="meal-viewer">
+        <h4 style="float:right">Time: {{meal.time}}</h4>
+        <h1>{{meal.name}}</h1>
+        <ul ng-repeat="mealItem in meal.items">
+            <li>
+                <p>
+                    <h1>{{mealItem.name}}</h1>
+                    <h2>{{mealItem.quantity}} {{mealItem.unitOfMeasurement}}</h2>
+                    <blockquote>{{meal.notes}}</blockquote>
+                </p>
+                <table ng-if="mealItem.usdaData">
+                    <tr ng-repeat="nutrient in mealItem.usdaData.report.food.nutrients">
+                        <td>{{nutrient.name}}</td>
+                        <td>{{convertedValue(nutrient.value, mealItem)}}</td>
+                        <td>{{nutrient.unit}}</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </fieldset>
+</div>

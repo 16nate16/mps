@@ -1,0 +1,4 @@
+<form name="addRecommendationForm" novalidate role="form">
+  <input type="email" placeholder="Enter Client Email" ng-model="newRecommendation.clientEmail" />
+  <input type="submit" value="Request Information From Client" ng-click="createRecommendation('request')" /> OR <input type="submit" value="Manually Enter Client Information" ng-click="createRecommendation('manualEntry')" />
+</form>

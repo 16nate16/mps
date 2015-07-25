@@ -1,0 +1,21 @@
+<div class="headerContainer">
+  <h1 class="logoHeavy">nutrition<span class="logoLight">ist.io</span></h1>
+<h2 style="font-weight:100">Registration</h2>
+<br />
+<div ng-show="!registrationComplete">
+  <form name="providerRegistrationForm" ng-submit="register(true)">
+    <input type="text" name="first" class="form-control" placeholder="First Name" ng-model="user.first" style="margin-bottom:5px">
+    <input type="text" name="last" class="form-control" placeholder="Last Name" ng-model="user.last" style="margin-bottom:5px">
+    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" style="margin-bottom:5px">
+    <input type="text" name="phone" class="form-control" placeholder="Phone Number" ng-model="user.phone" style="margin-bottom:10px">
+    <input type="submit" value="Register" class="btn btn-lg btn-info">
+  </form>
+  <div style="margin-top: 10px">
+    <h6 style="font-weight: 200; color: #ffffff;  opacity: .7; display: inline">Already registered? </h6>
+    <h6 style="font-weight: 700; display: inline"><a style="color: #FFFFFF" ui-sref="auth.providerLogin" href="#">Sign In</a></h6>
+  </div>
+</div>
+<div ng-show="registrationComplete">
+  <h3>Please check your email for confirmation information...</h3>
+</div>
+</div>

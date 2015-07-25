@@ -1,0 +1,49 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "isProvider": {
+      "type": "boolean"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "providerProfile": {
+      "type": "object"
+    },
+    "providerProfileHistory": {
+      "type": "array"
+    },
+    "sourceType": {
+      "type": "string"
+    },
+    "sourceId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "providedRecommendations": {
+      "type": "hasMany",
+      "model": "RecommendationAlpha",
+      "foreignKey": "providerId"
+    },
+    "receivedRecommendations": {
+      "type": "hasMany",
+      "model": "RecommendationAlpha",
+      "foreignKey": "consumerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "listUsers"
+    }
+  ],
+  "methods": []
+}

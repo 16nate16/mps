@@ -1,0 +1,101 @@
+<button type="button" class="healthforge-button" ng-click="save()">Save</button>
+<button type="button" class="healthforge-button" ng-click="getUSDAData()">Get USDA Data</button>
+<form name="addRecommendationForm" novalidate ng-submit="formAction(addRecommendationForm)" role="form">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Notes:</h2>
+      <textarea id="notes" ng-model="recommendation.notes" class="ng-pristine ng-untouched ng-valid form-control" style="
+      width: 700px;
+      height: 150px;
+      border-radius: 6px;"></textarea>
+      <h2>Nutritional Recommendation:</h2>
+      <section id="nutritionalRecommendation">
+        <secton id="meals">
+          <h3>Meals:</h3>
+          <div ng-repeat="meal in recommendation.nutritionalRecommendation.meals">
+            <table>
+              <tr>
+                <td>
+                  <input class="form-control" type="text" required ng-model="meal.name" placeholder="Meal Name">
+                  <input class="form-control" type="text" required ng-model="meal.time" placeholder="Meal Time">
+                  <input class="form-control" type="text" required ng-model="meal.notes" placeholder="Notes">
+                  <div class="btn btn-danger fa fa-minus-circle" ng-click="removeMeal(recommendation.nutritionalRecommendation.meals, meal)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table>
+                    <tr ng-repeat="mealItem in meal.items">
+                      <td>
+                        <input class="form-control" type="text" required ng-model="mealItem.name" placeholder="Meal Item">
+                        <input class="form-control" type="text" required ng-model="mealItem.quantity" placeholder="Quantity"  style="width: 80px;">
+                        <input class="form-control" type="text" required ng-model="mealItem.unitOfMeasurement" popover="g, mg, slices etc..." popover-trigger="focus" placeholder="g" style="width: 65px">
+                        <div class="btn btn-danger fa fa-minus-circle" ng-click="removeMealItem(meal, mealItem)"></div>
+                      </td>
+                    </tr>
+                  </table>
+                  <input class="btn btn-primary" type="button" value="+ Add Meal Item" ng-click="meal.items.push({})" />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <input class="btn btn-primary" type="button" value="+ Add Meal" ng-click="recommendation.nutritionalRecommendation.meals.push({items:[]})" />
+        </secton>
+      </section>
+      <section id="previewAndSend">
+        <legend>Private Link:</legend>
+        <p>Share this link in your own email:</p>
+        <p>http://nutritionist.io/recommendation/{{recommendation.id}}</p>
+        <h3>--OR--</h3>
+        <fieldset>
+          <legend>Email</legend>
+          <label for="emailSubject">Subject:</label>
+          <input class="form-control" id="emailSubject" type="text" ng-model="recommendation.emailSubject">
+          <label for="emailBody">Body:</label>
+          <textarea id="emailBody" ng-model="recommendation.emailBody" class="ng-pristine ng-untouched ng-valid form-control" style="
+          width: 700px;
+          height: 275px;
+          border-radius: 6px;
+        "></textarea>
+        </fieldset>
+        <hr />
+        <input type="submit" value="Send" class="healthforge-button" />
+      </section>
+    </div>
+    <div class="col-sm-6">
+      <tabset>
+        <tab heading="Client Data">
+          {{recommendation.clientProfile|json}}
+          <fieldset id="client">
+            <legend>Client ({{recommendation.clientEmail}})</legend>
+            <fieldset class="form-group">
+              <legend>General Information</legend>
+              <label for="clientFirstName">First Name:</label><input class="form-control" id="clientFirstName" type="text" ng-model="recommendation.clientData.first">
+              <label for="clientLastName">Last Name:</label><input class="form-control" id="clientLastName" type="text" ng-model="recommendation.clientData.last">
+              <label for="clientHeight">Height:</label><input class="form-control" id="clientHeight" type="text" ng-model="recommendation.clientData.height">
+              <label for="clientWeight">Weight:</label><input class="form-control" id="clientWeight" type="text" ng-model="recommendation.clientData.weight">
+              <label for="clientAge">Age:</label><input class="form-control" id="clientAge" type="text" ng-model="recommendation.clientData.age">
+              <label for="clientGender">Gender:</label><input class="form-control" id="clientGender" type="text" ng-model="recommendation.clientData.gender">
+            </fieldset>
+            <fieldset id="trainingSchedule">
+              <legend>Training Schedule:</legend>
+              <label for="daysPerWeek">Days/Week:</label><input class="form-control" id="daysPerWeek" type="text" ng-model="recommendation.clientData.trainingSchedule.daysPerWeek">
+              <label for="sessionsPerDay">Sessions/Day:</label><input class="form-control" id="sessionsPerDay" type="text" ng-model="recommendation.clientData.trainingSchedule.sessionsPerDay">
+              <label for="hoursPerSession">Hours/Session:</label><input class="form-control" id="hoursPerSession" type="text" ng-model="recommendation.clientData.trainingSchedule.hoursPerSession">
+            </fieldset>
+            <fieldset id="goals">
+              <legend>Goals:</legend>
+              <div ng-repeat="goal in recommendation.clientData.goals">
+                <input class ="form-control" type="text" required ng-model="goal.label" placeholder="Goal...">
+              </div>
+              <input class="btn btn-primary" type="button" value="+ Add Goal" ng-click="recommendation.clientData.goals.push({})" />
+            </fieldset>
+          </fieldset>
+        </tab>
+        <tab heading="Nutritional Data">
+          <meal-plan-viewer recommendation="recommendation.nutritionalRecommendation"></meal-plan-viewer>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</form>

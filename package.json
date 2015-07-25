@@ -1,30 +1,30 @@
 {
-  "name": "mps",
-  "description": "mps",
+  "name": "healthforge-server",
   "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "body-parser": "^1.6.5",
-    "cookie-parser": "^1.3.2",
-    "emailjs": "^0.3.12",
-    "express": "^4.8.5",
-    "express-hbs": "^0.7.11",
-    "express-layout": "^0.1.0",
-    "express-session": "^1.7.6",
-    "express-validator": "^2.8.0",
-    "handlebars": "^2.0.0",
-    "hbs": "2.0.1",
-    "morgan": "^1.2.3",
-    "serve-favicon": "^2.0.1",
-    "serve-static": "^1.5.3",
-    "stripe": "^3.0.2",
-    "underscore": "^1.7.0"
-  },
+  "main": "server/server.js",
   "scripts": {
-    "start": "server.js"
+    "pretest": "jshint .",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "dependencies": {
+    "bower": "^1.3.12",
+    "compression": "^1.0.3",
+    "errorhandler": "^1.1.1",
+    "loopback": "^2.8.0",
+    "loopback-boot": "^2.4.0",
+    "loopback-connector-mongodb": "^1.1.7",
+    "loopback-datasource-juggler": "^2.7.0",
+    "ejs": "~1.0.0",
+    "serve-favicon": "^2.0.1",
+    "braintree": "^1.23.0"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6"
   },
   "engines": {
-    "node": "0.10.29"
-  },
-  "devDependencies": {}
+    "node": "^0.10.33"
+  }
 }

@@ -1,0 +1,8 @@
+<div ng-class="[authorizedUser ? 'rec-in': 'rec-out']">
+    <h1>{{recommendation.clientData.first}}'s Recommendation</h1>
+    <br/>
+    <meal-plan-viewer recommendation="recommendation.nutritionalRecommendation"></meal-plan-viewer>
+    <div class="margins"><body>Click below to have your weeks food shipped directly to your doorstep.</body>
+        <input class="btn btn-primary btn-lg" id="btn-css" type="button" value="Order my meals to my doorstep" ui-sref="expError" />
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<form>
+  <table>
+    <tr>
+      <th>Item Name</th>
+      <th>Quantity (mg)</th>
+      <th>Price ($)</th>
+    </tr>
+    <tr ng-repeat="orderLine in transaction.orderLines">
+      <td><input type="text" required ng-model="orderLine.itemName"></td>
+      <td><input type="text" required ng-model="orderLine.quantity"></td>
+      <td><input type="text" required ng-model="orderLine.amount"></td>
+    </tr>
+    <tr><td></td><td></td><td>$ {{brainTreeTransaction.getTotal()}}</td></tr>
+  </table>
+  <div id="checkout"></div>
+</form>

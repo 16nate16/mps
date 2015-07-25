@@ -1,0 +1,14 @@
+<div class="headerContainer">
+  <h1 class="logoHeavy">nutrition<span class="logoLight">ist.io</span></h1>
+<h2 style="font-weight:100">Making managing and engaging with your clients easy</h2>
+<br />
+<form name="loginForm" ng-submit="login()">
+  <input type="email" name="email" class="form-control" placeholder="Email" ng-model="credentials.email" style="margin-bottom:5px">
+  <input type="password" name="password" class="form-control" placeholder="Password" ng-model="credentials.password" style="margin-bottom:10px">
+  <input type="submit" value="Sign In" class="btn btn-lg btn-info">
+</form>
+  <div style="margin-top: 10px">
+    <h6 style="font-weight: 200; color: #ffffff;  opacity: .7; display: inline">Not yet registered? </h6>
+    <h6 style="font-weight: 700; display: inline"><a style="color: #FFFFFF" ui-sref="auth.providerRegistration" href="#">Create Account</a></h6>
+  </div>
+</div>

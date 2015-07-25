@@ -1,0 +1,12 @@
+<h3 style="margin-bottom: 30px">Your Recommendations <input class="btn btn-info" id="btn-css" type="button" value="Create New" ui-sref="providerRecommendationsCreate"></h3>
+<div class="list-group" style="
+    width: 550px;
+">
+  <div class="list-group-item" ng-repeat="recommendation in recommendations">
+      {{recommendation.clientData.first}} {{recommendation.clientData.last}}
+      <div class="clientOptions">
+        <a class="fa fa-external-link fa" href="#" ui-sref="consumerRecommendation({id:recommendation.id})">Client Link</a>,
+        <a class="fa fa-edit fa" ui-sref="providerRecommendationsEdit({id:recommendation.id})" href="#"> Edit</a>
+      </div>
+  </div>
+</div>

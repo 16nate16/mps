@@ -1,0 +1,21 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "healthforgeOutboundGmail": {
+    "name": "healthforgeOutboundGmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "auth": {
+          "user": "healthforge.outbound@gmail.com",
+          "pass": "fightfightwin"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+
+<div>
+  <div class="bg">
+    <div class="headerContainer">
+      <h1 class="logoHeavy">nutrition<span class="logoLight">ist.io</span></h1>
+      <h2 style="margin-right: 20px">Nutrition recommendations <br>made easy</h2>
+      <br />
+      <h3>Create, share and manage your clients’ <br>nutrition recomendations</h3>
+    </div>
+    <div class="cta">
+      <div style="margin-left: 15%; margin-right: 15%; margin-top: 25px; text-align: center; color: #7f8c8d;">
+        Enter your email address below for <b style="color: #ffffff;">early access.</b>
+      </div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6" ng-show="!done">
+        <form class="form-inline" name="waitListForm" ng-submit="addWaitListEntry()">
+          <!--<div class="col-sm-6">-->
+          <input style="width: 300px" type="email" name="email" class="form-control form-group register" placeholder="Email" ng-model="waitListEntry.email" ng-required="true">
+          <!--</div>-->
+          <!--<div class="col-sm-6">-->
+          <input onclick="ga('send', 'event', 'button', 'click', 'early access');" type="submit" value="Request early access" class="btn btn-info form-group access-btn" style="text-align: center">
+          <!--</div>-->
+        </form>
+      </div>
+      <div style="text-align: center" class="done col-sm-6" ng-show="done">
+        <h3 style="text-align: center"><b>Thanks...</b> We will be reaching out to you shortly.</h3>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--<div style="position: relative; padding-left: 10%; margin-top: 60px;">-->
+<!--<div style="display: inline; width: 33%; float: left">-->
+<!--<h4>Data Collection</h4>-->
+<!--</div>-->
+<!--<div style="display: inline; width: 33%; float: left">-->
+<!--<h4>Meal Recommendations</h4>-->
+<!--</div>-->
+<!--<div style="display: inline; width: 33%; float: left">-->
+<!--<h4>Data Storage</h4>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<div class="info row">
+
+  <div class="col-sm-4" style="padding-right: 50px;">
+    <h4>Data Collection</h4>
+    <h5 style=" line-height: 150%">Collect and store the data you need to best serve your customers.</h5>
+  </div>
+  <div class="col-sm-4" style="padding-right: 50px;">
+    <h4>Nutrition Recommendations</h4>
+    <h5 style=" line-height: 150%">Quickly create and send beautifully designed nutrition recommendations.</h5>
+  </div>
+  <div class="col-sm-4" style="padding-right: 50px">
+    <h4>Integrated Nutritional Data</h4>
+    <h5 style=" line-height: 150%">Detailed nutritional breakdowns for both you and your clients.</h5>
+    <!--<h5 style=" line-height: 150%">You and your clients can see detailed nutritional data for their recommendations.</h5>-->
+  </div>
+</div>
+</div>

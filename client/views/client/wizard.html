@@ -1,0 +1,239 @@
+
+    <div class="container">
+
+        {{user|json}}
+
+        <!--<h1 class="logo-page"><a href="/" title="My Perfect Supplement">My Perfect Supplement</a></h1>-->
+
+        <div class="row customized-supplement-container form-section-wrapper">
+            <form id="supplementForm" ng-submit="register()">
+
+                <!--             <div class="active form-section-container nutra-container">
+                                 <div class="form-group form-section">
+                                     <h2 class="page-heading">This is Kim. Your supplement expert.</h2>
+                                     <img id="nutra-girl" src="img/kim.jpg">
+                                     <p class="nutra-content">She is going to help you create the <strong>Perfect</strong> supplement fully customized to your body type and athletic needs.
+                                     Once she gathers some information about you and your fitness goals she will be able to start creating your supplement.
+                                     </p>
+                                     &lt;!&ndash;<label for="supplementName"><span class="sub-heading">Have some fun here...</span></label>
+                                     <input type="text" name="supplementName" class="form-control input-lg">&ndash;&gt;
+
+                                     <div class="controls clearfix">
+                                         <a href="javascript:void(0)" class="btn btn-success next-btn pull-right">Get started <i
+                                                 class="arrow fa fa-arrow-right"></i></a>
+
+                                     </div>
+                                 </div>
+                                 &lt;!&ndash;end form group&ndash;&gt;
+                             </div>-->
+                <!--end section-->
+                <div class="next form-section-container margins formSections">
+                    <h3 id="customize" class="page-heading">Email</h3>
+                    <input class="form-control" type="text" placeholder="Email" ng-model="user.email">
+                </div>
+
+                <div class="next form-section-container formSections">
+                    <h3 id="customize" class="page-heading">Personal Information</h3>
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">How old are you?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+
+                            <input name="age" class="form-control" placeholder="Your age" ng-model="user.profile.age">
+
+                            <!--<label class="btn btn-default" ng-model="user.profile.age" btn-radio="'18-24'">18-24</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.age" btn-radio="'25-34'">25-34</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.age" btn-radio="'35-44'">35-44</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.age" btn-radio="'45-54'">45-54</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.age" btn-radio="'55+'">55+</label>-->
+                        </div>
+                    </div>
+                    <!--end form group-->
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">How much do you weigh? (lbs)</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+
+                            <input name="weight" class="form-control" placeholder="Weight (in lbs.)" ng-model="user.profile.weight">
+
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'-120'">-120</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'121-140'">121-140</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'141-160'">141-160</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'181-200'">181-200</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'201-220'">201-220</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'221-240'">221-240</label>-->
+                            <!--<label class="btn btn-default" ng-model="user.profile.weight" btn-radio="'241+'">241+</label>-->
+                        </div>
+                    </div>
+                    <!--end form group-->
+
+                    <div class="form-group form-section">
+                        <h5 class="section-heading margins">How tall are you?</h5>
+                        <div class="btn-group" dropdown>
+                            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                {{ user.profile.heightLabel.feet + ' ft' }} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a ng-click="user.profile.heightLabel.feet = 4">4 ft</a></li>
+                                <li><a ng-click="user.profile.heightLabel.feet = 5">5 ft</a></li>
+                                <li><a ng-click="user.profile.heightLabel.feet = 6">6 ft</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group" dropdown>
+                            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                {{ user.profile.heightLabel.inch + ' in ' }} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a ng-click="user.profile.heightLabel.inch = 0">0 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 1">1 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 2">2 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 3">3 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 4">4 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 5">5 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 6">6 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 7">7 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 8">8 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 9">9 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 10">10 in</a></li>
+                                <li><a ng-click="user.profile.heightLabel.inch = 11">11 in</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">What's your gender?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default" ng-model="user.profile.sex" btn-radio="'male'">Male</label>
+                            <label class="btn btn-default" ng-model="user.profile.sex" btn-radio="'female'">Female</label>
+                        </div>
+
+                    </div>
+                    <!--end form group-->
+                    <!--<div class="controls">-->
+                        <!--<a href="javascript:void(0)" class="btn btn-success next-btn pull-right" onClick="ga('send', 'event', 'button', 'click', 'bodyMetricsNext');">Next<i-->
+                                <!--class="fa fa-arrow-right"></i></a>-->
+                        <!--<a href="javascript:void(0)" class="btn btn-success prev-btn pull-left" onClick="ga('send', 'event', 'button', 'click', 'bodyMetricsBack');"><i-->
+                                <!--class="arrow fa fa-arrow-left"></i>Back</a>-->
+
+                    <!--</div>-->
+                </div>
+                <!--end section-->
+
+                <div class="next form-section-container formSections">
+                    <h3 id="goals" class="page-heading">Goal Related Info</h3>
+
+                    <!-- <div class="form-group form-section">
+                        <h3 class="section-heading">What is your primary reason for taking a pre-workout
+                            supplement?</h3>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default active">
+                                <input type="radio" name="Reason" value="Energy" checked="checked"> Increased Energy
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="Reason" value="Stamina"> Increased Stamina
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="Reason" value="Focus"> Increased Focus
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="Reason" value="Muscle-gain"> Increased muscle gain
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="Reason" value="Other"> Other
+                            </label>
+                            <input type="text" name="Other Reason" value="Other" placeholder="Other">-->
+                    <!-- </div>
+                </div> -->
+                    <!--end form group-->
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">What type of exercise/training will you be using this mix for?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default" ng-model="user.profile.cardio" btn-checkbox>Cardio</label>
+                            <label class="btn btn-default" ng-model="user.profile.weightTraining" btn-checkbox>Weight Training</label>
+                            <label class="btn btn-default" ng-model="user.profile.crossFit" btn-checkbox>Cross Fit</label>
+                            <label class="btn btn-default" ng-model="user.profile.other" btn-checkbox>Other</label>
+                        </div>
+                    </div>
+                    <!--end form group-->
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">What are your training/exercise goals?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default" ng-model="user.profile.gainLeanMuscle" btn-checkbox>Gain lean muscle</label>
+                            <label class="btn btn-default" ng-model="user.profile.loseWeight" btn-checkbox>Lose weight</label>
+                            <label class="btn btn-default" ng-model="user.profile.improveStrength" btn-checkbox>Improve strength</label>
+                            <label class="btn btn-default" ng-model="user.profile.otherGoal" btn-checkbox>Other</label>
+
+                        </div>
+                    </div>
+                    <!--end form group-->
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">How many times a week do you workout?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="2">2 times</label>
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="3">3 times</label>
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="4">4 times</label>
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="5">5 times</label>
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="6">6 times</label>
+                            <label class="btn btn-default" ng-model="user.profile.workoutSchedule" btn-radio="7">7 times</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-section margins">
+                        <h5 class="section-heading">Do you play a collegiate or professional sport?</h5>
+
+                        <div class="btn-group lg-btns" data-toggle="buttons">
+                            <label class="btn btn-default" ng-model="user.profile.sport" btn-radio="'no'">No</label>
+                            <label class="btn btn-default" ng-model="user.profile.sport" btn-radio="'collegiateAthlete'">Collegiate</label>
+                            <label class="btn btn-default" ng-model="user.profile.sport" btn-radio="'professionalAthlete'">Professional</label>
+
+                        </div>
+                    </div>
+                    <!--end form group-->
+
+                    <!--<div class="controls">-->
+                        <!--<a href="javascript:void(0)" class="btn btn-success next-btn pull-right" onClick="ga('send', 'event', 'button', 'click', 'excerciseNext');">Next <i-->
+                                <!--class="arrow fa fa-arrow-right"></i></a>-->
+                        <!--<a href="javascript:void(0)" class="btn btn-success prev-btn pull-left" onClick="ga('send', 'event', 'button', 'click', 'excerciseBack');"><i-->
+                                <!--class="arrow fa fa-arrow-left"></i>Back</a>-->
+                    <!--</div>-->
+                <!--end section-->
+                </div>
+                <div class="next form-section-container comments-container">
+                    <div class="form-group form-section">
+                        <h3 class="section-heading">Additional Information</h3>
+
+                        <p class="section-content">Please provide any additional information such as any relevant health related info. </p>
+                        <textarea name="comments" class="form-control" style="width: 400px" rows="3" ng-model="user.profile.additionalInfo"></textarea>
+                    </div>
+                    <!--end form group-->
+                    <!--<div class="controls">-->
+
+                        <!--&lt;!&ndash;<a href="javascript:void(0)" class="btn btn-success prev-btn pull-left" onClick="ga('send', 'event', 'button', 'click', 'additionalBack');"><i&ndash;&gt;-->
+                                <!--&lt;!&ndash;class="arrow fa fa-arrow-left"></i>Back</a>&ndash;&gt;-->
+                        <!--<button id="reviewOrder" class="btn btn-info review-btn pull-right" onClick="ga('send', 'event', 'button', 'click', 'additionalNext')"; type="submit">All Done-->
+                        <!--</button>-->
+                    <!--</div>-->
+                </div>
+
+                <div>
+                    <button class="btn btn-info" onClick="ga('send', 'event', 'button', 'click', 'additionalNext')"; type="submit">All Done</button>
+                </div>
+
+            </form>
+
+        </div>
+        <!--end custom select row-->
+    </div>
+    <!--end container-->
+</div>
